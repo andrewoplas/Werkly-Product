@@ -1,0 +1,201 @@
+.TableFilter {
+    .main {
+        & > .item {
+            width: 100%;
+            padding: 10px 20px;
+            margin-bottom: 2px;
+            background-color: white;
+            color: $dark;
+            font-size: 14px;
+            font-weight: bold;
+            border: 0;
+            border-radius: 4px;
+            text-align: left;
+            outline: 0;
+
+            &:not(.active):hover {
+                background-color: #f7f7f7;
+                text-decoration: underline !important;
+            }
+
+            &.active {
+                background-color: $gray-1;
+            }
+
+            &.show-filters {
+                .arrow {
+                    margin-left: 8px;
+                }
+            }
+        }
+
+        .add-filter-container {
+            padding: 10px 20px;
+            border: 1px solid $gray-2;
+
+            .header {
+                display: block;
+                font-weight: bold;
+                font-size: 14px;
+            }
+
+            .count {
+                display: block;
+                margin-top: 5px;
+                font-size: 11px;
+                color: $dark;
+            }
+
+            .dropdown-options {
+                text-align: right;
+
+                .dropdown-toggle {
+                    font-size: 11px;
+                    font-weight: bold;
+                    color: $dark;
+                }
+
+                .dropdown-menu {
+                    border: 0;
+                    border-radius: 0;
+                    @include dropdown-shadow;
+
+                    .dropdown-item {
+                        font-size: 12px;
+                        padding: 10px 15px;
+                        outline: 0;
+
+                        &:focus,
+                        &:active {
+                            background-color: $secondary-color;
+                        }
+                    }
+
+                    .dropdown-divider {
+                        margin: 0;
+                    }
+                }
+            }
+
+            .filters-list {
+                margin-top: 10px;
+
+                .item {
+                    padding: 8px 10px;
+                    background-color: $gray-1;
+                    border: 1px solid $gray-2;
+                    font-size: 12px;
+                    margin-bottom: 8px;
+
+                    @include flex(stretch, center);
+
+                    &.cloneable-row {
+                        display: none;
+                    }
+
+                    .description {
+                        margin-right: 10px;
+                    }
+
+                    .remove {
+                        margin-left: auto;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .btn-filter {
+                padding: 4px 0;
+                margin-top: 10px;
+                background-color: white;
+                border: 0;
+                font-size: 14px;
+                outline: 0;
+
+                &:hover {
+                    text-decoration: underline !important;
+                }
+            }
+        }
+
+        .action-buttons {
+            margin-top: 10px;
+            display: none;
+        }
+    }
+
+    .select-filters-container {
+        .filters {
+            max-height: 400px;
+            margin-top: 15px;
+            overflow-y: auto;
+
+            .header {
+                display: block;
+                padding: 8px 10px;
+                font-size: 15px;
+                font-weight: bold;
+                color: $dark;
+            }
+
+            .item {
+                display: block;
+                padding: 8px 10px;
+                font-size: 14px;
+                color: $dark;
+                border-radius: 4px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #f7f7f7;
+                }
+            }
+        }
+    }
+
+    .select-filters-value {
+        .options {
+            padding: 15px 0;
+
+            & > .item {
+                margin-bottom: 10px;
+                padding-left: 15px;
+
+                .selector {
+                    margin-top: 7px;
+                }
+            }
+        }
+
+        .option-selected {
+            margin-top: 23px;
+            padding-left: 15px;
+
+            .title {
+                display: block;
+                font-weight: bold;
+            }
+
+            .description {
+                display: block;
+                font-size: 12px;
+                opacity: 0.8;
+            }
+        }
+
+        .btn-apply-filter {
+            display: none;
+            margin-left: 15px;
+        }
+    }
+
+    .btn-back {
+        padding: 0;
+        border: 0;
+        background-color: white;
+        color: $dark;
+        font-size: 14px;
+        font-weight: bold;
+        outline: 0;
+    }
+}

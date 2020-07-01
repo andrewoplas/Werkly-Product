@@ -1,0 +1,51 @@
+@mixin checkbox-after($content, $margin-top) {
+    content: url($content);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: $margin-top;
+    height: 100%;
+}
+
+.Checkbox {
+    label {
+        @include flex(flex-start, center);
+        max-width: 200px;
+        font-family: $primary-font;
+        font-size: 14px;
+        font-weight: normal;
+        margin-bottom: 0;
+
+        &::selection {
+            color: none;
+            background: none;
+        }
+
+        &::-moz-selection {
+            color: none;
+            background: none;
+        }
+
+        input {
+            display: none;
+        }
+
+        span {
+            margin-right: 10px;
+            height: 18px;
+            width: 18px;
+            border: 1px solid $dark;
+            display: inline-block;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        [type="checkbox"]:checked + span:before {
+            @include checkbox-after("../images/check.svg", 1px);
+        }
+
+        [type="checkbox"].minus:checked + span:before {
+            @include checkbox-after("../images/minus.svg", 2px);
+        }
+    }
+}

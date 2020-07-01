@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Werkly</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+
+        <!-- Vendor CSS -->
+        <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.min.css" />
+
+        <link rel="stylesheet" href="./vendors/semantic-ui/transition.min.css" />
+        <link rel="stylesheet" href="./vendors/semantic-dropdown/dropdown.css" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="./resources/css/main.css" />
+    </head>
+
+    <body>
+        <div class="BaseInternal">
+            <!-- ===== HEADER ===== -->
+            <div class="Header">
+                <div class="logo-container">
+                    <div class="background-blur"></div>
+                    <div class="logo-banner">
+                        <img src="./resources/images/logo.png" alt="banner logo" />
+                    </div>
+                </div>
+
+                <div class="menu container-fluid">
+                    <ul class="nav nav-pages">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="javascript:void(0)" title="Dashboard">
+                                <i class="icon fas fa-th-large"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)" title="Operations Manual">
+                                <i class="icon fas fa-book"></i>
+                                <span>Operations Manual</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)" title="Training">
+                                <i class="icon fas fa-graduation-cap"></i>
+                                <span>Training</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)" title="Performance">
+                                <i class="icon fas fa-trophy"></i>
+                                <span>Performance</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)" title="Communications">
+                                <i class="icon fas fa-comments"></i>
+                                <span>Communications</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)" title="Forums">
+                                <i class="icon fas fa-list-ul"></i>
+                                <span>Forums</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="dropdown mobile-nav">
+                        <a id="mobile-nav" class="has-arrow" data-toggle="dropdown">
+                            Menu
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="mobile-nav">
+                            <a class="dropdown-item active" href="#"> <i class="icon fas fa-th-large"></i>Dashboard </a>
+                            <a class="dropdown-item" href="#"> <i class="icon fas fa-book"></i>Operations Manual </a>
+                            <a class="dropdown-item" href="#"> <i class="icon fas fa-graduation-cap"></i>Training </a>
+                            <a class="dropdown-item" href="#"> <i class="icon fas fa-trophy"></i>Performance </a>
+                            <a class="dropdown-item" href="#"> <i class="icon fas fa-comments"></i>Communications </a>
+                            <a class="dropdown-item" href="#"> <i class="icon fas fa-list-ul"></i>Forum </a>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <ul class="nav nav-icons">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">
+                                <i class="icon fas fa-chart-line"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">
+                                <i class="icon fas fa-users"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">
+                                <i class="icon fas fa-map-marker-alt"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <img src="./resources/images/logo-white.png" class="logo" alt="logo" />
+                </div>
+
+                <div class="page-header container-fluid">
+                    <h2 class="title">Page Header Goes Here</h2>
+
+                    <div class="details">
+                        <div class="search-input">
+                            <input type="text" placeholder="Search..." />
+                            <i class="icon fas fa-search"></i>
+                        </div>
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <i class="fas fa-cog"></i>
+                            </li>
+                            <li class="nav-item">
+                                <i class="fas fa-check-square"></i>
+                            </li>
+                            <li class="nav-item">
+                                <i class="fas fa-question-circle"></i>
+                            </li>
+                        </ul>
+
+                        <div class="dropdown dropdown-avatar">
+                            <a id="dropdownMenuButton" data-toggle="dropdown">
+                                <img src="./resources/images/avatar.png" alt="avatar" class="Avatar" />
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item show-on-mobile" href="#"> <i class="icon fas fa-cog"></i>Icon 1 </a>
+                                <a class="dropdown-item show-on-mobile" href="#"> <i class="icon fas fa-check-square"></i>Icon 2 </a>
+                                <a class="dropdown-item show-on-mobile" href="#"> <i class="icon fas fa-question-circle"></i>Icon 3 </a>
+                                <div class="dropdown-divider show-on-mobile"></div>
+                                <a class="dropdown-item" href="#">Profile</a>
+                                <a class="dropdown-item" href="#">Account</a>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== MAIN CONTENT ===== -->
+            <div class="MainContent container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <div class="ContentBox mb-30 mb-md-0">
+                            <div class="box-header">
+                                <h4 class="box-title">This is a header</h4>
+                            </div>
+                            <hr />
+                            <div class="ButtonCluster">
+                                <button class="item block">
+                                    Button Label
+                                    <i class="arrow fas fa-angle-right"></i>
+                                </button>
+                                <button class="item block">
+                                    Button Label
+                                    <i class="arrow fas fa-angle-right"></i>
+                                </button>
+                                <button class="item block selected">
+                                    Button Label
+                                    <i class="arrow fas fa-angle-right"></i>
+                                </button>
+
+                                <button class="item block">
+                                    Button Label
+                                    <i class="arrow fas fa-angle-right"></i>
+                                </button>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <button class="Button">Back</button>
+                                <button class="Button secondary">Publish</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <div class="ContentBox">
+                            <div class="box-header">
+                                <h4 class="box-title">This is a header</h4>
+                            </div>
+                            <hr />
+                            <div class="row">
+                                <div class="col-12 col-sm-3 d-flex justify-content-between align-items-start mb-3">
+                                    <p class="label">Field Label</p>
+                                    <div
+                                        class="Tooltip mt-1"
+                                        data-tippy-content="This is the placeholder for an extremely important tooltip"
+                                        data-tippy-placement="top-start"
+                                        data-tippy-offset="[-20,10]"
+                                    >
+                                        <i class="icon fas fa-question"></i>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-9">
+                                    <input class="Input" placeholder="Placeholder text goes here" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="content" class="text-center">
+                            <div class="ContentBox mt-4 pt-4 cloneable-block">
+                                <div class="Builder cloneable-row mb-3">
+                                    <div class="content-container">
+                                        <i class="main-icon far fa-plus-square"></i>
+
+                                        <div class="ButtonGroup btn-group">
+                                            <button class="Button secondary dropdown-toggle" data-toggle="dropdown">Add Content</button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="javascript:void(0)">Button Label</a>
+                                                <a class="dropdown-item" href="javascript:void(0)">Button Label</a>
+                                                <a class="dropdown-item" href="javascript:void(0)">Button Label</a>
+                                                <a class="dropdown-item" href="javascript:void(0)">Button Label</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="action-items">
+                                        <button
+                                            class="Button icon btn-arrow-up Tooltip no-style"
+                                            data-tippy-content="Arrow Up"
+                                            data-tippy-placement="left"
+                                        >
+                                            <i class="fas fa-arrow-up"></i>
+                                        </button>
+
+                                        <button
+                                            class="Button icon btn-arrow-down Tooltip no-style"
+                                            data-tippy-content="Arrow Down"
+                                            data-tippy-placement="left"
+                                        >
+                                            <i class="fas fa-arrow-down"></i>
+                                        </button>
+
+                                        <button class="Button icon btn-grid Tooltip no-style" data-tippy-content="Grid" data-tippy-placement="left">
+                                            <i class="fas fa-th"></i>
+                                        </button>
+
+                                        <button class="Button icon btn-copy Tooltip no-style" data-tippy-content="Copy" data-tippy-placement="left">
+                                            <i class="far fa-copy"></i>
+                                        </button>
+
+                                        <button
+                                            class="Button icon btn-delete Tooltip no-style"
+                                            data-tippy-content="Delete"
+                                            data-tippy-placement="left"
+                                        >
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <button class="Button secondary btn-new-row">New Row</button>
+                            </div>
+                            <button class="Button secondary mt-3 mb-5 btn-new-block">New Block</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== FOOTER ===== -->
+            <div class="Footer">
+                <p class="text">© Werkly. All rights reserved 2020.</p>
+            </div>
+        </div>
+
+        <!-- Vendor JS -->
+        <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+        <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+
+        <script src="./vendors/jquery/jquery.min.js"></script>
+        <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <script src="./vendors/semantic-ui/transition.min.js"></script>
+        <script src="./vendors/semantic-dropdown/dropdown.min.js"></script>
+
+        <script src="./vendors/ckeditor/ckeditor.js"></script>
+
+        <!-- Custom JS -->
+        <script src="./resources/js/main.js"></script>
+
+        <script>
+            if (initializePageBuilder) {
+                initializePage();
+                initializePageBuilder();
+            }
+        </script>
+    </body>
+</html>

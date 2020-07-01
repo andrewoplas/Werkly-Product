@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Werkly</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+
+        <!-- Vendor CSS -->
+        <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./vendors/dataTables/datatables.min.css" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="./resources/css/main.css" />
+    </head>
+
+    <body class="white">
+        <div class="MainContent">
+            <!-- ===== Data tables ===== -->
+            <div class="row mb-5">
+                <div class="col-12 col-md-3">
+                    <p class="label">Modal Popup (small)</p>
+                </div>
+                <div class="col-12 col-md-9">
+                    <button type="button" class="Button secondary" data-toggle="modal" data-target="#modal-small">
+                        Launch small modal
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="Modal modal fade" id="modal-small" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="ContentBox">
+                                        <div class="box-header">
+                                            <h4 class="box-title">This is a header</h4>
+                                            <div class="action-items no-flex-basis">
+                                                <button class="Button icon">
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <hr />
+
+                                        <p class="normal-text">
+                                            Lorem ipsum content goes here Lorem ipsum content goes here Lorem ipsum content goes here Lorem ipsum
+                                            content goes here Lorem ipsum content goes here Lorem ipsum content goes here Lorem ipsum content goes
+                                            here.
+                                        </p>
+
+                                        <div class="mt-4 d-flex justify-content-between align-items-center">
+                                            <button class="Button" data-dismiss="modal">Cancel</button>
+                                            <button class="Button secondary">Confirm</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-12 col-md-3">
+                    <p class="label">Modal Popup (medium)</p>
+                </div>
+                <div class="col-12 col-md-9">
+                    <button type="button" class="Button secondary" data-toggle="modal" data-target="#modal-medium">
+                        Launch medium modal
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="Modal medium modal fade" id="modal-medium" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="ContentBox">
+                                        <div class="box-header">
+                                            <h4 class="box-title">This is a header</h4>
+                                            <div class="action-items no-flex-basis">
+                                                <button class="Button icon">
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <hr />
+
+                                        <p class="normal-text">
+                                            Lorem ipsum content goes here Lorem ipsum content goes here Lorem ipsum content goes here Lorem ipsum
+                                            content goes here Lorem ipsum content goes here Lorem ipsum content goes here Lorem ipsum content goes
+                                            here.
+                                        </p>
+
+                                        <div class="mt-4 d-flex justify-content-between align-items-center">
+                                            <button class="Button" data-dismiss="modal">Cancel</button>
+                                            <button class="Button secondary">Confirm</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    <p class="label">Modal Popup (large)</p>
+                </div>
+                <div class="col-12 col-md-9">
+                    <button type="button" class="Button secondary" data-toggle="modal" data-target="#modal-large">
+                        Launch large modal
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="Modal large modal fade" id="modal-large" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="ContentBox">
+                                        <div class="box-header">
+                                            <h4 class="box-title">This is a header</h4>
+                                            <div class="action-items no-flex-basis">
+                                                <button class="Button icon">
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <hr />
+
+                                        <p class="normal-text">
+                                            Lorem ipsum content goes here Lorem ipsum content goes here Lorem ipsum content goes here Lorem ipsum
+                                            content goes here Lorem ipsum content goes here Lorem ipsum content goes here Lorem ipsum content goes
+                                            here.
+                                        </p>
+
+                                        <div class="mt-4 d-flex justify-content-between align-items-center">
+                                            <button class="Button" data-dismiss="modal">Cancel</button>
+                                            <button class="Button secondary">Confirm</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vendor JS -->
+        <script src="./vendors/jquery/jquery.min.js"></script>
+        <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Custom JS -->
+        <script src="./resources/js/main.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                initializeDataTables();
+            });
+        </script>
+    </body>
+</html>

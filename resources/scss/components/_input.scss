@@ -1,0 +1,32 @@
+input.Input,
+textarea.Input {
+    width: 100%;
+    border-radius: 4px;
+    padding: 5px 10px;
+    border: 1px solid $gray-3;
+    $outline: 0 !important;
+    font-family: $secondary-font;
+    font-weight: normal;
+    font-size: 14px;
+    color: $dark;
+    outline: 0 !important;
+
+    &:focus {
+        border-color: $dark;
+    }
+
+    &::placeholder {
+        font-family: $secondary-font;
+        font-weight: 300;
+        font-size: 14px;
+        color: $gray-4;
+    }
+
+    &:disabled {
+        background-color: $gray-1;
+    }
+}
+
+textarea.Input {
+    min-height: 70px;
+}

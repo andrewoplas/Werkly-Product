@@ -1,0 +1,92 @@
+// vendors
+@import "./vendors/vendors";
+
+// abstracts
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+// layout
+@import "./layout/header";
+@import "./layout/content";
+@import "./layout/footer";
+
+// components
+@import "./components/content-box";
+@import "./components/button";
+@import "./components/input";
+@import "./components/select";
+@import "./components/tooltip";
+@import "./components/switch";
+@import "./components/slider";
+@import "./components/radio-button";
+@import "./components/checkbox";
+@import "./components/action-required";
+@import "./components/comment";
+@import "./components/avatar";
+@import "./components/mini-table";
+@import "./components/datatable";
+@import "./components/progress-bar";
+@import "./components/accordion";
+@import "./components/builder";
+@import "./components/document-card";
+@import "./components/document-hover";
+@import "./components/modal";
+@import "./components/article";
+@import "./components/complaint-card";
+@import "./components/task";
+@import "./components/activity-log";
+@import "./components/setup-wizard";
+@import "./components/wysiwyg";
+@import "./components/datatable2";
+@import "./components/table-filter";
+@import "./components/filters-container";
+@import "./components/advance-table";
+
+* {
+    font-family: $primary-font;
+}
+
+body {
+    background-color: $gray-1;
+    min-height: 100vh;
+    min-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+
+    &.white {
+        background-color: white;
+    }
+
+    & > div:first-child {
+        position: relative;
+        min-height: 100vh;
+    }
+}
+
+p.label {
+    margin: 0;
+    font-family: $primary-font;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+p.normal-text {
+    margin: 0;
+    font-family: $primary-font;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+[data-tippy-root] {
+    .tippy-box {
+        border-radius: 4px;
+
+        .tippy-content {
+            font-size: 11px;
+        }
+    }
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}

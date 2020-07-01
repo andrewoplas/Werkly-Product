@@ -1,0 +1,15 @@
+.Tooltip {
+    &:not(.no-style) {
+        width: 20px;
+        height: 20px;
+        padding: 3px;
+        background-color: $dark;
+        border-radius: 50%;
+        @include flex(center, center);
+
+        .icon {
+            color: white;
+            font-size: 13px;
+        }
+    }
+}

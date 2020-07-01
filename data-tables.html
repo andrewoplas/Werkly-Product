@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Werkly</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+
+        <!-- Vendor CSS -->
+        <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./vendors/dataTables/datatables.min.css" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="./resources/css/main.css" />
+    </head>
+
+    <body class="white">
+        <div class="MainContent">
+            <!-- ===== Data tables ===== -->
+            <div class="row mb-5">
+                <div class="col-12 col-md-3">
+                    <p class="label">Basic table</p>
+                </div>
+                <div class="col-12 col-md-9">
+                    <div class="Datatable table-responsive">
+                        <table class="table" id="basictable-checkbox-1">
+                            <thead>
+                                <tr>
+                                    <th style="width: 50px;">
+                                        <div class="Checkbox">
+                                            <label>
+                                                <input type="checkbox" name="checkbox[]" />
+                                                <span class="mx-auto"></span>
+                                            </label>
+                                        </div>
+                                    </th>
+                                    <th>Label Here</th>
+                                    <th>Label Here</th>
+                                    <th>Label Here</th>
+                                    <th>Label Here</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="clone-for-demo">
+                                    <td>
+                                        <div class="Checkbox">
+                                            <label>
+                                                <input type="checkbox" name="checkbox[]" />
+                                                <span class="mx-auto"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>Label Here</td>
+                                    <td>Label Here</td>
+                                    <td>Label Here</td>
+                                    <td>Label Here</td>
+                                    <td>
+                                        <button class="Button icon mr-2">
+                                            <i class="fas fa-external-link-alt"></i>
+                                        </button>
+                                        <button class="Button icon mr-2">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row my-5">
+                <div class="col-12 col-md-3">
+                    <p class="label">Table with other items</p>
+                </div>
+                <div class="col-12 col-md-9">
+                    <div class="Datatable table-responsive">
+                        <table class="table" id="basictable-checkbox-2">
+                            <thead>
+                                <tr>
+                                    <th style="width: 50px;">
+                                        <div class="Checkbox">
+                                            <label>
+                                                <input type="checkbox" name="checkbox[]" />
+                                                <span class=""></span>
+                                            </label>
+                                        </div>
+                                    </th>
+                                    <th>Label Here</th>
+                                    <th>Label Here</th>
+                                    <th>Label Here</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="clone-for-demo">
+                                    <td>
+                                        <div class="Checkbox">
+                                            <label>
+                                                <input type="checkbox" name="checkbox[]" />
+                                                <span class="mx-auto"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>Label Here</td>
+                                    <td>
+                                        <div class="ProgressBar">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 85%;"></div>
+                                            </div>
+                                            <span class="value">85%</span>
+                                        </div>
+                                    </td>
+                                    <td>Label Here</td>
+                                    <td>
+                                        <button class="Button icon mr-2">
+                                            <i class="fas fa-external-link-alt"></i>
+                                        </button>
+                                        <button class="Button icon mr-2">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row my-5">
+                <div class="col-12 col-md-3">
+                    <p class="label">Mini table</p>
+                </div>
+                <div class="col-12 col-md-9">
+                    <div class="table-responsive">
+                        <table class="MiniTable table" id="minitable-checkbox-1">
+                            <thead>
+                                <tr>
+                                    <th style="width: 35%;">Label here</th>
+                                    <th>
+                                        <div class="Checkbox">
+                                            <label>
+                                                <input type="checkbox" />
+                                                <span></span>
+                                                <b>Label here</b>
+                                            </label>
+                                        </div>
+                                    </th>
+                                    <th>Label here</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Label here</td>
+                                    <td>
+                                        <div class="Checkbox">
+                                            <label>
+                                                <input type="checkbox" name="checkbox[]" />
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>Label here</td>
+                                    <td>
+                                        <button class="Button icon mr-2">
+                                            <i class="fas fa-external-link-alt"></i>
+                                        </button>
+                                        <button class="Button icon mr-2">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Label here</td>
+                                    <td>
+                                        <div class="Checkbox">
+                                            <label>
+                                                <input type="checkbox" name="checkbox[]" />
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>Label here</td>
+                                    <td>
+                                        <button class="Button icon mr-2">
+                                            <i class="fas fa-external-link-alt"></i>
+                                        </button>
+                                        <button class="Button icon mr-2">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Label here</td>
+                                    <td>
+                                        <div class="Checkbox">
+                                            <label>
+                                                <input type="checkbox" name="checkbox[]" />
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>Label here</td>
+                                    <td>
+                                        <button class="Button icon mr-2">
+                                            <i class="fas fa-external-link-alt"></i>
+                                        </button>
+                                        <button class="Button icon mr-2">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row my-5">
+                <div class="col-12 col-md-3">
+                    <p class="label">Mini table with new row button</p>
+                </div>
+                <div class="col-12 col-md-9">
+                    <div class="table-responsive">
+                        <table class="MiniTable table" id="minitable-checkbox-2">
+                            <thead>
+                                <tr>
+                                    <th style="width: 35%;">Label here</th>
+                                    <th>
+                                        <div class="Checkbox">
+                                            <label>
+                                                <input type="checkbox" />
+                                                <span></span>
+                                                <b>Label here</b>
+                                            </label>
+                                        </div>
+                                    </th>
+                                    <th>Label here</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Label here</td>
+                                    <td>
+                                        <div class="Checkbox">
+                                            <label>
+                                                <input type="checkbox" name="checkbox[]" />
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>Label here</td>
+                                    <td>
+                                        <button class="Button icon mr-2">
+                                            <i class="fas fa-external-link-alt"></i>
+                                        </button>
+                                        <button class="Button icon mr-2">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Label here</td>
+                                    <td>
+                                        <div class="Checkbox">
+                                            <label>
+                                                <input type="checkbox" name="checkbox[]" />
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>Label here</td>
+                                    <td>
+                                        <button class="Button icon mr-2">
+                                            <i class="fas fa-external-link-alt"></i>
+                                        </button>
+                                        <button class="Button icon mr-2">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="cloneable-row">
+                                    <!-- Cloneable element -->
+                                    <td><input class="Input" /></td>
+                                    <td>
+                                        <div class="Checkbox">
+                                            <label>
+                                                <input type="checkbox" name="checkbox[]" />
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><input class="Input" /></td>
+                                    <td>
+                                        <button class="Button icon mr-2">
+                                            <i class="fas fa-external-link-alt"></i>
+                                        </button>
+                                        <button class="Button icon mr-2">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="Button secondary" id="btn-add-new-row">Add New Row</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vendor JS -->
+        <script src="./vendors/jquery/jquery.min.js"></script>
+        <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="./vendors/datatables/datatables.min.js"></script>
+
+        <!-- Custom JS -->
+        <script src="./resources/js/main.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                initializeDataTables();
+            });
+        </script>
+    </body>
+</html>

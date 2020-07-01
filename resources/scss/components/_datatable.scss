@@ -1,0 +1,159 @@
+.Datatable {
+    border: 0 !important;
+
+    table {
+        padding-top: 15px !important;
+        min-width: 800px;
+
+        thead {
+            th {
+                padding: 13px 20px !important;
+                font-family: $primary-font;
+                font-size: 14px;
+                font-weight: bold;
+                border: 0;
+                border-bottom: 1px solid $gray-3 !important;
+                vertical-align: bottom;
+
+                &.center {
+                    @include flex(center, center);
+                    margin-bottom: -1px;
+                }
+            }
+        }
+
+        tbody {
+            td {
+                padding: 13px 20px !important;
+                font-family: $primary-font;
+                font-size: 14px;
+                font-weight: normal;
+                border: 0;
+                border-bottom: 1px solid $gray-3 !important;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .dataTables_length {
+        font-family: $primary-font;
+        font-size: 14px;
+        font-weight: normal;
+        color: $dark;
+
+        select {
+            font-family: $primary-font;
+            font-size: 14px;
+            font-weight: normal;
+            border: 1px solid $gray-3;
+            padding: 7px 5px;
+            border-radius: 8px;
+        }
+    }
+
+    .dataTables_info {
+        padding: 0 !important;
+        margin-top: 22px;
+        font-family: $primary-font;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .dataTable.no-footer {
+        border: 0 !important;
+    }
+
+    .dataTables_paginate {
+        padding: 0 !important;
+        margin-top: 22px;
+        @include flex(center, center);
+
+        & > span {
+            @include flex(center, center);
+        }
+
+        & > .paginate_button {
+            &:first-child {
+                border-left: 1px solid $gray-3 !important;
+                border-top-left-radius: 8px;
+                border-bottom-left-radius: 8px;
+            }
+
+            &:last-child {
+                border-top-right-radius: 8px;
+                border-bottom-right-radius: 8px;
+            }
+        }
+
+        .paginate_button {
+            height: 22px;
+            margin: 0;
+            padding: 4px 7px !important;
+            font-family: $primary-font;
+            font-size: 11px;
+            font-weight: normal;
+            color: $dark;
+            border: 0 !important;
+            border-top: 1px solid $gray-3 !important;
+            border-right: 1px solid $gray-3 !important;
+            border-bottom: 1px solid $gray-3 !important;
+            border-radius: 0;
+            @include flex(center, center);
+
+            &:not(.disabled):not(.active):hover {
+                background: rgba(0, 0, 0, 0.1);
+                color: $dark !important;
+            }
+
+            &.disabled {
+                font-family: $secondary-font !important;
+                font-weight: 300 !important;
+                color: $gray-3 !important;
+
+                &:hover {
+                    color: $gray-3 !important;
+                }
+            }
+
+            &.current {
+                background: $secondary-color !important;
+                color: white !important;
+
+                &:hover {
+                    color: white !important;
+                }
+            }
+        }
+
+        .ellipsis {
+            height: 22px;
+            padding: 2px 7px !important;
+            line-height: 1;
+            border-top: 1px solid $gray-3 !important;
+            border-right: 1px solid $gray-3 !important;
+            border-bottom: 1px solid $gray-3 !important;
+            font-family: $primary-font;
+            font-size: 11px;
+            font-weight: normal;
+            border-radius: 0;
+        }
+    }
+
+    .dataTables_filter {
+        @include flex(center, center);
+
+        input {
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 300;
+            padding: 6px 11px;
+            width: 180px;
+            height: 100%;
+        }
+
+        label {
+            margin: 0;
+            align-self: stretch;
+        }
+    }
+}

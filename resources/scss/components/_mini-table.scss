@@ -1,0 +1,33 @@
+.MiniTable {
+    min-width: 800px;
+    width: 100%;
+
+    thead {
+        th {
+            padding: 13px 20px;
+            font-family: $primary-font;
+            font-size: 14px;
+            font-weight: bold;
+            border-top: 0;
+            border-bottom: 1px solid $gray-3;
+            vertical-align: bottom;
+
+            &.center {
+                @include flex(center, center);
+                margin-bottom: -1px;
+            }
+        }
+    }
+
+    tbody {
+        td {
+            padding: 13px 20px;
+            font-family: $primary-font;
+            font-size: 14px;
+            font-weight: normal;
+            border-top: 0;
+            border-bottom: 1px solid $gray-3;
+            vertical-align: middle;
+        }
+    }
+}

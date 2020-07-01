@@ -1,0 +1,16 @@
+.Footer {
+    height: 45px;
+    width: 100%;
+    background-color: $dark;
+    position: absolute;
+    bottom: 0;
+    @include flex(center, center);
+
+    .text {
+        font-family: $primary-font;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+        color: white;
+    }
+}

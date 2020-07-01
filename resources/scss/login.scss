@@ -1,0 +1,54 @@
+@import "./main.scss";
+
+.Login {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    & > .row {
+        height: 100vh;
+    }
+
+    .graphic {
+        background-image: url("../images/login-left-graphic.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .form {
+        padding: 40px 40px 0;
+
+        @include media-breakpoint-down(sm) {
+            padding: 0 20px 0;
+        }
+
+        .logo {
+            width: 264px;
+            position: absolute;
+            right: 40px;
+            align-self: flex-start;
+
+            @include media-breakpoint-down(sm) {
+                width: 240px;
+                position: relative;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 30px;
+                right: 0;
+            }
+        }
+
+        form {
+            width: 100%;
+
+            .forgot-password-link {
+                color: $dark;
+            }
+        }
+    }
+}
+
+.Footer {
+    position: absolute;
+    bottom: 0;
+}

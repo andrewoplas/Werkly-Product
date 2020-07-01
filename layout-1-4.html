@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Werkly</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+
+        <!-- Vendor CSS -->
+        <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./vendors/dataTables/datatables.min.css" />
+        <link rel="stylesheet" href="./vendors/datepicker/datepicker.min.css" />
+        <link rel="stylesheet" href="./vendors/semantic-ui/transition.min.css" />
+        <link rel="stylesheet" href="./vendors/semantic-dropdown/dropdown.css" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="./resources/css/main.css" />
+    </head>
+
+    <body>
+        <div class="BaseInternal">
+            <!-- ===== HEADER ===== -->
+            <div class="Header">
+                <div class="logo-container">
+                    <div class="background-blur"></div>
+                    <div class="logo-banner">
+                        <img src="./resources/images/logo.png" alt="banner logo" />
+                    </div>
+                </div>
+
+                <div class="menu container-fluid">
+                    <ul class="nav nav-pages">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="javascript:void(0)" title="Dashboard">
+                                <i class="icon fas fa-th-large"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)" title="Operations Manual">
+                                <i class="icon fas fa-book"></i>
+                                <span>Operations Manual</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)" title="Training">
+                                <i class="icon fas fa-graduation-cap"></i>
+                                <span>Training</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)" title="Performance">
+                                <i class="icon fas fa-trophy"></i>
+                                <span>Performance</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)" title="Communications">
+                                <i class="icon fas fa-comments"></i>
+                                <span>Communications</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)" title="Forums">
+                                <i class="icon fas fa-list-ul"></i>
+                                <span>Forums</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="dropdown mobile-nav">
+                        <a id="mobile-nav" class="has-arrow" data-toggle="dropdown">
+                            Menu
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="mobile-nav">
+                            <a class="dropdown-item active" href="#"> <i class="icon fas fa-th-large"></i>Dashboard </a>
+                            <a class="dropdown-item" href="#"> <i class="icon fas fa-book"></i>Operations Manual </a>
+                            <a class="dropdown-item" href="#"> <i class="icon fas fa-graduation-cap"></i>Training </a>
+                            <a class="dropdown-item" href="#"> <i class="icon fas fa-trophy"></i>Performance </a>
+                            <a class="dropdown-item" href="#"> <i class="icon fas fa-comments"></i>Communications </a>
+                            <a class="dropdown-item" href="#"> <i class="icon fas fa-list-ul"></i>Forum </a>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <ul class="nav nav-icons">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">
+                                <i class="icon fas fa-chart-line"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">
+                                <i class="icon fas fa-users"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">
+                                <i class="icon fas fa-map-marker-alt"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <img src="./resources/images/logo-white.png" class="logo" alt="logo" />
+                </div>
+
+                <div class="page-header container-fluid">
+                    <h2 class="title">Page Header Goes Here</h2>
+
+                    <div class="details">
+                        <div class="search-input">
+                            <input type="text" placeholder="Search..." />
+                            <i class="icon fas fa-search"></i>
+                        </div>
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <i class="fas fa-cog"></i>
+                            </li>
+                            <li class="nav-item">
+                                <i class="fas fa-check-square"></i>
+                            </li>
+                            <li class="nav-item">
+                                <i class="fas fa-question-circle"></i>
+                            </li>
+                        </ul>
+
+                        <div class="dropdown dropdown-avatar">
+                            <a id="dropdownMenuButton" data-toggle="dropdown">
+                                <img src="./resources/images/avatar.png" alt="avatar" class="Avatar" />
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item show-on-mobile" href="#"> <i class="icon fas fa-cog"></i>Icon 1 </a>
+                                <a class="dropdown-item show-on-mobile" href="#"> <i class="icon fas fa-check-square"></i>Icon 2 </a>
+                                <a class="dropdown-item show-on-mobile" href="#"> <i class="icon fas fa-question-circle"></i>Icon 3 </a>
+                                <div class="dropdown-divider show-on-mobile"></div>
+                                <a class="dropdown-item" href="#">Profile</a>
+                                <a class="dropdown-item" href="#">Account</a>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== MAIN CONTENT ===== -->
+            <div class="MainContent container-fluid">
+                <div class="row" style="margin-bottom: 100px;">
+                    <div class="col-12">
+                        <div class="ContentBox">
+                            <div class="box-header">
+                                <h4 class="box-title">This is a header</h4>
+                            </div>
+                            <hr />
+
+                            <div class="AdvanceTable row">
+                                <div class="filter-configuration-panel panel shown">
+                                    <button class="Button secondary icon btn-show-filter">
+                                        <i class="fas fa-filter text-white"></i>
+                                    </button>
+
+                                    <div class="TableFilter" style="margin-top: 18px;">
+                                        <div class="screen main">
+                                            <button class="item active">All users (923)</button>
+                                            <button class="item show-filters">
+                                                <i class="arrow left-arrow fas fa-angle-left ml-0 mr-2 d-none"></i
+                                                ><span class="text">All saved filters</span><i class="arrow right-arrow fas fa-angle-right"></i>
+                                            </button>
+
+                                            <div class="add-filter-container">
+                                                <span class="header">All users</span>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <span class="count">923 users</span>
+                                                    </div>
+                                                    <div class="col-6 pr-0">
+                                                        <div class="dropdown dropdown-options">
+                                                            <a href="#" class="btn dropdown-toggle py-0" data-toggle="dropdown" id="option-filter">
+                                                                Options
+                                                            </a>
+                                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="option-filter">
+                                                                <button class="dropdown-item disabled" type="button">Option A</button>
+                                                                <div class="dropdown-divider"></div>
+                                                                <button class="dropdown-item disabled" type="button">Option B</button>
+                                                                <div class="dropdown-divider"></div>
+                                                                <button class="dropdown-item" type="button">Option C</button>
+                                                                <button class="dropdown-item" type="button">Option B</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="filters-list">
+                                                    <div class="item cloneable-row">
+                                                        <span class="description">
+                                                            <strong class="filter-name"></strong>
+                                                            <span class="condition"></span>
+                                                            <strong class="value"></strong>
+                                                        </span>
+
+                                                        <i class="fas fa-times remove"></i>
+                                                    </div>
+                                                </div>
+                                                <button class="btn-filter">
+                                                    <i class="fas fa-plus mr-1"></i>
+                                                    Add filter
+                                                </button>
+                                            </div>
+
+                                            <div class="action-buttons">
+                                                <button class="Button secondary mr-2 btn-save">Save</button>
+                                                <button class="Button btn-reset">Reset</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="screen select-filters-container d-none">
+                                            <button class="btn-back" value="main"><i class="fas fa-angle-left mr-2"></i> Back</button>
+
+                                            <div class="filters">
+                                                <span class="header">Most Used Properties</span>
+                                                <span type="text" class="item">First Name</span>
+                                                <span type="text" class="item">Last Name</span>
+
+                                                <span class="header">All Properties</span>
+                                                <span type="date" class="item">Birthday</span>
+                                                <span type="date" class="item">Employment date</span>
+                                                <span type="text" class="item">Hair colour</span>
+                                                <span type="text" class="item">Eye colour</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="screen select-filters-value d-none">
+                                            <button class="btn-back" value="select-filters-container">
+                                                <i class="fas fa-angle-left mr-2"></i> Back
+                                            </button>
+
+                                            <div class="option-selected">
+                                                <span class="title">First Name</span>
+                                                <span class="description">Some description here. This is optional text</span>
+                                            </div>
+
+                                            <div class="options">
+                                                <div class="item">
+                                                    <div class="RadioButton">
+                                                        <input
+                                                            class="form-check-input choice"
+                                                            type="radio"
+                                                            name="filter-options"
+                                                            id="is"
+                                                            value="is"
+                                                        />
+                                                        <label for="is">
+                                                            is
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="selector d-none">
+                                                        <input type="text" class="Input query-value text" placeholder="Placeholder text goes here" />
+                                                        <input type="text" class="Input query-value date d-none" data-toggle="datepicker" readonly />
+                                                    </div>
+                                                </div>
+
+                                                <div class="item">
+                                                    <div class="RadioButton">
+                                                        <input
+                                                            class="form-check-input choice"
+                                                            type="radio"
+                                                            name="filter-options"
+                                                            id="is-equal-to"
+                                                            value="is equal to"
+                                                        />
+                                                        <label for="is-equal-to">
+                                                            is equal to
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="selector d-none">
+                                                        <select class="ui fluid dropdown Select query-value">
+                                                            <option value="">Selectable option here</option>
+                                                            <option value="Option A">Option A</option>
+                                                            <option value="Option B">Option B</option>
+                                                            <option value="Option C">Option C</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="item date d-none">
+                                                    <div class="RadioButton">
+                                                        <input
+                                                            class="form-check-input choice"
+                                                            type="radio"
+                                                            name="filter-options"
+                                                            id="is-before"
+                                                            value="is before"
+                                                        />
+                                                        <label for="is-before">
+                                                            is before
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="selector d-none">
+                                                        <input type="text" class="Input query-value" data-toggle="datepicker" readonly />
+                                                    </div>
+                                                </div>
+
+                                                <div class="item date d-none">
+                                                    <div class="RadioButton">
+                                                        <input
+                                                            class="form-check-input choice"
+                                                            type="radio"
+                                                            name="filter-options"
+                                                            id="is-after"
+                                                            value="is after"
+                                                        />
+                                                        <label for="is-after">
+                                                            is after
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="selector d-none">
+                                                        <input type="text" class="Input query-value" data-toggle="datepicker" readonly />
+                                                    </div>
+                                                </div>
+
+                                                <div class="item">
+                                                    <div class="RadioButton">
+                                                        <input
+                                                            class="form-check-input choice"
+                                                            type="radio"
+                                                            name="filter-options"
+                                                            id="is-known"
+                                                            value="is"
+                                                        />
+                                                        <label for="is-known">
+                                                            is known
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="selector d-none">
+                                                        <input type="hidden" class="query-value" value="Known" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="item">
+                                                    <div class="RadioButton">
+                                                        <input
+                                                            class="form-check-input choice"
+                                                            type="radio"
+                                                            name="filter-options"
+                                                            id="is-not-known"
+                                                            value="is"
+                                                        />
+                                                        <label for="is-not-known">
+                                                            is not known
+                                                        </label>
+                                                    </div>
+                                                    <div class="selector d-none">
+                                                        <input type="hidden" class="query-value" value="Not Known" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <button class="Button primary btn-apply-filter">
+                                                Apply filter
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="table-panel panel">
+                                    <div class="Datatable-2" id="datatable">
+                                        <table class="table" id="basictable-checkbox-1">
+                                            <thead>
+                                                <tr>
+                                                    <th class="square no-sort" style="width: 10px;">
+                                                        <div class="Checkbox">
+                                                            <label>
+                                                                <input type="checkbox" name="checkbox[]" />
+                                                                <span class="mx-auto"></span>
+                                                            </label>
+                                                        </div>
+                                                    </th>
+                                                    <th class="normal-column">
+                                                        <div class="d-flex">
+                                                            <span>COLUMN #1</span>
+                                                            <div class="sorting-icons ml-2">
+                                                                <i class="fas fa-caret-up asc"></i>
+                                                                <i class="fas fa-caret-down desc"></i>
+                                                            </div>
+                                                        </div>
+                                                    </th>
+                                                    <th class="normal-column">
+                                                        <div class="d-flex">
+                                                            <span>COLUMN #2</span>
+                                                            <div class="sorting-icons ml-2">
+                                                                <i class="fas fa-caret-up asc"></i>
+                                                                <i class="fas fa-caret-down desc"></i>
+                                                            </div>
+                                                        </div>
+                                                    </th>
+                                                    <th class="normal-column">
+                                                        <div class="d-flex">
+                                                            <span>COLUMN #3</span>
+                                                            <div class="sorting-icons ml-2">
+                                                                <i class="fas fa-caret-up asc"></i>
+                                                                <i class="fas fa-caret-down desc"></i>
+                                                            </div>
+                                                        </div>
+                                                    </th>
+                                                    <th class="normal-column">
+                                                        <div class="d-flex">
+                                                            <span>COLUMN #4</span>
+                                                            <div class="sorting-icons ml-2">
+                                                                <i class="fas fa-caret-up asc"></i>
+                                                                <i class="fas fa-caret-down desc"></i>
+                                                            </div>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="clone-for-demo">
+                                                    <td class="square">
+                                                        <div class="Checkbox">
+                                                            <label>
+                                                                <input type="checkbox" name="checkbox[]" />
+                                                                <span class="mx-auto"></span>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                    <td style="width: 160px;"><a href="#" class="link">A clickable label</a></td>
+                                                    <td style="width: 160px;">Standard label</td>
+                                                    <td>
+                                                        Standard label standard label standard label standard label standard label
+                                                    </td>
+                                                    <td style="width: 160px;">Standard label</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="filters-panel panel d-none">
+                                    <div class="FiltersContainer" style="margin-top: 50px;">
+                                        <div class="row">
+                                            <div class="col-12 col-md-4 column">
+                                                <div class="item">
+                                                    <span class="title">Standard</span>
+                                                    <ul class="list">
+                                                        <li>All Users</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4 column px-0">
+                                                <div class="item">
+                                                    <span class="title">Created by me</span>
+                                                    <ul class="list">
+                                                        <li>New employees</li>
+                                                        <li>Admins with red hard</li>
+                                                        <li>People with a birthday this month</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4 column">
+                                                <div class="item">
+                                                    <span class="title">Created by others</span>
+                                                    <ul class="list">
+                                                        <li>India based managers</li>
+                                                        <li>Franchisees without insurance</li>
+                                                        <li>Employed for more than 2 years</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== FOOTER ===== -->
+            <div class="Footer">
+                <p class="text">© Werkly. All rights reserved 2020.</p>
+            </div>
+        </div>
+
+        <!-- Vendor JS -->
+        <script src="./vendors/jquery/jquery.min.js"></script>
+        <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="./vendors/datatables/datatables.min.js"></script>
+        <script src="./vendors/datepicker/datepicker.min.js"></script>
+        <script src="./vendors/semantic-ui/transition.min.js"></script>
+        <script src="./vendors/semantic-dropdown/dropdown.min.js"></script>
+
+        <!-- Custom JS -->
+        <script src="./resources/js/TableFilter.js"></script>
+        <script src="./resources/js/main.js"></script>
+
+        <script>
+            initializePage();
+            initializeLayout14();
+        </script>
+    </body>
+</html>

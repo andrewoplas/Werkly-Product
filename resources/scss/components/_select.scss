@@ -1,0 +1,89 @@
+@mixin select {
+    width: 100%;
+    min-height: 30px !important;
+    border-radius: 4px;
+    padding: 8px 10px !important;
+    border: 1px solid $gray-3 !important;
+    font-family: $secondary-font;
+    font-weight: normal;
+    font-size: 14px;
+    color: $dark;
+    outline: 0 !important;
+
+    &.active {
+        border-color: $dark !important;
+    }
+
+    .default.text {
+        font-family: $secondary-font;
+        font-weight: normal;
+        font-size: 14px !important;
+        color: $dark !important;
+        margin: 0 !important;
+    }
+
+    .menu {
+        border-color: $dark !important;
+
+        & > .item {
+            font-family: $secondary-font !important;
+            font-size: 14px !important;
+            color: $dark !important;
+            padding: 8px 10px !important;
+
+            &:hover {
+                background-color: $dark;
+                color: white !important;
+            }
+        }
+    }
+
+    &:focus {
+        border-color: $dark;
+    }
+
+    &::placeholder {
+        font-family: $secondary-font;
+        font-weight: 300;
+        font-size: 14px;
+        color: $gray-4;
+    }
+
+    &:disabled {
+        background-color: $gray-1;
+    }
+}
+
+select.Select,
+.fluid.Select {
+    @include select;
+}
+
+.fluid.SelectMultiple {
+    @include select;
+
+    .menu .item:hover {
+        background-color: $secondary-color;
+        color: white !important;
+    }
+
+    .label {
+        background-color: $secondary-color;
+        border-radius: 4px;
+        color: white !important;
+        border: 0 !important;
+    }
+
+    .delete.icon {
+        cursor: pointer;
+        margin-right: 0;
+        margin-left: 15px;
+        font-weight: bold;
+        font-size: 18px;
+        font-style: unset;
+
+        &:before {
+            content: "x";
+        }
+    }
+}

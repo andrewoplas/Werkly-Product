@@ -1,0 +1,113 @@
+.Comment {
+    @include flex(center, stretch);
+    min-height: 70px;
+    flex-wrap: wrap;
+
+    .user-information {
+        margin-right: 10px;
+
+        .online-indicator {
+            height: 2px;
+            width: 100%;
+            margin-top: 5px;
+            background-color: $secondary-color;
+            display: none;
+        }
+    }
+
+    .comment-input {
+        width: auto;
+        margin-right: 10px;
+        flex: 1;
+    }
+
+    .action-buttons {
+        @include flex(flex-start, flex-end, column);
+        flex-shrink: 0;
+
+        & > *:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .send,
+        .attach {
+            flex-shrink: 0;
+        }
+    }
+
+    .comment-details {
+        flex-basis: calc(100% - 20px - 30px - 30px);
+        margin-top: 5px;
+        @include flex(space-between, flex-start);
+
+        .attachments {
+            @include flex(flex-start, center);
+            flex-wrap: wrap;
+            flex: 3;
+
+            @include media-breakpoint-down(sm) {
+                flex: 2;
+            }
+
+            .item {
+                margin-right: 25px;
+                width: 100px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                line-height: 1;
+
+                .icon {
+                    margin-right: 5px;
+                    font-size: 10px;
+                }
+
+                span {
+                    font-family: $secondary-font;
+                    font-size: 11px;
+                    font-weight: 300;
+                    color: $gray-4;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+
+        .time-ago {
+            flex: 1;
+            font-family: $secondary-font;
+            font-size: 11px;
+            font-weight: 300;
+            text-align: right;
+            color: $gray-4;
+
+            @include media-breakpoint-down(sm) {
+                flex: 2;
+            }
+        }
+    }
+}
+
+.Comment.active {
+    .user-information {
+        .online-indicator {
+            display: block;
+        }
+    }
+
+    .comment-input {
+        background-color: $secondary-color-light;
+        pointer-events: none;
+
+        &::placeholder {
+            font-family: $primary-font;
+            font-weight: normal;
+            font-size: 14px;
+            color: $dark !important;
+        }
+    }
+}
+
+.Comment.reply {
+    margin-top: 10px;
+    margin-left: 40px;
+}

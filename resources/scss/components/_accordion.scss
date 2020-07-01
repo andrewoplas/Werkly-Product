@@ -1,0 +1,136 @@
+@mixin dd-handle {
+    .dd-handle {
+        position: relative;
+        height: 45px;
+        width: 100%;
+        padding: 0 20px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        background: $gray-2;
+        border: 1px solid $gray-3;
+
+        cursor: pointer;
+        @include flex(flex-start, center);
+
+        &:hover {
+            color: $dark;
+            opacity: 0.7;
+            transition: 100ms;
+        }
+
+        .name {
+            margin: 0;
+            font-family: $primary-font;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+}
+
+@mixin item-container {
+    .item-container {
+        position: absolute;
+        height: 45px;
+        top: 0;
+        right: 27px;
+        z-index: 100;
+        @include flex(flex-start, center);
+
+        .action-button {
+            padding: 5px;
+            font-size: 18px;
+        }
+
+        .fa-angle-right {
+            margin-left: 0;
+            font-size: 18px;
+        }
+    }
+}
+
+@mixin dd-item {
+    .dd-item {
+        position: relative;
+
+        [data-action="expand"] {
+            display: none;
+            z-index: 200;
+        }
+
+        [data-action="collapse"] {
+            display: block;
+            z-index: 200;
+        }
+
+        &.dd-collapsed {
+            [data-action="expand"] {
+                display: block;
+            }
+
+            [data-action="collapse"] {
+                display: none;
+            }
+        }
+
+        &.selected {
+            .dd-handle {
+                background-color: $gray-1 !important;
+
+                .name {
+                    font-weight: bold !important;
+                }
+            }
+        }
+
+        & > button {
+            width: 30px;
+            height: 30px;
+            margin: 0;
+            position: absolute;
+            right: 15px;
+            top: 8px;
+            float: none;
+            font-size: 18px;
+            text-indent: 0;
+            z-index: 199;
+        }
+
+        & > ol {
+            .dd-handle {
+                background: white !important;
+            }
+
+            .name {
+                font-weight: normal !important;
+            }
+        }
+
+        &:has(.dd-list) {
+            .fa-angle-right {
+                display: none !important;
+            }
+        }
+    }
+}
+
+.Accordion {
+    max-width: 100%;
+
+    @include dd-handle;
+
+    @include item-container;
+
+    @include dd-item;
+
+    [data-action] {
+        outline: 0 !important;
+    }
+}
+
+.dd-dragel {
+    @include dd-handle;
+
+    @include item-container;
+
+    @include dd-item;
+}
