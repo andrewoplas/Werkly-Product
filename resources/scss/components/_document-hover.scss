@@ -7,8 +7,8 @@ $border-width: 60px;
     &:not(.no-hover):hover {
         .image-container {
             .image {
-                border-bottom: solid $border-width transparent;
-                transition: border-bottom 250ms ease-out;
+                transition: background-position 250ms ease-out;
+                background-position: center -50px !important;
             }
 
             .action-items {
@@ -19,10 +19,15 @@ $border-width: 60px;
         }
     }
 
+    &.white-box {
+        background-color: white;
+        border-radius: 4px;
+        padding: 20px;
+    }
+
     .image-container {
         min-height: 220px;
         max-height: 250px;
-        // min-width: 185px;
         width: 100%;
         position: relative;
 
@@ -32,12 +37,12 @@ $border-width: 60px;
             position: absolute;
             top: 0;
             right: 0;
-            background-image: url("../images/login-left-graphic.png");
+            background-image: url("../images/document-hover.png");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            border-bottom: solid 0 transparent;
-            transition: border-bottom 250ms ease-in;
+            transition: background-position 250ms ease-in;
+            border-radius: 4px;
         }
 
         .action-items {
@@ -47,16 +52,19 @@ $border-width: 60px;
             position: absolute;
             background-color: $dark;
             bottom: 0;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
 
             max-height: 0;
             transition: 250ms ease-in;
             overflow: hidden;
 
-            @include flex(space-between, center);
+            @include flex(center, center);
             flex-wrap: wrap;
 
-            &.center {
-                @include flex(center, center);
+            .btn-view {
+                padding: 6px 24px;
+                margin-right: 5px;
             }
         }
     }
@@ -69,5 +77,6 @@ $border-width: 60px;
         line-height: 24px;
         font-weight: bold;
         color: $dark;
+        text-align: center;
     }
 }

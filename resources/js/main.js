@@ -174,8 +174,6 @@ function initializeLayout1() {
         $(".ui.dropdown").dropdown();
         tippy(".Tooltip", { maxWidth: 160 });
 
-        CKEDITOR.replace("editor1");
-
         // Switch display value
         $(".Switch input").on("change", function () {
             const isChecked = $(this).is(":checked");

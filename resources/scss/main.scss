@@ -36,18 +36,20 @@
 @import "./components/task";
 @import "./components/activity-log";
 @import "./components/setup-wizard";
-@import "./components/wysiwyg";
+@import "./components/link";
 @import "./components/datatable2";
 @import "./components/table-filter";
 @import "./components/filters-container";
 @import "./components/advance-table";
+@import "./components/form-error";
+@import "./components/colorpicker";
 
 * {
     font-family: $primary-font;
 }
 
 body {
-    background-color: $gray-1;
+    background-color: $screen-background;
     min-height: 100vh;
     min-width: 100%;
     overflow-x: hidden;
@@ -89,4 +91,16 @@ p.normal-text {
 
 .mb-30 {
     margin-bottom: 30px;
+}
+
+.grid-10 {
+    &.row {
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+    }
+
+    & > div {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }

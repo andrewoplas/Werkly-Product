@@ -2,8 +2,8 @@
     width: 100%;
     min-height: 30px !important;
     border-radius: 4px;
-    padding: 8px 10px !important;
-    border: 1px solid $gray-3 !important;
+    padding: 11px 10px !important;
+    border: 1px solid $gray-5 !important;
     font-family: $secondary-font;
     font-weight: normal;
     font-size: 14px;
@@ -52,6 +52,17 @@
     &:disabled {
         background-color: $gray-1;
     }
+
+    .dropdown.icon::before {
+        content: "\f107";
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 300;
+        font-size: 15px;
+        display: inline-block;
+        padding-right: 3px;
+        vertical-align: middle;
+        border: 0;
+    }
 }
 
 select.Select,
@@ -61,6 +72,8 @@ select.Select,
 
 .fluid.SelectMultiple {
     @include select;
+    min-height: 38px !important;
+    padding: 4px !important;
 
     .menu .item:hover {
         background-color: $secondary-color;
@@ -68,10 +81,14 @@ select.Select,
     }
 
     .label {
+        padding: 7px 10px !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        font-size: 10px !important;
         background-color: $secondary-color;
         border-radius: 4px;
         color: white !important;
-        border: 0 !important;
+        box-shadow: none !important;
     }
 
     .delete.icon {
@@ -79,7 +96,7 @@ select.Select,
         margin-right: 0;
         margin-left: 15px;
         font-weight: bold;
-        font-size: 18px;
+        font-size: 10px;
         font-style: unset;
 
         &:before {

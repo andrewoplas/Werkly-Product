@@ -1,13 +1,20 @@
-@mixin checkbox-after($content, $margin-top) {
-    content: url($content);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@mixin checkbox-before($content, $margin-top) {
+    content: "\f00c";
     margin-top: $margin-top;
     height: 100%;
+    font-family: "Font Awesome 5 Pro";
+    color: white;
+    border-radius: 4px;
+    @include flex(center, center);
 }
 
 .Checkbox {
+    &[disabled],
+    &.disabled {
+        opacity: 0.3;
+        pointer-events: none;
+    }
+
     label {
         @include flex(flex-start, center);
         max-width: 200px;
@@ -15,6 +22,7 @@
         font-size: 14px;
         font-weight: normal;
         margin-bottom: 0;
+        cursor: pointer;
 
         &::selection {
             color: none;
@@ -34,18 +42,23 @@
             margin-right: 10px;
             height: 18px;
             width: 18px;
-            border: 1px solid $dark;
             display: inline-block;
             position: relative;
             flex-shrink: 0;
+            background-color: #e9e9e9;
+            border-radius: 4px;
+        }
+
+        [type="checkbox"]:checked + span {
+            background-color: $primary-color !important;
         }
 
         [type="checkbox"]:checked + span:before {
-            @include checkbox-after("../images/check.svg", 1px);
+            @include checkbox-before("../images/check.svg", 1px);
         }
 
         [type="checkbox"].minus:checked + span:before {
-            @include checkbox-after("../images/minus.svg", 2px);
+            @include checkbox-before("../images/minus.svg", 0);
         }
     }
 }

@@ -1,0 +1,23 @@
+.ColorPicker {
+    max-width: 200px;
+    position: relative;
+
+    .value {
+        width: 20px;
+        height: 20px;
+        display: block;
+        border-radius: 4px;
+    }
+
+    input {
+        padding-right: 40px;
+    }
+
+    .icon {
+        position: absolute;
+        font-size: 16px;
+        color: #444;
+        top: 12px;
+        right: 15px;
+    }
+}

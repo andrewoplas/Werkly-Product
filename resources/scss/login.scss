@@ -16,39 +16,37 @@
     }
 
     .form {
+        @include flex(center, center, column);
         padding: 40px 40px 0;
+        margin-bottom: 20px;
 
         @include media-breakpoint-down(sm) {
             padding: 0 20px 0;
         }
 
         .logo {
-            width: 264px;
-            position: absolute;
-            right: 40px;
-            align-self: flex-start;
-
-            @include media-breakpoint-down(sm) {
-                width: 240px;
-                position: relative;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: 30px;
-                right: 0;
-            }
+            width: 160px;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 40px;
         }
 
         form {
             width: 100%;
 
             .forgot-password-link {
-                color: $dark;
+                color: $primary-color;
+                font-weight: normal;
+            }
+
+            .label {
+                font-weight: 400;
+            }
+
+            button {
+                font-weight: bold;
             }
         }
     }
-}
-
-.Footer {
-    position: absolute;
-    bottom: 0;
 }

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Werkly</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+
+        <!-- Vendor CSS -->
+        <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.min.css" />
+
+        <link rel="stylesheet" href="./vendors/semantic-ui/transition.min.css" />
+        <link rel="stylesheet" href="./vendors/semantic-dropdown/dropdown.css" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="./resources/css/main.css" />
+    </head>
+
+    <body>
+        <div class="MainContent">
+            <div class="row">
+                <div class="col-12 mb-30">
+                    <div class="ContentBox no-min-height">
+                        <div class="box-header">
+                            <h4 class="box-title full-width-on-mobile">
+                                This is a header
+                                <button class="Button icon ellipsis d-inline-block d-sm-none ml-2">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </h4>
+                            <div class="action-items">
+                                <ul class="nav nav-tabs tabs" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#tab-2-1" role="tab">Tab Label</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#tab-2-2" role="tab">Tab Label</a>
+                                    </li>
+                                </ul>
+                                <button class="Button primary mr-0 mr-sm-4 main-button">Tab Label</button>
+                                <button class="Button icon ellipsis d-none d-sm-block">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-5 col-lg-4 col-xl-3 mb-30 mb-lg-0">
+                    <div class="ContentBox same-padding w-100">
+                        <div class="ButtonCluster">
+                            <button class="item selected">
+                                Basic Inputs
+                                <i class="arrow fal fa-angle-right"></i>
+                            </button>
+                            <button class="item">
+                                Menu item label
+                                <i class="arrow fal fa-angle-right"></i>
+                            </button>
+                            <button class="item">
+                                Menu item label
+                                <i class="arrow fal fa-angle-right"></i>
+                            </button>
+                            <button class="item">
+                                Menu item label
+                                <i class="arrow fal fa-angle-right"></i>
+                            </button>
+                            <button class="item">
+                                Menu item label
+                                <i class="arrow fal fa-angle-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-7 col-lg-8 col-xl-9">
+                    <div class="ContentBox mb-30">
+                        <div class="box-header">
+                            <h4 class="box-title full-width-on-mobile">
+                                This is a header
+                                <button class="Button icon ellipsis d-inline-block d-sm-none ml-2">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </h4>
+                            <div class="action-items">
+                                <button class="Button icon ellipsis d-none d-sm-block">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <hr />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vendor JS -->
+        <script src="https://kit.fontawesome.com/8c9c5e8e6e.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+
+        <script src="./vendors/jquery/jquery.min.js"></script>
+        <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Custom JS -->
+        <script src="./resources/js/main.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                initializeButtonsInputs();
+            });
+        </script>
+    </body>
+</html>

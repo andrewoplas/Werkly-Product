@@ -1,4 +1,10 @@
 .RadioButton {
+    &[disabled],
+    &.disabled {
+        opacity: 0.3;
+        pointer-events: none;
+    }
+
     label {
         @include flex(stretch, center);
         font-family: $primary-font;
@@ -6,6 +12,7 @@
         font-weight: normal;
         margin-left: 10px;
         margin: 0;
+        cursor: pointer;
     }
 
     /* completely hiding radio button */
@@ -17,21 +24,25 @@
     input[type="radio"] + label:before {
         content: "";
         /* create custom radiobutton appearance */
-        display: inline-block;
+        @include flex(center, center);
         width: 18px;
         height: 18px;
-        padding: 3px;
         margin-right: 10px;
         /* background-color only for content */
         background-clip: content-box;
-        border: 1px solid $dark;
-        background-color: white;
+        background-color: #e9e9e9;
         border-radius: 50%;
+        line-height: 0;
     }
 
     /* appearance of checked radiobutton */
     input[type="radio"]:checked + label:before {
-        background-color: $dark;
+        content: "\f111";
+        font-family: "Font Awesome 5 Pro";
+        font-size: 0.55rem;
+        font-weight: 900;
+        color: white;
+        background-color: $primary-color;
     }
 
     /* optional styles for centering radiobuttons */
