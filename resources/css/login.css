@@ -790,6 +790,9 @@
 .ContentBox.no-min-height {
   min-height: 0;
 }
+.ContentBox.h-100 {
+  height: 300px;
+}
 .ContentBox .box-header {
   min-height: 45px;
   flex-wrap: wrap;
@@ -859,7 +862,7 @@
   font-family: "Nunito", sans-serif;
   font-size: 14px;
   font-weight: normal;
-  color: #444;
+  color: #bbbbbb;
   text-align: center;
 }
 .ContentBox .box-header .action-items .tabs li a.active {
@@ -868,6 +871,31 @@
 }
 @media (max-width: 575.98px) {
   .ContentBox .box-header .action-items .tabs {
+    margin-right: 0;
+  }
+}
+.ContentBox .box-header .action-items.with-input {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+.ContentBox .box-header .action-items.with-input .InputIcon {
+  margin-right: 10px;
+}
+.ContentBox .box-header .action-items.with-input .Select {
+  width: 265px;
+  margin-right: 10px;
+}
+@media (max-width: 767.98px) {
+  .ContentBox .box-header .action-items.with-input .InputIcon {
+    width: 100%;
+    margin-top: 0;
+    margin-right: 0;
+  }
+  .ContentBox .box-header .action-items.with-input .Select {
+    width: 100%;
+    margin-top: 10px;
     margin-right: 0;
   }
 }
@@ -3123,6 +3151,442 @@ select.Select .dropdown.icon::before,
   color: #444;
   top: 12px;
   right: 15px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.AdvanceList .filter-configuration-panel {
+  width: 30%;
+  margin-bottom: 20px;
+  transition: 300ms;
+}
+.AdvanceList .filter-configuration-panel:not(.shown) {
+  width: 0;
+  transition: ease-in 300ms;
+}
+.AdvanceList .filter-configuration-panel:not(.shown) + .panel {
+  width: 100% !important;
+  transition: ease-in 300ms;
+}
+.AdvanceList .filter-configuration-panel:not(.shown) .ListFilter {
+  opacity: 0;
+  transition: 200ms;
+}
+.AdvanceList .filter-configuration-panel.shown {
+  padding: 0 15px;
+}
+.AdvanceList .filter-configuration-panel.shown .ListFilter {
+  animation: fadeIn ease-in 500ms;
+}
+.AdvanceList .list-panel {
+  z-index: 999;
+  padding: 0 15px;
+  width: 70%;
+  transition: 300ms;
+}
+.AdvanceList .list-panel .header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2e2e2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.AdvanceList .list-panel .header .btn-show-filter {
+  min-height: 35px;
+}
+.AdvanceList .list-panel .header .search-filter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.AdvanceList .list-panel .header .search-filter .search-input {
+  position: relative;
+  margin-right: 20px;
+  flex: 1;
+}
+.AdvanceList .list-panel .header .search-filter .search-input input {
+  width: 100%;
+  padding: 6px 15px;
+  padding-right: 45px;
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #444;
+  background-color: #f7f7f7;
+  border-radius: 4px;
+  border: 1px solid #e2e2e2 !important;
+  outline: none !important;
+}
+.AdvanceList .list-panel .header .search-filter .search-input input::placeholder {
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #bbbbbb;
+}
+.AdvanceList .list-panel .header .search-filter .search-input .icon {
+  position: absolute;
+  color: #bbbbbb;
+  top: 10px;
+  right: 15px;
+  font-size: 13px;
+}
+.AdvanceList .list-panel .list .item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+.AdvanceList .list-panel .list .item .icon {
+  width: 33px;
+  height: 33px;
+  margin-right: 20px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.AdvanceList .list-panel .list .item .icon.red {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #ff0000;
+}
+.AdvanceList .list-panel .list .item .icon.green {
+  background-color: rgba(0, 208, 14, 0.1);
+  color: #00d00e;
+}
+.AdvanceList .list-panel .list .item .icon.purple {
+  background-color: rgba(244, 91, 255, 0.1);
+  color: #f45bff;
+}
+.AdvanceList .list-panel .list .item .icon.violet {
+  background-color: rgba(97, 85, 255, 0.1);
+  color: #6155ff;
+}
+.AdvanceList .list-panel .list .item .details {
+  flex: 1;
+  margin-right: 15px;
+}
+.AdvanceList .list-panel .list .item .details .title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #00a6ed;
+}
+.AdvanceList .list-panel .list .item .details .description {
+  margin: 0;
+  font-size: 11px;
+  color: #bbbbbb;
+}
+.AdvanceList .list-panel .list .item .time {
+  margin-left: auto;
+  font-size: 11px;
+  color: #bbbbbb;
+}
+.AdvanceList .list-panel .btn-show-more {
+  margin-top: 20px;
+  background-color: white;
+  border: 0;
+  outline: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.AdvanceList .list-panel .btn-show-more .icon {
+  color: #00a6ed;
+}
+.AdvanceList .list-panel .btn-show-more span {
+  margin-left: 10px;
+  color: #00a6ed;
+  font-size: 14px;
+  font-weight: bold;
+}
+@media (max-width: 1199.98px) {
+  .AdvanceList .filter-configuration-panel {
+    width: 30%;
+  }
+  .AdvanceList .list-panel {
+    width: 70%;
+  }
+}
+@media (max-width: 991.98px) {
+  .AdvanceList .filter-configuration-panel {
+    width: 100%;
+  }
+  .AdvanceList .list-panel {
+    width: 100%;
+  }
+}
+
+.ListFilter .list-select {
+  margin-bottom: 18px;
+  background-color: #f7f7f7 !important;
+}
+.ListFilter .main .border {
+  padding: 10px 20px;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+}
+.ListFilter .main .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.ListFilter .main .header-container span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+}
+.ListFilter .main .header-container button {
+  margin-right: -15px;
+}
+.ListFilter .main .filters-list {
+  margin-top: 10px;
+}
+.ListFilter .main .filters-list .item {
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  background-color: #eeeeee;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  flex-direction: row;
+}
+.ListFilter .main .filters-list .item.cloneable-row {
+  display: none;
+}
+.ListFilter .main .filters-list .item .description {
+  margin-right: 10px;
+}
+.ListFilter .main .filters-list .item .remove {
+  margin-left: auto;
+  cursor: pointer;
+}
+.ListFilter .main .btn-filter {
+  padding: 4px 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #00a6ed;
+  background-color: white;
+  border: 0;
+  outline: 0;
+}
+.ListFilter .main .action-buttons {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  display: none;
+}
+.ListFilter .main .action-buttons button {
+  font-weight: bold;
+}
+.ListFilter .main .action-buttons .btn-save {
+  border-color: #7fb800;
+  color: #7fb800;
+}
+.ListFilter .select-filters-container .filters {
+  max-height: 400px;
+  margin-top: 15px;
+  overflow-y: auto;
+}
+.ListFilter .select-filters-container .filters .header {
+  display: block;
+  padding: 8px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #444;
+}
+.ListFilter .select-filters-container .filters .item {
+  display: block;
+  padding: 8px 10px;
+  font-size: 14px;
+  color: #444;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.ListFilter .select-filters-container .filters .item:hover {
+  background-color: #f7f7f7;
+}
+.ListFilter .select-filters-value .options {
+  padding: 15px 0;
+}
+.ListFilter .select-filters-value .options > .item {
+  margin-bottom: 10px;
+  padding-left: 15px;
+}
+.ListFilter .select-filters-value .options > .item .selector {
+  margin-top: 7px;
+}
+.ListFilter .select-filters-value .option-selected {
+  margin-top: 23px;
+  padding-left: 15px;
+}
+.ListFilter .select-filters-value .option-selected .title {
+  display: block;
+  font-weight: bold;
+}
+.ListFilter .select-filters-value .option-selected .description {
+  display: block;
+  font-size: 12px;
+  opacity: 0.8;
+}
+.ListFilter .select-filters-value .btn-apply-filter {
+  display: none;
+  margin-left: 15px;
+}
+.ListFilter .btn-back {
+  padding: 0;
+  border: 0;
+  background-color: white;
+  color: #444;
+  font-size: 14px;
+  font-weight: bold;
+  outline: 0;
+}
+
+.UserCard {
+  padding: 20px;
+  background-color: white;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  flex-direction: row;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+}
+.UserCard .Avatar {
+  width: 95px;
+  height: 95px;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+.UserCard .user-details {
+  flex: 1;
+}
+.UserCard .user-details .main-information {
+  display: flex;
+  flex-wrap: wrap;
+}
+.UserCard .user-details .main-information .name-position {
+  margin-right: 20px;
+}
+.UserCard .user-details .main-information .name-position .name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+}
+.UserCard .user-details .main-information .name-position .position {
+  margin: 0;
+  margin-top: -2px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #bbbbbb;
+}
+.UserCard .user-details .main-information .badges {
+  margin-top: 2px;
+}
+.UserCard .user-details .main-information .badges .shield {
+  margin-right: 3px;
+  color: #ff0000;
+}
+.UserCard .user-details .main-information .badges .grin {
+  margin-right: 3px;
+  color: #6155ff;
+}
+.UserCard .user-details .main-information .badges .star {
+  margin-right: 3px;
+  color: #b9e73e;
+}
+.UserCard .user-details .main-information .badges .megaphone {
+  color: #00d00e;
+}
+.UserCard .user-details .contact-information {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.UserCard .user-details .contact-information .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.UserCard .user-details .contact-information .item .icon {
+  font-size: 14px;
+  color: #bbbbbb;
+  margin-right: 5px;
+}
+.UserCard .user-details .contact-information .item span {
+  font-size: 14px;
+  color: #bbbbbb;
+  line-height: 0;
+}
+.UserCard button {
+  margin-left: auto;
+  flex-shrink: 0;
+  color: #bbbbbb !important;
+  border: 0 !important;
+  align-self: flex-start;
+}
+
+.Contact .image {
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/contact-image.png");
+  background-position: center;
+  background-size: cover;
 }
 
 * {

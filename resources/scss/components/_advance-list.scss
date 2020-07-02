@@ -1,0 +1,190 @@
+@import "../abstracts/animation";
+
+$animationDuration: 300ms;
+
+.AdvanceList {
+    .filter-configuration-panel {
+        width: 30%;
+        margin-bottom: 20px;
+        transition: $animationDuration;
+
+        &:not(.shown) {
+            width: 0;
+            transition: ease-in $animationDuration;
+
+            & + .panel {
+                width: 100% !important;
+                transition: ease-in $animationDuration;
+            }
+
+            .ListFilter {
+                opacity: 0;
+                transition: 200ms;
+            }
+        }
+
+        &.shown {
+            padding: 0 15px;
+
+            .ListFilter {
+                animation: fadeIn ease-in 500ms;
+            }
+        }
+    }
+
+    .list-panel {
+        z-index: 999;
+        padding: 0 15px;
+        width: 70%;
+        transition: 300ms;
+
+        .header {
+            padding-bottom: 10px;
+            border-bottom: 1px solid $gray-5;
+            @include flex(space-between, center);
+
+            .btn-show-filter {
+                min-height: 35px;
+            }
+
+            .search-filter {
+                @include flex(flex-start, center);
+
+                .search-input {
+                    position: relative;
+                    margin-right: 20px;
+                    flex: 1;
+
+                    input {
+                        width: 100%;
+                        padding: 6px 15px;
+                        padding-right: 45px;
+                        font-family: $primary-font;
+                        font-size: 12px;
+                        font-weight: 600;
+                        color: $dark;
+                        background-color: $gray-7;
+                        border-radius: 4px;
+                        border: 1px solid $gray-5 !important;
+                        outline: none !important;
+
+                        &::placeholder {
+                            font-family: $primary-font;
+                            font-size: 12px;
+                            font-weight: 500;
+                            color: $gray-6;
+                        }
+                    }
+
+                    .icon {
+                        position: absolute;
+                        color: $gray-6;
+                        top: 10px;
+                        right: 15px;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
+        .list {
+            .item {
+                @include flex(flex-start, center);
+                padding-top: 13px;
+                padding-bottom: 13px;
+
+                .icon {
+                    width: 33px;
+                    height: 33px;
+                    margin-right: 20px;
+                    border-radius: 4px;
+                    flex-shrink: 0;
+                    @include flex(center, center);
+
+                    &.red {
+                        background-color: rgba($color: $red, $alpha: 0.1);
+                        color: $red;
+                    }
+
+                    &.green {
+                        background-color: rgba($color: $green, $alpha: 0.1);
+                        color: $green;
+                    }
+
+                    &.purple {
+                        background-color: rgba($color: $purple, $alpha: 0.1);
+                        color: $purple;
+                    }
+
+                    &.violet {
+                        background-color: rgba($color: $violet, $alpha: 0.1);
+                        color: $violet;
+                    }
+                }
+
+                .details {
+                    flex: 1;
+                    margin-right: 15px;
+
+                    .title {
+                        margin: 0;
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: $primary-color;
+                    }
+
+                    .description {
+                        margin: 0;
+                        font-size: 11px;
+                        color: $gray-6;
+                    }
+                }
+
+                .time {
+                    margin-left: auto;
+                    font-size: 11px;
+                    color: $gray-6;
+                }
+            }
+        }
+
+        .btn-show-more {
+            margin-top: 20px;
+            background-color: white;
+            border: 0;
+            outline: 0;
+            @include flex(center, center);
+
+            .icon {
+                color: $primary-color;
+            }
+
+            span {
+                margin-left: 10px;
+                color: $primary-color;
+                font-size: 14px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        .filter-configuration-panel {
+            width: 30%;
+        }
+
+        .list-panel {
+            width: 70%;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .filter-configuration-panel {
+            width: 100%;
+        }
+
+        .list-panel {
+            width: 100%;
+        }
+    }
+}

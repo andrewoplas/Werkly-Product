@@ -322,3 +322,23 @@ function initializeSidebar() {
         }
     });
 }
+
+function initialize217() {
+    // initialize dropdown
+    $(".ui.dropdown").dropdown();
+
+    $(".btn-show-filter").click(function () {
+        $(".filter-configuration-panel").toggleClass("shown");
+    });
+
+    $(".btn-show-more").click(function () {
+        alert("show more clicked");
+    });
+
+    // List Filters
+    if (initializeListFilterListeners) {
+        initializeListFilterListeners();
+    } else {
+        console.error("Could not find initializeTableFilterListeners method");
+    }
+}

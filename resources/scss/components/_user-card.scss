@@ -1,0 +1,91 @@
+.UserCard {
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    @include flex(stretch, center);
+    @include shadow(0, 0, 10px, 0, rgba(0, 0, 0, 0.05));
+
+    .Avatar {
+        width: 95px;
+        height: 95px;
+        flex-shrink: 0;
+        margin-right: 20px;
+    }
+
+    .user-details {
+        flex: 1;
+
+        .main-information {
+            display: flex;
+            flex-wrap: wrap;
+
+            .name-position {
+                margin-right: 20px;
+
+                .name {
+                    margin: 0;
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: $dark;
+                }
+
+                .position {
+                    margin: 0;
+                    margin-top: -2px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: $gray-6;
+                }
+            }
+
+            .badges {
+                margin-top: 2px;
+                .shield {
+                    margin-right: 3px;
+                    color: $red;
+                }
+                .grin {
+                    margin-right: 3px;
+                    color: $violet;
+                }
+                .star {
+                    margin-right: 3px;
+                    color: $lime-green;
+                }
+                .megaphone {
+                    color: $green;
+                }
+            }
+        }
+
+        .contact-information {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+
+            .item {
+                @include flex(center, center);
+
+                .icon {
+                    font-size: 14px;
+                    color: $gray-6;
+                    margin-right: 5px;
+                }
+
+                span {
+                    font-size: 14px;
+                    color: $gray-6;
+                    line-height: 0;
+                }
+            }
+        }
+    }
+
+    button {
+        margin-left: auto;
+        flex-shrink: 0;
+        color: $gray-6 !important;
+        border: 0 !important;
+        align-self: flex-start;
+    }
+}

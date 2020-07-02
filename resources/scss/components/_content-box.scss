@@ -16,6 +16,10 @@
         min-height: 0;
     }
 
+    &.h-100 {
+        height: 300px;
+    }
+
     .box-header {
         min-height: 45px;
         flex-wrap: wrap;
@@ -82,7 +86,7 @@
                         font-family: $primary-font;
                         font-size: 14px;
                         font-weight: normal;
-                        color: $dark;
+                        color: $gray-6;
                         text-align: center;
 
                         &.active {
@@ -94,6 +98,31 @@
 
                 @include media-breakpoint-down(xs) {
                     margin-right: 0;
+                }
+            }
+
+            &.with-input {
+                @include flex(flex-end, stretch);
+
+                .InputIcon {
+                    margin-right: 10px;
+                }
+                .Select {
+                    width: 265px;
+                    margin-right: 10px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    .InputIcon {
+                        width: 100%;
+                        margin-top: 0;
+                        margin-right: 0;
+                    }
+                    .Select {
+                        width: 100%;
+                        margin-top: 10px;
+                        margin-right: 0;
+                    }
                 }
             }
         }

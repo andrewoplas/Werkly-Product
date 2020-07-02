@@ -1,0 +1,156 @@
+.ListFilter {
+    .list-select {
+        margin-bottom: 18px;
+        background-color: $gray-7 !important;
+    }
+
+    .main {
+        .border {
+            padding: 10px 20px;
+            border: 1px solid $gray-5;
+            border-radius: 4px;
+        }
+
+        .header-container {
+            @include flex(space-between, center);
+
+            span {
+                font-size: 14px;
+                font-weight: bold;
+                color: $dark;
+            }
+
+            button {
+                margin-right: -15px;
+            }
+        }
+
+        .filters-list {
+            margin-top: 10px;
+
+            .item {
+                padding: 8px 10px;
+                margin-bottom: 8px;
+                font-size: 12px;
+                background-color: $gray-1;
+                border: 1px solid $gray-2;
+                border-radius: 4px;
+
+                @include flex(stretch, center);
+
+                &.cloneable-row {
+                    display: none;
+                }
+
+                .description {
+                    margin-right: 10px;
+                }
+
+                .remove {
+                    margin-left: auto;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .btn-filter {
+            padding: 4px 0;
+            font-size: 14px;
+            font-weight: bold;
+            color: $primary-color;
+            background-color: white;
+            border: 0;
+            outline: 0;
+        }
+
+        .action-buttons {
+            margin-top: 20px;
+            @include flex(space-between, center);
+            display: none;
+
+            button {
+                font-weight: bold;
+            }
+
+            .btn-save {
+                border-color: $secondary-color;
+                color: $secondary-color;
+            }
+        }
+    }
+
+    .select-filters-container {
+        .filters {
+            max-height: 400px;
+            margin-top: 15px;
+            overflow-y: auto;
+
+            .header {
+                display: block;
+                padding: 8px 10px;
+                font-size: 15px;
+                font-weight: bold;
+                color: $dark;
+            }
+
+            .item {
+                display: block;
+                padding: 8px 10px;
+                font-size: 14px;
+                color: $dark;
+                border-radius: 4px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $gray-7;
+                }
+            }
+        }
+    }
+
+    .select-filters-value {
+        .options {
+            padding: 15px 0;
+
+            & > .item {
+                margin-bottom: 10px;
+                padding-left: 15px;
+
+                .selector {
+                    margin-top: 7px;
+                }
+            }
+        }
+
+        .option-selected {
+            margin-top: 23px;
+            padding-left: 15px;
+
+            .title {
+                display: block;
+                font-weight: bold;
+            }
+
+            .description {
+                display: block;
+                font-size: 12px;
+                opacity: 0.8;
+            }
+        }
+
+        .btn-apply-filter {
+            display: none;
+            margin-left: 15px;
+        }
+    }
+
+    .btn-back {
+        padding: 0;
+        border: 0;
+        background-color: white;
+        color: $dark;
+        font-size: 14px;
+        font-weight: bold;
+        outline: 0;
+    }
+}
