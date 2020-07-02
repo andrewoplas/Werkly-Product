@@ -508,7 +508,7 @@ $image-container-height-md: 130px;
 
     /* =========== Mobile Header =========== */
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-up(sm) {
         .header-mobile {
             display: none;
         }

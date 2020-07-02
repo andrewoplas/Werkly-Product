@@ -509,7 +509,7 @@
     display: none;
   }
 }
-@media (max-width: 767.98px) {
+@media (min-width: 576px) {
   .Header .header-mobile {
     display: none;
   }
