@@ -508,18 +508,16 @@ $image-container-height-md: 130px;
 
     /* =========== Mobile Header =========== */
 
-    @include media-breakpoint-up(sm) {
-        .header-mobile {
-            display: none;
-        }
-    }
-
     .header-mobile {
         height: 60px;
         width: 100vw;
         background-color: white;
         @include shadow(0, 3px, 6px, 0, rgba(0, 0, 0, 0.16));
-        @include flex(space-between, center);
+        display: none;
+
+        @include media-breakpoint-down(sm) {
+            @include flex(space-between, center);
+        }
 
         .logo {
             height: 22px;
