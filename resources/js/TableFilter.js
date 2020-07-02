@@ -59,7 +59,6 @@ function mainListeners() {
         $(this)
             .parents(".item")
             .hide(100, function () {
-                console.log();
                 const filterItemsCount = tableFilter.find(".main .filters-list .item:visible").length;
                 actionButtonVisibility(filterItemsCount > 0); // 1 is for the cloneable row
             });
