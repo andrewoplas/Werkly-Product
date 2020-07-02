@@ -1,361 +1,84 @@
+@import "../abstracts/animation";
+
 $menu-collapse-width: 1250px;
 $page-header-menu-collapse-width: 780px;
-$header-height: 45px;
+$header-height: 60px;
+$sidebar-width: 55px;
+$sidebar-width-open: 240px;
+
+$image-container-height: 180px;
+$image-container-height-lg: 150px;
+$image-container-height-md: 130px;
 
 .Header {
-    .logo-container {
+    .image-container {
+        height: $image-container-height;
         position: relative;
-        height: 180px;
-
-        &.spacing {
-            margin-bottom: $header-height;
-        }
-
-        .background-blur {
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            background-image: url("../images/header-top.png");
-            background-size: cover;
-            background-position: center;
-            z-index: -1;
-
-            -webkit-filter: blur(3px);
-            -moz-filter: blur(3px);
-            -o-filter: blur(3px);
-            -ms-filter: blur(3px);
-            filter: blur(3px);
-        }
-
-        .logo-banner {
-            width: 330px;
-            height: 114px;
-            padding: 30px 76px 28px;
-            background-color: white;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            @include element-center;
-
-            @include media-breakpoint-down(lg) {
-                width: 292px;
-                height: 114px;
-                padding: 25px 60px 23px;
-            }
-
-            @include media-breakpoint-down(md) {
-                width: 292px;
-                height: auto;
-                padding: 25px 60px 23px;
-            }
-
-            img {
-                width: 178px;
-                height: 56px;
-                @include element-center;
-
-                @include media-breakpoint-down(lg) {
-                    width: 140px;
-                    height: auto;
-                }
-
-                @include media-breakpoint-down(md) {
-                    width: 110px;
-                }
-            }
-        }
+        background-image: url("../images/header-top.png");
+        background-size: cover;
+        background-position: center;
+        @include blur(2px);
 
         @include media-breakpoint-down(lg) {
-            height: 150px;
+            height: $image-container-height-lg;
         }
 
         @include media-breakpoint-down(md) {
-            height: 130px;
-        }
-    }
-
-    .menu {
-        height: $header-height;
-        padding-left: 20px;
-        padding-right: 20px;
-        background-color: $primary-color;
-        @include flex(flex-start, center);
-        z-index: 9999;
-
-        &.fixed {
-            position: fixed;
-            top: 0;
-        }
-
-        .nav {
-            height: 100%;
-
-            &.nav-pages {
-                & > li {
-                    height: 100%;
-
-                    a {
-                        @include flex(flex-start, center);
-                        height: 100%;
-                        padding: 15px 25px;
-                        color: white;
-
-                        span {
-                            font-size: 14px;
-                            color: white;
-                        }
-
-                        &.active {
-                            margin-top: -10px;
-                            height: 55px;
-                            color: $dark;
-                            background-color: white;
-                            border-top-left-radius: 8px;
-                            border-top-right-radius: 8px;
-                            position: relative;
-
-                            span {
-                                opacity: 0;
-                            }
-
-                            &::after {
-                                content: attr(title);
-                                font-weight: bold;
-                                position: absolute;
-                                color: $dark;
-                                left: 40px;
-                                margin-top: 1px;
-                            }
-
-                            .icon {
-                                color: $secondary-color;
-                                margin-left: -7px;
-                                margin-right: 15px;
-                                color: $secondary-color;
-                            }
-                        }
-
-                        .icon {
-                            color: white;
-                            margin-right: 8px;
-                        }
-                    }
-                }
-
-                @include breakpoint-down($menu-collapse-width) {
-                    display: none;
-                }
-
-                .nav-item-dropdown {
-                    background: $primary-color;
-                    padding-right: 20px;
-                    height: 100%;
-
-                    [data-toggle="dropdown"] {
-                        color: white;
-                        cursor: pointer;
-                    }
-
-                    .dropdown-menu {
-                        padding: 0;
-                        margin: 0;
-                        background: $primary-color;
-                        border: 0;
-                        border-radius: 0;
-                        z-index: 1;
-                        margin-top: -1px;
-
-                        a {
-                            position: relative;
-                            display: block;
-                            padding: 12px 15px;
-                            font-size: 14px;
-                            color: white;
-                            transition: all 0.3s ease-out;
-
-                            &:not(.active) {
-                                &:focus,
-                                &:hover {
-                                    background-color: #153e73 !important;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            &.nav-icons {
-                & > li {
-                    height: 100%;
-
-                    a {
-                        @include flex(flex-start, center);
-                        height: 100%;
-                        padding: 15px 18px;
-                        color: white;
-
-                        @include media-breakpoint-down(sm) {
-                            padding: 15px 10px;
-                        }
-                    }
-                }
-            }
-        }
-
-        .mobile-nav {
-            width: 200px;
-            height: 100%;
-            display: none;
-            position: relative;
-            background: $primary-color;
-
-            @include breakpoint-down($menu-collapse-width) {
-                @include flex(stretch, center);
-            }
-
-            @include breakpoint-down(500px) {
-                width: 150px;
-            }
-
-            @include breakpoint-down(400px) {
-                width: 130px;
-            }
-
-            [data-toggle="dropdown"] {
-                width: 100%;
-                height: 100%;
-                padding: 12px 15px;
-                color: white;
-                cursor: pointer;
-                @include flex(stretch, center);
-            }
-
-            .dropdown-menu {
-                padding: 0;
-                margin: 0;
-                background: $primary-color;
-                z-index: 999;
-                margin-top: -1px;
-                border: 0;
-                border-radius: 0;
-                width: 100%;
-
-                .dropdown-item.active {
-                    background-color: $secondary-color !important;
-                    font-weight: bold;
-                }
-
-                .dropdown-item:not(.active) {
-                    &:focus,
-                    &:hover {
-                        background-color: #153e73 !important;
-                    }
-                }
-
-                a {
-                    position: relative;
-                    display: block;
-                    padding: 12px 15px;
-                    font-size: 14px;
-                    color: white;
-                    transition: all 0.3s ease-out;
-
-                    &.has-arrow {
-                        height: $header-height;
-                    }
-
-                    .icon {
-                        color: white;
-                        margin-right: 10px;
-                        font-size: 14px;
-                        min-width: 18px;
-                    }
-
-                    @include breakpoint-down(500px) {
-                        font-size: 12px;
-                        padding: 12px 10px;
-                    }
-
-                    @include breakpoint-down(400px) {
-                        font-size: 10px;
-                        @include flex(flex-start, center);
-                    }
-                }
-            }
-
-            .dropdown-submenu {
-                position: relative;
-
-                a::after {
-                    transform: rotate(-90deg);
-                    position: absolute;
-                    right: 6px;
-                    top: 0.8em;
-                }
-
-                .dropdown-menu {
-                    top: 0;
-                    left: 100%;
-                    margin-left: 0.1rem;
-                    margin-right: 0.1rem;
-                }
-
-                .dropdown-toggle::after {
-                    position: absolute;
-                    content: "";
-                    width: 0.5em;
-                    height: 0.5em;
-                    border-style: solid;
-                    border-width: 1px 0 0 1px;
-                    border-color: initial;
-                    right: 1.3em;
-                    transform: rotate(135deg) translateY(-50%);
-                    transform-origin: top;
-                    top: 50%;
-                    transition: all 0.3s ease-out;
-                }
-            }
-        }
-
-        .divider {
-            height: 25px;
-            width: 1px;
-            margin: 0 10px;
-            background-color: white;
-        }
-
-        .logo {
-            height: 20px;
-            width: 63px;
-            margin-left: auto;
-
-            @include breakpoint-down(400px) {
-                display: none;
-            }
+            height: $image-container-height-md;
         }
     }
 
     .page-header {
         height: $header-height;
+        width: calc(100% - #{$sidebar-width});
         padding-left: 20px;
         padding-right: 20px;
-        background-color: white;
+        background-color: $primary-color;
         box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
         @include flex(space-between, center);
+
+        margin-left: $sidebar-width;
+
+        &.pinned {
+            width: calc(100% - #{$sidebar-width-open});
+            margin-left: $sidebar-width-open;
+            transition: 200ms ease-out;
+        }
 
         &.fixed {
             margin-top: $header-height;
         }
 
-        .title {
-            margin: 0;
-            padding: 0;
-            color: $dark;
-            font-size: 16px;
-            font-weight: bold;
-            font-family: $secondary-font;
+        .title-container {
+            @include flex(flex-start, center);
 
-            @include breakpoint-down(400px) {
-                font-size: 14px;
+            .title {
+                margin: 0;
+                padding: 0;
+                margin-left: 10px;
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+                font-family: $primary-font;
+
+                @include breakpoint-down(400px) {
+                    font-size: 14px;
+                }
+            }
+
+            .icon {
+                width: 40px;
+                height: 40px;
+                color: white;
+                font-size: 18px;
+                border-radius: 50%;
+                cursor: pointer;
+                @include flex(center, center);
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.1);
+                    transition: 150ms;
+                }
             }
         }
 
@@ -368,34 +91,64 @@ $header-height: 45px;
 
                 input {
                     width: 100%;
-                    padding: 5px 15px;
+                    padding: 6px 15px;
                     padding-right: 45px;
-                    font-family: $secondary-font;
-                    font-weight: normal;
+                    background-color: rgba(255, 255, 255, 0.2);
+                    font-family: $primary-font;
                     font-size: 14px;
-                    color: $dark;
-                    border-radius: 20px;
-                    border: 1px solid $gray-3;
+                    font-weight: normal;
+                    color: white;
+                    border-radius: 4px;
+                    border: 0 !important;
                     outline: none !important;
 
                     &::placeholder {
-                        font-family: $secondary-font;
-                        font-weight: 300;
-                        font-size: 11px;
-                        color: $gray-4;
+                        font-family: $primary-font;
+                        font-size: 12px;
+                        font-weight: 500;
+                        color: white;
                     }
                 }
 
                 .icon {
                     position: absolute;
-                    top: 8px;
+                    color: white;
+                    top: 10px;
                     right: 15px;
+                    font-size: 13px;
                 }
             }
 
-            .nav li {
-                padding: 10px 12px;
-                @include flex(center, center);
+            .nav {
+                margin-left: 10px;
+
+                li {
+                    position: relative;
+                    padding: 0 20px;
+                    height: $header-height;
+                    color: white;
+                    cursor: pointer;
+                    @include flex(center, center);
+
+                    &:hover {
+                        background-color: #3ab7ed;
+                    }
+
+                    .counter {
+                        position: absolute;
+                        width: 16px;
+                        height: 16px;
+                        font-size: 10px;
+                        font-weight: 600;
+                        color: white;
+                        background-color: $secondary-color;
+                        border-radius: 50%;
+                        line-height: 0;
+                        margin-left: 8px;
+                        margin-top: -12px;
+                        @include flex(center, center);
+                    }
+                }
             }
 
             @include breakpoint-down($page-header-menu-collapse-width) {
@@ -406,21 +159,43 @@ $header-height: 45px;
             }
 
             .dropdown-avatar {
+                cursor: pointer;
+                margin-left: 10px;
                 @include breakpoint-up($page-header-menu-collapse-width) {
                     .show-on-mobile {
                         display: none;
                     }
                 }
 
-                img.Avatar {
-                    margin-left: 20px;
-                    cursor: pointer;
+                &.show {
+                    .arrow {
+                        transform: rotate(180deg);
+                    }
+                }
+
+                [data-toggle="dropdown"] {
+                    height: $header-height;
+                    @include flex(center, center);
+
+                    .avatar-name {
+                        margin-left: 10px;
+                        color: white;
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+
+                    .arrow {
+                        color: white;
+                        font-size: 16px;
+                        margin-left: 10px;
+                        transition: all 0.3s ease-out;
+                    }
                 }
 
                 .dropdown-menu {
                     border: 0;
                     border-radius: 0;
-                    margin-top: 12px;
+                    margin-top: -5px !important;
                     @include dropdown-shadow;
 
                     .dropdown-item {
@@ -454,38 +229,6 @@ $header-height: 45px;
         }
     }
 
-    .page-header-external {
-        height: $header-height;
-        padding-left: 20px;
-        padding-right: 20px;
-        background-color: $primary-color;
-        z-index: 999;
-        @include flex(space-between, center);
-
-        &.fixed {
-            position: fixed;
-            top: 0;
-        }
-
-        .title {
-            margin: 0;
-            padding: 0;
-            color: white;
-            font-size: 16px;
-            font-weight: 300;
-            font-family: $secondary-font;
-
-            @include breakpoint-down(400px) {
-                font-size: 14px;
-            }
-        }
-
-        .icon {
-            color: white;
-            font-size: 19px;
-        }
-    }
-
     .dropdown {
         .has-arrow::after {
             position: absolute;
@@ -506,6 +249,255 @@ $header-height: 45px;
             .has-arrow::after {
                 transform: rotate(45deg) translateY(-50%);
                 top: 52%;
+            }
+        }
+    }
+
+    .sidebar {
+        width: $sidebar-width-open;
+        height: calc(100vh - #{$image-container-height});
+        position: absolute;
+        margin-top: -$header-height;
+        background-color: white;
+        overflow-y: auto;
+
+        transition: width 200ms ease-out;
+        -webkit-box-shadow: 3px 0px 6px 0px rgba(0, 0, 0, 0.16);
+        -moz-box-shadow: 3px 0px 6px 0px rgba(0, 0, 0, 0.16);
+        box-shadow: 3px 0px 6px 0px rgba(0, 0, 0, 0.16);
+
+        @include media-breakpoint-down(lg) {
+            height: calc(100vh - #{$image-container-height-lg});
+        }
+
+        @include media-breakpoint-down(md) {
+            height: calc(100vh - #{$image-container-height-md});
+        }
+
+        &.pinned {
+            height: calc(100vh);
+            margin-top: 0;
+            bottom: 0;
+            transition: height 200ms ease-out;
+
+            .logo {
+                height: calc(#{$header-height} + #{$image-container-height});
+                border-bottom: 0;
+                transition: height 200ms ease-out;
+                @include flex(center, center);
+
+                @include media-breakpoint-down(lg) {
+                    height: calc(#{$header-height} + #{$image-container-height-lg});
+                }
+
+                @include media-breakpoint-down(md) {
+                    height: calc(#{$header-height} + #{$image-container-height-md});
+                }
+
+                .full {
+                    height: 50px;
+                    transition: 200ms ease;
+                    & + .icon {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &.collapsed {
+            width: $sidebar-width;
+            transition: width 200ms ease-out;
+
+            .logo {
+                .full {
+                    display: none;
+
+                    & + .icon {
+                        display: none;
+                    }
+                }
+
+                .small {
+                    display: block;
+                }
+            }
+
+            .links {
+                .header {
+                    .full {
+                        display: none;
+                    }
+
+                    .small {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .logo {
+            height: $header-height;
+            border-bottom: 1px solid $gray-1;
+            padding: 0 20px 0 14px;
+            @include flex(space-between, center);
+
+            .small {
+                height: 23px;
+                display: none;
+            }
+
+            .full {
+                height: 30px;
+                margin-top: 5px;
+
+                & + .icon {
+                    color: $gray-6;
+                    font-size: 18px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .links {
+            .header {
+                margin-top: 5px;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                white-space: nowrap;
+
+                .full {
+                    margin-left: 20px;
+                    font-size: 12px;
+                    font-weight: 800;
+                    color: $gray-6;
+                    text-transform: uppercase;
+                }
+
+                .small {
+                    font-size: 20px;
+                    color: $gray-6;
+                    text-align: center;
+                    display: none;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            .links-container {
+                text-align: left;
+
+                * {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                // First layer
+                & > ul > li {
+                    &.active > a {
+                        background-color: $gray-7;
+                    }
+                }
+
+                li {
+                    list-style-type: none;
+
+                    &.active {
+                        & > a {
+                            color: $primary-color;
+
+                            &:after {
+                                transform: rotate(180deg) !important;
+                            }
+
+                            .icon {
+                                color: $primary-color !important;
+                            }
+                        }
+
+                        & > ul {
+                            display: block;
+                        }
+                    }
+
+                    a:not(:only-child):after {
+                        content: "\f107";
+                        font-family: "Font Awesome 5 Pro";
+                        font-weight: 300;
+                        font-size: 18px;
+                        position: absolute;
+                        right: 20px;
+                        opacity: 0.5;
+                        transform: rotate(0);
+                        transition: transform 200ms ease;
+                        @include flex(center, center);
+                    }
+
+                    a {
+                        position: relative;
+                        width: 100%;
+                        padding: 14px 20px;
+                        font-size: 14px;
+                        font-family: $primary-font;
+                        color: $dark;
+                        border: 0;
+                        outline: 0 !important;
+                        text-decoration: none;
+                        background-color: white;
+                        @include flex(flex-start, center);
+
+                        &:hover {
+                            color: $primary-color !important;
+                            transition: 200ms;
+                        }
+
+                        .icon {
+                            width: 25px;
+                            text-align: left;
+                            font-size: 16px;
+                            opacity: 0.5;
+                        }
+                    }
+                }
+
+                /* do not remove - this makes the submenu open / close */
+                ul ul,
+                ul ul ul ul {
+                    margin-left: 20px;
+                    display: none;
+
+                    & > li > a {
+                        padding-left: 25px;
+                        &:before {
+                            content: "-";
+                            font-size: 16px;
+                            opacity: 0.5;
+                            position: absolute;
+                            margin-left: -18px;
+                            margin-top: -2px;
+                        }
+                    }
+                }
+
+                ul ul ul,
+                ul ul ul ul ul ul {
+                    margin-left: 20px;
+
+                    & > li > a {
+                        padding-left: 25px;
+                        &:before {
+                            content: "\f111";
+                            font-family: "Font Awesome 5 Pro";
+                            font-weight: 600;
+                            font-size: 5px;
+                            opacity: 0.5;
+                            position: absolute;
+                            margin-left: -18px;
+                            margin-top: 0;
+                        }
+                    }
+                }
             }
         }
     }

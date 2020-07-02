@@ -12,7 +12,11 @@
 
         <!-- Vendor CSS -->
         <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.min.css" />
-
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css"
+        />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css" />
         <link rel="stylesheet" href="./vendors/semantic-ui/transition.min.css" />
         <link rel="stylesheet" href="./vendors/semantic-dropdown/dropdown.css" />
 
@@ -176,8 +180,14 @@
                                 <p class="label">Date / time input</p>
                             </div>
                             <div class="col-12 col-md-9">
-                                <div class="InputIcon">
-                                    <input type="text" class="Input" value="19 August, 2011 01:45 PM" />
+                                <div class="InputIcon" data-target-input="nearest">
+                                    <input
+                                        type="text"
+                                        class="Input datetimepicker-input"
+                                        id="datetimepicker"
+                                        data-toggle="datetimepicker"
+                                        data-target="#datetimepicker"
+                                    />
                                     <i class="far fa-calendar icon"></i>
                                 </div>
                             </div>
@@ -189,7 +199,13 @@
                             </div>
                             <div class="col-12 col-md-9">
                                 <div class="InputIcon">
-                                    <input type="text" class="Input" value="19 August, 2011" />
+                                    <input
+                                        type="text"
+                                        class="Input datetimepicker-input"
+                                        id="datepicker"
+                                        data-toggle="datetimepicker"
+                                        data-target="#datepicker"
+                                    />
                                     <i class="far fa-calendar icon"></i>
                                 </div>
                             </div>
@@ -201,7 +217,13 @@
                             </div>
                             <div class="col-12 col-md-9">
                                 <div class="InputIcon">
-                                    <input type="text" class="Input" value="01:45 PM" />
+                                    <input
+                                        type="text"
+                                        class="Input datetimepicker-input"
+                                        id="timepicker"
+                                        data-toggle="datetimepicker"
+                                        data-target="#timepicker"
+                                    />
                                     <i class="far fa-clock icon"></i>
                                 </div>
                             </div>
@@ -327,7 +349,7 @@
                                     <span class="left">
                                         <span class="value" style="background-color: #7fb800;"></span>
                                     </span>
-                                    <input type="text" class="Input left-addon" value="#7FB800" />
+                                    <input type="text" class="Input left-addon" id="color-picker" value="#7FB800" readonly />
                                     <i class="fas fa-crosshairs icon"></i>
                                 </div>
                             </div>
@@ -469,20 +491,71 @@
 
         <!-- Vendor JS -->
         <script src="https://kit.fontawesome.com/8c9c5e8e6e.js" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
         <script src="./vendors/jquery/jquery.min.js"></script>
         <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
         <script src="./vendors/semantic-ui/transition.min.js"></script>
         <script src="./vendors/semantic-dropdown/dropdown.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.es5.min.js"></script>
 
         <!-- Custom JS -->
         <script src="./resources/js/main.js"></script>
 
         <script>
             $(document).ready(function () {
-                initializeButtonsInputs();
+                $(".ui.dropdown").dropdown();
+
+                $(".ButtonCluster .item").click(function () {
+                    $(this).parents(".ButtonCluster").find(".item").removeClass("selected");
+                    $(this).addClass("selected");
+                });
+
+                // Date time pickers
+                $("#datetimepicker").datetimepicker({
+                    format: "DD MMMM, YYYY hh:mm A",
+                });
+                $("#datepicker").datetimepicker({
+                    format: "DD MMMM, YYYY",
+                });
+                $("#timepicker").datetimepicker({
+                    format: "hh:mm A",
+                });
+
+                // Simple example, see optional options for more configuration.
+                const defaultColor = "#7fb800";
+                const pickr = Pickr.create({
+                    theme: "nano", // or 'monolith', or 'nano'
+                    el: ".ColorPicker",
+                    useAsButton: true,
+                    appendToBody: false,
+                    default: defaultColor,
+                    components: {
+                        // Main components
+                        preview: true,
+                        opacity: true,
+                        hue: true,
+
+                        // Input / output Options
+                        interaction: {
+                            input: true,
+                            save: true,
+                            cancel: true,
+                        },
+                    }, // Translations, these are the default values.
+                    i18n: {
+                        "btn:cancel": "Close",
+                    },
+                })
+                    .on("save", (color, instance) => {
+                        // Set color to picker
+                        const hex = color.toHEXA().toString();
+                        $(".ColorPicker .Input").val(hex);
+                        $(".ColorPicker .value").css("background-color", hex);
+                    })
+                    .on("cancel", (instance) => {
+                        instance.hide();
+                    });
             });
         </script>
     </body>
