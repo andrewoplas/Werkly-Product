@@ -255,11 +255,11 @@ $image-container-height-md: 130px;
         box-shadow: 3px 0px 6px 0px rgba(0, 0, 0, 0.16);
 
         @include media-breakpoint-down(lg) {
-            height: calc(100vh - #{$image-container-height-lg});
+            height: calc(100% - #{$image-container-height-lg});
         }
 
         @include media-breakpoint-down(md) {
-            height: calc(100vh - #{$image-container-height-md});
+            height: calc(100% - #{$image-container-height-md});
         }
 
         &.pinned {

@@ -1,0 +1,7 @@
+@import "../../abstracts/variables";
+
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover,
+.bootstrap-datetimepicker-widget button[data-action] {
+    background-color: $primary-color !important;
+}

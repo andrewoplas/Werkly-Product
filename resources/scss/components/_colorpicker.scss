@@ -21,3 +21,15 @@
         right: 15px;
     }
 }
+
+.CustomColorPicker {
+    .pcr-save {
+        border-radius: 4px !important;
+        background-color: $primary-color !important;
+    }
+
+    .pcr-cancel {
+        border-radius: 4px !important;
+        background-color: $dark !important;
+    }
+}

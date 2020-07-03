@@ -1,4 +1,10 @@
 @charset "UTF-8";
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover,
+.bootstrap-datetimepicker-widget button[data-action] {
+  background-color: #00a6ed !important;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -288,12 +294,12 @@
 }
 @media (max-width: 1199.98px) {
   .Header .sidebar {
-    height: calc(100vh - 150px);
+    height: calc(100% - 150px);
   }
 }
 @media (max-width: 991.98px) {
   .Header .sidebar {
-    height: calc(100vh - 130px);
+    height: calc(100% - 130px);
   }
 }
 .Header .sidebar.pinned {
@@ -1363,8 +1369,8 @@ select.Select .dropdown.icon::before,
 }
 .fluid.SelectMultiple .label {
   padding: 7px 10px !important;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
+  margin-top: 2px !important;
+  margin-bottom: 2px !important;
   font-size: 10px !important;
   background-color: #7fb800;
   border-radius: 4px;
@@ -2516,11 +2522,16 @@ select.Select .dropdown.icon::before,
   margin-left: 0.355em;
 }
 .LinkDropdown .dropdown-menu {
-  border: 1px solid #eeeeee;
+  border: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.05);
 }
 .LinkDropdown .dropdown-menu .dropdown-item {
   font-size: 14px;
   color: #444;
+  padding: 12px 15px;
 }
 .LinkDropdown .dropdown-menu .dropdown-item:active, .LinkDropdown .dropdown-menu .dropdown-item:focus {
   background-color: #00a6ed;
@@ -3098,6 +3109,15 @@ select.Select .dropdown.icon::before,
   color: #444;
   top: 12px;
   right: 15px;
+}
+
+.CustomColorPicker .pcr-save {
+  border-radius: 4px !important;
+  background-color: #00a6ed !important;
+}
+.CustomColorPicker .pcr-cancel {
+  border-radius: 4px !important;
+  background-color: #444 !important;
 }
 
 @keyframes fadeIn {

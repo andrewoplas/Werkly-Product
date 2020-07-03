@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Werkly</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+
+        <!-- Required CSS -->
+        <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./vendors/perfect-scrollbar/css/perfect-scrollbar.css" />
+
+        <!-- Vendor CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css"
+        />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css" />
+        <link rel="stylesheet" href="./vendors/semantic-ui/transition.min.css" />
+        <link rel="stylesheet" href="./vendors/semantic-dropdown/dropdown.css" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="./resources/css/main.css" />
+    </head>
+
+    <body>
+        <div>
+            <!-- ===== HEADER ===== -->
+            <div class="Header">
+                <div class="image-container"></div>
+
+                <div class="page-header container-fluid">
+                    <div class="title-container">
+                        <i class="fas fa-bars icon" id="btn-open-sidebar"></i>
+                        <h2 class="title">Dashboard</h2>
+                    </div>
+
+                    <div class="details">
+                        <div class="search-input">
+                            <input type="text" placeholder="Search..." />
+                            <i class="icon far fa-search"></i>
+                        </div>
+
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <i class="fas fa-check-square"></i>
+                            </li>
+                            <li class="nav-item">
+                                <i class="fas fa-question-circle"></i>
+                            </li>
+                            <li class="nav-item">
+                                <i class="fas fa-bell"></i>
+                                <span class="counter">3</span>
+                            </li>
+                        </ul>
+
+                        <div class="dropdown dropdown-avatar">
+                            <a data-toggle="dropdown">
+                                <img src="./resources/images/avatar.png" alt="avatar" class="Avatar" />
+                                <span class="avatar-name">John Smith</span>
+                                <i class="arrow fal fa-angle-down"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right mt-2">
+                                <a class="dropdown-item show-on-mobile" href="javascript:void(0)"> <i class="icon fas fa-check-square"></i>Icon 1 </a>
+                                <a class="dropdown-item show-on-mobile" href="javascript:void(0)">
+                                    <i class="icon fas fa-question-circle"></i>Icon 2
+                                </a>
+                                <a class="dropdown-item show-on-mobile" href="javascript:void(0)"> <i class="icon fas fa-bell"></i>Icon 3 </a>
+                                <div class="dropdown-divider show-on-mobile"></div>
+                                <a class="dropdown-item" href="javascript:void(0)">Profile</a>
+                                <a class="dropdown-item" href="javascript:void(0)">Account</a>
+                                <a class="dropdown-item" href="javascript:void(0)">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar collapsed">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="./resources/images/logo-small.png" alt="" class="small" />
+                            <img src="./resources/images/logo.png" alt="" class="full" />
+                        </a>
+
+                        <i class="fas fa-thumbtack icon" id="btn-pin"></i>
+                    </div>
+
+                    <div id="links-scrollbar">
+                        <!-- Section 2 -->
+                        <div class="links">
+                            <div class="header">
+                                <span class="full">Pages</span>
+                                <i class="far fa-ellipsis-h small"></i>
+                            </div>
+
+                            <div class="links-container">
+                                <ul class="menu">
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)">
+                                            <i class="fad fa-chart-line icon"></i>
+                                            <span>Content Boxes</span>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a href="boxes.html">Boxes</a>
+                                            </li>
+                                            <li>
+                                                <a href="boxes-2.html">Boxes 2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="inputs.html"><i class="fad fa-pencil-ruler icon"></i> <span>Inputs</span></a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)"><i class="fad fa-chart-line icon"></i> <span>Dashboard</span></a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)"><i class="fad fa-chart-line icon"></i> <span>Dashboard</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Section 2 -->
+                        <div class="links">
+                            <div class="header">
+                                <span class="full">Menu Section</span>
+                                <i class="far fa-ellipsis-h small"></i>
+                            </div>
+
+                            <div class="links-container">
+                                <ul class="menu">
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)">
+                                            <i class="fad fa-chart-line icon"></i>
+                                            <span>Dashboard</span>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a><i class="fad fa-chart-line icon"></i> <span>Dashboard</span></a>
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li class="active">
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                                <ul>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">Sub menu item</a>
+                                                        <ul>
+                                                            <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                                <ul>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)"><i class="fad fa-chart-line icon"></i> <span>Dashboard</span></a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)"><i class="fad fa-chart-line icon"></i> <span>Dashboard</span></a>
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-mobile">
+                    <img src="./resources/images/logo.png" class="logo" />
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <i class="fas fa-check-square"></i>
+                        </li>
+                        <li class="nav-item">
+                            <i class="fas fa-question-circle"></i>
+                        </li>
+                        <li class="nav-item">
+                            <i class="fas fa-bell"></i>
+                            <span class="counter">3</span>
+                        </li>
+                        <li class="nav-item dropdown-show collapsed" data-toggle="collapse" data-target="#mobile-navbar">
+                            <i class="fas fa-bars icon"></i>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="collapse navbar-collapse" id="mobile-navbar">
+                    <div class="first-row">
+                        <div class="search-input">
+                            <input type="text" placeholder="Search..." />
+                            <i class="icon far fa-search"></i>
+                        </div>
+                        <img src="./resources/images/avatar.png" alt="avatar" class="Avatar" />
+                    </div>
+
+                    <div class="links-row">
+                        <!-- Section 1 -->
+                        <div class="links">
+                            <div class="header">
+                                <span class="full">Menu Section</span>
+                            </div>
+
+                            <div class="links-container">
+                                <ul class="menu">
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)">
+                                            <i class="fad fa-chart-line icon"></i>
+                                            <span>Dashboard</span>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a><i class="fad fa-chart-line icon"></i> <span>Dashboard</span></a>
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li class="active">
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                                <ul>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">Sub menu item</a>
+                                                        <ul>
+                                                            <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                                <ul>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)"><i class="fad fa-chart-line icon"></i> <span>Dashboard</span></a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)"><i class="fad fa-chart-line icon"></i> <span>Dashboard</span></a>
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Section 2 -->
+                        <div class="links">
+                            <div class="header">
+                                <span class="full">Menu Section</span>
+                            </div>
+
+                            <div class="links-container">
+                                <ul class="menu">
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)">
+                                            <i class="fad fa-chart-line icon"></i>
+                                            <span>Dashboard</span>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a><i class="fad fa-chart-line icon"></i> <span>Dashboard</span></a>
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li class="active">
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                                <ul>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">Sub menu item</a>
+                                                        <ul>
+                                                            <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                                <ul>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)"><i class="fad fa-chart-line icon"></i> <span>Dashboard</span></a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)"><i class="fad fa-chart-line icon"></i> <span>Dashboard</span></a>
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== MAIN CONTENT ===== -->
+            <div class="MainContent">
+                <div class="row">
+                    <div class="col-12 col-xl-3 mb-30">
+                        <div class="ContentBox w-100">
+                            <div class="box-header">
+                                <h4 class="box-title">This is a header</h4>
+                                <div class="action-items">
+                                    <button class="Button icon ellipsis" data-toggle="dropdown">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="ButtonCluster">
+                                <button class="item selected">
+                                    Basic Inputs
+                                    <i class="arrow fal fa-angle-right"></i>
+                                </button>
+                                <button class="item">
+                                    Menu item label
+                                    <i class="arrow fal fa-angle-right"></i>
+                                </button>
+                                <button class="item">
+                                    Menu item label
+                                    <i class="arrow fal fa-angle-right"></i>
+                                </button>
+                                <button class="item">
+                                    Menu item label
+                                    <i class="arrow fal fa-angle-right"></i>
+                                </button>
+                                <button class="item">
+                                    Menu item label
+                                    <i class="arrow fal fa-angle-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-9">
+                        <!-- Basic Inputs -->
+                        <div class="ContentBox mb-4">
+                            <div class="box-header">
+                                <h4 class="box-title full-width-on-mobile">
+                                    This is a header
+                                    <button class="Button icon ellipsis d-inline-block d-sm-none ml-2" data-toggle="dropdown">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                    </div>
+                                </h4>
+                                <div class="action-items">
+                                    <ul class="nav nav-tabs tabs" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#tab-1" role="tab">Tab Label</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#tab-2" role="tab">Tab Label</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-toggle="tab" href="#tab-3" role="tab">Tab Label</a>
+                                        </li>
+                                    </ul>
+                                    <button class="Button icon ellipsis d-none d-sm-block" data-toggle="dropdown">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <!-- ===== Inputs ===== -->
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Basic Input</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input class="Input" placeholder="Placeholder text" />
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Active Input</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input class="Input" value="Input text looks like this" placeholder="Input text looks like this" autofocus />
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Required field failure</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input class="Input" placeholder="Placeholder text" />
+                                    <span class="FormError"><i class="fas fa-exclamation-triangle icon"></i> This is a required field</span>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Disabled state</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input class="Input" placeholder="Placeholder text goes here" disabled />
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Dropdown (single-select)</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <select class="ui fluid dropdown Select">
+                                        <option value="">Select an option from this list</option>
+                                        <option value="1">Selectable option here</option>
+                                        <option value="2">Selectable option here</option>
+                                        <option value="3">Selectable option here</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Dropdown (multi-select)</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <select name="sample" class="ui fluid dropdown SelectMultiple" multiple>
+                                        <option value="1" selected>Selectable item</option>
+                                        <option value="2" selected>Selectable item</option>
+                                        <option value="3" selected>Selectable item</option>
+                                        <option value="4">Selectable option here</option>
+                                        <option value="5">Selectable option here</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Multi-line input</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <textarea class="Input" placeholder="Placeholder text goes here"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Password Input</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="password" class="Input" value="password" />
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Date / time input</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <div class="InputIcon" data-target-input="nearest">
+                                        <input
+                                            type="text"
+                                            class="Input datetimepicker-input"
+                                            id="datetimepicker"
+                                            data-toggle="datetimepicker"
+                                            data-target="#datetimepicker"
+                                        />
+                                        <i class="far fa-calendar icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Date only input</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <div class="InputIcon">
+                                        <input
+                                            type="text"
+                                            class="Input datetimepicker-input"
+                                            id="datepicker"
+                                            data-toggle="datetimepicker"
+                                            data-target="#datepicker"
+                                        />
+                                        <i class="far fa-calendar icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Time only input</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <div class="InputIcon">
+                                        <input
+                                            type="text"
+                                            class="Input datetimepicker-input"
+                                            id="timepicker"
+                                            data-toggle="datetimepicker"
+                                            data-target="#timepicker"
+                                        />
+                                        <i class="far fa-clock icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Basic Input</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <span class="InputLabel">Label on top</span>
+                                    <input class="Input" placeholder="Placeholder text" />
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Text Link</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <a href="#" class="Link">This is a link</a>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Text Link Disabled</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <a href="#" class="Link" disabled>This is a disabled link</a>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Text Dropdown</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <div class="LinkDropdown dropdown">
+                                        <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                            Select from this list
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Other Inputs 1 -->
+                        <div class="ContentBox mb-4">
+                            <div class="box-header">
+                                <h4 class="box-title full-width-on-mobile">
+                                    This is a header
+                                    <button class="Button icon ellipsis d-inline-block d-sm-none ml-2" data-toggle="dropdown">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                    </div>
+                                </h4>
+                                <div class="action-items">
+                                    <ul class="nav nav-tabs tabs" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#tab-1" role="tab">Tab Label</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#tab-2" role="tab">Tab Label</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-toggle="tab" href="#tab-3" role="tab">Tab Label</a>
+                                        </li>
+                                    </ul>
+                                    <button class="Button icon ellipsis d-none d-sm-block" data-toggle="dropdown">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+
+                            <!-- ===== Inputs ===== -->
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Left Addon</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <div class="InputGroup">
+                                        <span class="left">@</span>
+                                        <input type="text" class="Input left-addon" placeholder="Placeholder text" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Right Addon</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <div class="InputGroup">
+                                        <input type="text" class="Input right-addon" placeholder="Placeholder text" />
+                                        <span class="right">@example.com</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Dual Addon</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <div class="InputGroup">
+                                        <span class="left">@</span>
+                                        <input type="text" class="Input left-addon right-addon" placeholder="Placeholder text" />
+                                        <span class="right">@example.com</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Colour Picker</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <div class="InputGroup ColorPicker">
+                                        <span class="left">
+                                            <span class="value" style="background-color: #7fb800;"></span>
+                                        </span>
+                                        <input type="text" class="Input left-addon" id="color-picker" value="#7FB800" readonly />
+                                        <i class="fas fa-crosshairs icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Other Inputs 2 -->
+                        <div class="ContentBox mb-4">
+                            <div class="box-header">
+                                <h4 class="box-title full-width-on-mobile">
+                                    This is a header
+                                    <button class="Button icon ellipsis d-inline-block d-sm-none ml-2" data-toggle="dropdown">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                    </div>
+                                </h4>
+                                <div class="action-items">
+                                    <ul class="nav nav-tabs tabs" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#tab-1" role="tab">Tab Label</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#tab-2" role="tab">Tab Label</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-toggle="tab" href="#tab-3" role="tab">Tab Label</a>
+                                        </li>
+                                    </ul>
+                                    <button class="Button icon ellipsis d-none d-sm-block" data-toggle="dropdown">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+
+                            <!-- ===== Inputs ===== -->
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Standard Checkboxes</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <div class="Checkbox">
+                                        <label>
+                                            <input type="checkbox" />
+                                            <span></span>
+                                            Default
+                                        </label>
+                                    </div>
+                                    <div class="Checkbox mt-3">
+                                        <label>
+                                            <input type="checkbox" checked />
+                                            <span></span>
+                                            Checked
+                                        </label>
+                                    </div>
+                                    <div class="Checkbox disabled mt-3">
+                                        <label>
+                                            <input type="checkbox" />
+                                            <span></span>
+                                            Disabled
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Required field failure</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <div class="Checkbox">
+                                        <label>
+                                            <input type="checkbox" />
+                                            <span></span>
+                                            Default
+                                        </label>
+                                        <span class="FormError">This is a required field</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Standard Radio Buttons</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <div class="RadioButton">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" />
+                                        <label for="exampleRadios1">
+                                            Default
+                                        </label>
+                                    </div>
+                                    <div class="RadioButton mt-3">
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="exampleRadios"
+                                            id="exampleRadios2"
+                                            value="option2"
+                                            checked
+                                        />
+                                        <label for="exampleRadios2">
+                                            Selected
+                                        </label>
+                                    </div>
+                                    <div class="RadioButton disabled mt-3">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" />
+                                        <label for="exampleRadios3">
+                                            Disabled
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Required field failure</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <div class="RadioButton">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4" />
+                                        <label for="exampleRadios4">
+                                            Default
+                                        </label>
+                                        <span class="FormError">This is a required field</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-12 col-md-3">
+                                    <p class="label">Toggle Switches</p>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <label class="Switch">
+                                        <input type="checkbox" />
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <label class="Switch ml-3">
+                                        <input type="checkbox" checked />
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== FOOTER ===== -->
+            <div class="Footer d-none">
+                <p class="text">© Werkly. All rights reserved 2020.</p>
+            </div>
+        </div>
+
+        <!-- Required JS -->
+        <script src="https://kit.fontawesome.com/8c9c5e8e6e.js"></script>
+        <script src="./vendors/jquery/jquery.min.js"></script>
+        <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="./vendors/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+
+        <!-- Vendor JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+        <script src="./vendors/semantic-ui/transition.min.js"></script>
+        <script src="./vendors/semantic-dropdown/dropdown.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.es5.min.js"></script>
+
+        <!-- Custom JS -->
+        <script src="./resources/js/main.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                initializePage();
+
+                $(".ui.dropdown").dropdown();
+
+                $(".ButtonCluster .item").click(function () {
+                    $(this).parents(".ButtonCluster").find(".item").removeClass("selected");
+                    $(this).addClass("selected");
+                });
+
+                // Date time pickers
+                $("#datetimepicker").datetimepicker({
+                    format: "DD MMMM, YYYY hh:mm A",
+                });
+                $("#datepicker").datetimepicker({
+                    format: "DD MMMM, YYYY",
+                });
+                $("#timepicker").datetimepicker({
+                    format: "hh:mm A",
+                });
+
+                // Simple example, see optional options for more configuration.
+                const defaultColor = "#7fb800";
+                const pickr = Pickr.create({
+                    theme: "nano", // or 'monolith', or 'nano'
+                    el: ".ColorPicker",
+                    appClass: "CustomColorPicker",
+                    useAsButton: true,
+                    appendToBody: false,
+                    default: defaultColor,
+                    components: {
+                        // Main components
+                        preview: true,
+                        opacity: true,
+                        hue: true,
+
+                        // Input / output Options
+                        interaction: {
+                            input: true,
+                            save: true,
+                            cancel: true,
+                        },
+                    }, // Translations, these are the default values.
+                    i18n: {
+                        "btn:cancel": "Close",
+                    },
+                })
+                    .on("save", (color, instance) => {
+                        // Set color to picker
+                        const hex = color.toHEXA().toString();
+                        $(".ColorPicker .Input").val(hex);
+                        $(".ColorPicker .value").css("background-color", hex);
+                    })
+                    .on("cancel", (instance) => {
+                        instance.hide();
+                    });
+            });
+        </script>
+    </body>
+</html>

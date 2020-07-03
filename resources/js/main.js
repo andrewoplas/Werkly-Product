@@ -48,12 +48,12 @@ function initializeSidebar() {
     const ps = new PerfectScrollbar("#links-scrollbar");
 
     // prevent page from jumping to top from  # href link
-    $(".links-container li.menu-item-has-children > a").click(function (e) {
+    $(".links-container li.menu-item-has-children > a:not(:only-child)").click(function (e) {
         e.preventDefault();
     });
 
     // remove link from menu items that have children
-    $(".links-container li.menu-item-has-children > a").attr("href", "#");
+    $(".links-container li.menu-item-has-children > a:not(:only-child)").attr("href", "#");
 
     //  function to open / close menu items
     $(".links-container a").click(function () {
