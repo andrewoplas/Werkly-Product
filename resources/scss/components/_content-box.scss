@@ -79,6 +79,7 @@
 
                 li {
                     a {
+                        min-width: 100px;
                         padding-top: 5px;
                         padding-bottom: 5px;
                         position: relative;
@@ -89,15 +90,31 @@
                         color: $gray-6;
                         text-align: center;
 
-                        &.active {
+                        &:not(.active):hover {
                             color: $primary-color;
                             font-weight: 600;
+                        }
+
+                        &.active {
+                            background-color: $primary-color;
+                            color: white;
+                            border-radius: 4px;
                         }
                     }
                 }
 
                 @include media-breakpoint-down(xs) {
                     margin-right: 0;
+                    width: 100%;
+
+                    li {
+                        margin: 3px 0;
+                        width: 100%;
+
+                        a {
+                            width: 100%;
+                        }
+                    }
                 }
             }
 

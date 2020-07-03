@@ -17,7 +17,10 @@
 
     .form {
         @include flex(center, center, column);
+        max-width: 660px;
         padding: 40px 40px 0;
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 20px;
 
         @include media-breakpoint-down(sm) {

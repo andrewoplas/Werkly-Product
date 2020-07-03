@@ -17,5 +17,8 @@
     "bugs": {
         "url": "https://github.com/andrewoplas/Werkly-Demo/issues"
     },
-    "homepage": "https://github.com/andrewoplas/Werkly-Demo#readme"
+    "homepage": "https://github.com/andrewoplas/Werkly-Demo#readme",
+    "dependencies": {
+        "perfect-scrollbar": "^1.5.0"
+    }
 }

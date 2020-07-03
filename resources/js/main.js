@@ -1,20 +1,4 @@
 function initializePage() {
-    $(".dropdown-menu a.dropdown-toggle").on("click", function (e) {
-        if (!$(this).next().hasClass("show")) {
-            $(this).parents(".dropdown-menu").first().find(".show").removeClass("show");
-        }
-        var $subMenu = $(this).next(".dropdown-menu");
-        $subMenu.toggleClass("show");
-
-        $(this)
-            .parents("li.nav-item.dropdown.show")
-            .on("hidden.bs.dropdown", function (e) {
-                $(".dropdown-submenu .show").removeClass("show");
-            });
-
-        return false;
-    });
-
     $(window).scroll(function () {
         const height = $(".Header .logo-container").outerHeight();
         const pageHeader = $(".Header .page-header");
@@ -54,6 +38,65 @@ function initializePage() {
     $(".menu .nav-pages .nav-link").click(function () {
         $(".menu .nav-pages .nav-link").removeClass("active");
         const active = $(this).addClass("active");
+    });
+
+    // Opens sidebar
+    const sidebar = $(".sidebar");
+    sidebar.hover(
+        function () {
+            if (!sidebar.hasClass("pinned")) {
+                sidebar.removeClass("collapsed");
+            }
+        },
+        function () {
+            if (!sidebar.hasClass("pinned")) {
+                sidebar.addClass("collapsed");
+                $(".sidebar .links").find(".active").removeClass("active");
+                $(".sidebar .links").find("ul:not(.menu)").hide();
+            }
+        }
+    );
+
+    // Pin sidebar
+    $("#btn-pin").click(function () {
+        sidebar.addClass("pinned");
+        $(".page-header").addClass("pinned");
+        $(".image-container").addClass("pinned");
+        $(".MainContent").addClass("pinned");
+    });
+
+    // Set scrollbar
+    const ps = new PerfectScrollbar("#links-scrollbar");
+
+    initializeSidebar();
+}
+
+function initializeSidebar() {
+    // prevent page from jumping to top from  # href link
+    $(".links-container li.menu-item-has-children > a").click(function (e) {
+        e.preventDefault();
+    });
+
+    // remove link from menu items that have children
+    $(".links-container li.menu-item-has-children > a").attr("href", "#");
+
+    //  function to open / close menu items
+    $(".links-container a").click(function () {
+        var link = $(this);
+        var closest_ul = link.closest("ul");
+        var parallel_active_links = closest_ul.find(".active");
+        var closest_li = link.closest("li");
+        var link_status = closest_li.hasClass("active");
+        var count = 0;
+
+        closest_ul.find("ul").slideUp(function () {
+            if (++count == closest_ul.find("ul").length) parallel_active_links.removeClass("active");
+        });
+
+        if (!link_status) {
+            closest_li.children("ul").slideDown();
+            closest_li.addClass("active");
+        }
     });
 }
 
@@ -292,35 +335,6 @@ function initializeLayout14() {
     } else {
         console.error("Could not find initializeTableFilterListeners method");
     }
-}
-
-function initializeSidebar() {
-    // prevent page from jumping to top from  # href link
-    $(".links-container li.menu-item-has-children > a").click(function (e) {
-        e.preventDefault();
-    });
-
-    // remove link from menu items that have children
-    $(".links-container li.menu-item-has-children > a").attr("href", "#");
-
-    //  function to open / close menu items
-    $(".links-container a").click(function () {
-        var link = $(this);
-        var closest_ul = link.closest("ul");
-        var parallel_active_links = closest_ul.find(".active");
-        var closest_li = link.closest("li");
-        var link_status = closest_li.hasClass("active");
-        var count = 0;
-
-        closest_ul.find("ul").slideUp(function () {
-            if (++count == closest_ul.find("ul").length) parallel_active_links.removeClass("active");
-        });
-
-        if (!link_status) {
-            closest_li.children("ul").slideDown();
-            closest_li.addClass("active");
-        }
-    });
 }
 
 function initialize217() {

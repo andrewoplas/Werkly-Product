@@ -14,6 +14,7 @@ $image-container-height-md: 130px;
     /* =========== Desktop Header =========== */
 
     .image-container {
+        width: 100%;
         height: $image-container-height;
         position: relative;
         background-image: url("../images/header-top.png");
@@ -27,6 +28,12 @@ $image-container-height-md: 130px;
 
         @include media-breakpoint-down(md) {
             height: $image-container-height-md;
+        }
+
+        &.pinned {
+            width: calc(100% - #{$sidebar-width-open});
+            margin-left: $sidebar-width-open;
+            transition: 200ms ease-out;
         }
     }
 
@@ -233,11 +240,12 @@ $image-container-height-md: 130px;
 
     .sidebar {
         width: $sidebar-width-open;
-        height: calc(100vh - #{$image-container-height});
+        height: calc(100% - #{$image-container-height});
         position: absolute;
         margin-top: -$header-height;
         background-color: white;
-        overflow-y: auto;
+        overflow: hidden;
+        z-index: 10000;
 
         transition: width 200ms ease-out;
         -webkit-box-shadow: 3px 0px 6px 0px rgba(0, 0, 0, 0.16);
@@ -253,7 +261,7 @@ $image-container-height-md: 130px;
         }
 
         &.pinned {
-            height: calc(100vh);
+            height: 100%;
             margin-top: 0;
             bottom: 0;
             transition: height 200ms ease-out;
@@ -348,6 +356,11 @@ $image-container-height-md: 130px;
                     cursor: pointer;
                 }
             }
+        }
+
+        #links-scrollbar {
+            height: calc(100% - #{$image-container-height});
+            position: relative;
         }
 
         .links {
