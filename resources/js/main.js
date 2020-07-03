@@ -40,7 +40,13 @@ function initializePage() {
         const active = $(this).addClass("active");
     });
 
+    // Initialize sidebar listeners
     initializeSidebar();
+
+    // Hide opened dropdown if hovered out
+    $(".DocumentHover").hover(null, function () {
+        $(this).find(".dropdown-menu.show").removeClass("show");
+    });
 }
 
 function initializeSidebar() {

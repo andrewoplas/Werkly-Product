@@ -16,22 +16,14 @@
 @import "./components/input";
 @import "./components/select";
 @import "./components/switch";
-@import "./components/slider";
 @import "./components/radio-button";
 @import "./components/checkbox";
-@import "./components/action-required";
-@import "./components/comment";
 @import "./components/avatar";
 @import "./components/mini-table";
 @import "./components/datatable";
-@import "./components/progress-bar";
 @import "./components/accordion";
-@import "./components/builder";
 @import "./components/document-hover";
 @import "./components/modal";
-@import "./components/article";
-@import "./components/complaint-card";
-@import "./components/activity-log";
 @import "./components/link";
 @import "./components/datatable2";
 @import "./components/table-filter";
@@ -77,16 +69,6 @@ p.normal-text {
     font-family: $primary-font;
     font-size: 14px;
     font-weight: normal;
-}
-
-[data-tippy-root] {
-    .tippy-box {
-        border-radius: 4px;
-
-        .tippy-content {
-            font-size: 11px;
-        }
-    }
 }
 
 .mb-30 {
