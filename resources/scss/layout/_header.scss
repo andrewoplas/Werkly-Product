@@ -246,6 +246,8 @@ $image-container-height-md: 130px;
         background-color: white;
         overflow: hidden;
         z-index: 10000;
+        display: flex;
+        flex-direction: column;
 
         transition: width 200ms ease-out;
         -webkit-box-shadow: 3px 0px 6px 0px rgba(0, 0, 0, 0.16);
@@ -359,8 +361,8 @@ $image-container-height-md: 130px;
         }
 
         #links-scrollbar {
-            height: calc(100% - #{$image-container-height});
             position: relative;
+            flex: 1;
         }
 
         .links {

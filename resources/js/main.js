@@ -40,38 +40,13 @@ function initializePage() {
         const active = $(this).addClass("active");
     });
 
-    // Opens sidebar
-    const sidebar = $(".sidebar");
-    sidebar.hover(
-        function () {
-            if (!sidebar.hasClass("pinned")) {
-                sidebar.removeClass("collapsed");
-            }
-        },
-        function () {
-            if (!sidebar.hasClass("pinned")) {
-                sidebar.addClass("collapsed");
-                $(".sidebar .links").find(".active").removeClass("active");
-                $(".sidebar .links").find("ul:not(.menu)").hide();
-            }
-        }
-    );
-
-    // Pin sidebar
-    $("#btn-pin").click(function () {
-        sidebar.addClass("pinned");
-        $(".page-header").addClass("pinned");
-        $(".image-container").addClass("pinned");
-        $(".MainContent").addClass("pinned");
-    });
-
-    // Set scrollbar
-    const ps = new PerfectScrollbar("#links-scrollbar");
-
     initializeSidebar();
 }
 
 function initializeSidebar() {
+    // Set scrollbar
+    const ps = new PerfectScrollbar("#links-scrollbar");
+
     // prevent page from jumping to top from  # href link
     $(".links-container li.menu-item-has-children > a").click(function (e) {
         e.preventDefault();
@@ -97,6 +72,35 @@ function initializeSidebar() {
             closest_li.children("ul").slideDown();
             closest_li.addClass("active");
         }
+
+        ps.update();
+    });
+
+    // Opens sidebar
+    const sidebar = $(".sidebar");
+    sidebar.hover(
+        function () {
+            if (!sidebar.hasClass("pinned")) {
+                sidebar.removeClass("collapsed");
+            }
+        },
+        function () {
+            if (!sidebar.hasClass("pinned")) {
+                sidebar.addClass("collapsed");
+                $(".sidebar .links").find(".active").removeClass("active");
+                $(".sidebar .links").find("ul:not(.menu)").hide();
+                ps.update();
+            }
+        }
+    );
+
+    // Pin sidebar
+    $("#btn-pin").click(function () {
+        sidebar.addClass("pinned");
+        $(".page-header").addClass("pinned");
+        $(".image-container").addClass("pinned");
+        $(".MainContent").addClass("pinned");
+        ps.update();
     });
 }
 
