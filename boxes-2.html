@@ -13,6 +13,10 @@
         <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" href="./vendors/perfect-scrollbar/css/perfect-scrollbar.css" />
 
+        <!-- Vendor CSS -->
+        <link rel="stylesheet" href="./vendors/semantic-ui/transition.min.css" />
+        <link rel="stylesheet" href="./vendors/semantic-dropdown/dropdown.css" />
+
         <!-- Custom CSS -->
         <link rel="stylesheet" href="./resources/css/main.css" />
     </head>
@@ -375,10 +379,9 @@
 
             <!-- ===== MAIN CONTENT ===== -->
             <div class="MainContent">
-                <!-- First Row -->
                 <div class="row">
-                    <div class="col-12">
-                        <div class="ContentBox mb-4">
+                    <div class="col-12 mb-30">
+                        <div class="ContentBox no-min-height">
                             <div class="box-header">
                                 <h4 class="box-title full-width-on-mobile">
                                     This is a header
@@ -413,100 +416,47 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr />
-                            <div class="tab-content">
-                                <div class="tab-pane fade show active" id="tab1" role="tabpanel">Tab 1</div>
-                                <div class="tab-pane fade" id="tab2" role="tabpanel">Tab 2</div>
-                                <div class="tab-pane fade" id="tab3" role="tabpanel">Tab 3</div>
-                            </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Second Row -->
                 <div class="row">
-                    <div class="col-12 col-md-4 col-xl-6">
-                        <div class="ContentBox mb-4">
-                            <div class="box-header">
-                                <h4 class="box-title">This is a header</h4>
-                                <div class="action-items">
-                                    <button class="Button icon ellipsis" data-toggle="dropdown">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
-                                    </div>
-                                </div>
+                    <div class="col-12 col-md-5 col-lg-4 col-xl-3 mb-30 mb-lg-0">
+                        <div class="ContentBox same-padding w-100">
+                            <div class="ButtonCluster">
+                                <button class="item selected">
+                                    Basic Inputs
+                                    <i class="arrow fal fa-angle-right"></i>
+                                </button>
+                                <button class="item">
+                                    Menu item label
+                                    <i class="arrow fal fa-angle-right"></i>
+                                </button>
+                                <button class="item">
+                                    Menu item label
+                                    <i class="arrow fal fa-angle-right"></i>
+                                </button>
+                                <button class="item">
+                                    Menu item label
+                                    <i class="arrow fal fa-angle-right"></i>
+                                </button>
+                                <button class="item">
+                                    Menu item label
+                                    <i class="arrow fal fa-angle-right"></i>
+                                </button>
                             </div>
-                            <hr />
                         </div>
                     </div>
-                    <div class="col-12 col-md-4 col-xl-3">
-                        <div class="ContentBox mb-4">
+                    <div class="col-12 col-md-7 col-lg-8 col-xl-9">
+                        <div class="ContentBox mb-30">
                             <div class="box-header">
-                                <h4 class="box-title">This is a header</h4>
-                                <div class="action-items">
-                                    <button class="Button icon ellipsis" data-toggle="dropdown">
+                                <h4 class="box-title full-width-on-mobile">
+                                    This is a header
+                                    <button class="Button icon ellipsis d-inline-block d-sm-none ml-2">
                                         <i class="fas fa-ellipsis-v"></i>
                                     </button>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr />
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-xl-3">
-                        <div class="ContentBox mb-4">
-                            <div class="box-header">
-                                <h4 class="box-title">This is a header</h4>
+                                </h4>
                                 <div class="action-items">
-                                    <button class="Button icon ellipsis" data-toggle="dropdown">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr />
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Third Row -->
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-8">
-                        <div class="ContentBox mb-4">
-                            <div class="box-header">
-                                <h4 class="box-title">This is a header</h4>
-                                <div class="action-items">
-                                    <button class="Button icon ellipsis" data-toggle="dropdown">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr />
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="ContentBox mb-4">
-                            <div class="box-header">
-                                <h4 class="box-title">This is a header</h4>
-                                <div class="action-items">
-                                    <button class="Button icon ellipsis" data-toggle="dropdown">
+                                    <button class="Button icon ellipsis d-none d-sm-block" data-toggle="dropdown">
                                         <i class="fas fa-ellipsis-v"></i>
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right">
@@ -534,12 +484,20 @@
         <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="./vendors/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
 
+        <!-- Vendor JS -->
+        <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+
         <!-- Custom JS -->
         <script src="./resources/js/main.js"></script>
 
         <script>
             $(document).ready(function () {
                 initializePage();
+
+                $(".ButtonCluster .item").click(function () {
+                    $(this).parents(".ButtonCluster").find(".item").removeClass("selected");
+                    $(this).addClass("selected");
+                });
             });
         </script>
     </body>

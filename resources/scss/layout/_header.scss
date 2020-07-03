@@ -285,9 +285,10 @@ $image-container-height-md: 130px;
                 .full {
                     height: 50px;
                     transition: 200ms ease;
-                    & + .icon {
-                        display: none;
-                    }
+                }
+
+                .icon {
+                    display: none;
                 }
             }
         }
@@ -299,14 +300,14 @@ $image-container-height-md: 130px;
             .logo {
                 .full {
                     display: none;
-
-                    & + .icon {
-                        display: none;
-                    }
                 }
 
                 .small {
                     display: block;
+                }
+
+                .icon {
+                    display: none;
                 }
             }
 
@@ -351,12 +352,12 @@ $image-container-height-md: 130px;
             .full {
                 height: 30px;
                 margin-top: 5px;
+            }
 
-                & + .icon {
-                    color: $gray-6;
-                    font-size: 18px;
-                    cursor: pointer;
-                }
+            .icon {
+                color: $gray-6;
+                font-size: 18px;
+                cursor: pointer;
             }
         }
 
@@ -455,6 +456,10 @@ $image-container-height-md: 130px;
                         text-decoration: none;
                         background-color: white;
                         @include flex(flex-start, center);
+
+                        span {
+                            white-space: nowrap;
+                        }
 
                         &:hover {
                             color: $primary-color !important;
