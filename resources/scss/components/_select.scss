@@ -4,7 +4,7 @@
     border-radius: 4px;
     padding: 11px 10px !important;
     border: 1px solid $gray-5 !important;
-    font-family: $secondary-font;
+    font-family: $primary-font;
     font-weight: normal;
     font-size: 14px;
     color: $dark;
@@ -15,7 +15,7 @@
     }
 
     .default.text {
-        font-family: $secondary-font;
+        font-family: $primary-font;
         font-weight: normal;
         font-size: 14px !important;
         color: $dark !important;
@@ -26,7 +26,7 @@
         border-color: $dark !important;
 
         & > .item {
-            font-family: $secondary-font !important;
+            font-family: $primary-font !important;
             font-size: 14px !important;
             color: $dark !important;
             padding: 8px 10px !important;
@@ -43,7 +43,7 @@
     }
 
     &::placeholder {
-        font-family: $secondary-font;
+        font-family: $primary-font;
         font-weight: 300;
         font-size: 14px;
         color: $gray-4;
