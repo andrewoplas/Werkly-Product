@@ -36,6 +36,7 @@ $border-width: 60px;
         background-color: white;
         border-radius: 4px;
         padding: 20px;
+        @include shadow(0, 0, 10px, 0, rgba(0, 0, 0, 0.05));
     }
 
     .image-container {

@@ -2243,6 +2243,9 @@ select.Select .dropdown.icon::before,
   background-color: white;
   border-radius: 4px;
   padding: 20px;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
 }
 .DocumentHover .image-container {
   min-height: 220px;
