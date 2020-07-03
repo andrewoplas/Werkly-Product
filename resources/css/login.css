@@ -959,24 +959,8 @@
   font-size: 14px;
   padding: 12px 15px;
 }
-.ContentBox .box-header .dropdown-menu .dropdown-item .show-on-mobile {
-  display: none;
-}
-@media only screen and (max-width: 1100px) {
-  .ContentBox .box-header .dropdown-menu .dropdown-item .show-on-mobile {
-    display: flex;
-    align-items: center;
-    justify-content: stretch;
-    flex-direction: row;
-  }
-}
 .ContentBox .box-header .dropdown-menu .dropdown-item:active {
   background-color: #00a6ed;
-}
-.ContentBox .box-header .dropdown-menu .dropdown-item .icon {
-  margin-right: 10px;
-  font-size: 14px;
-  min-width: 18px;
 }
 .ContentBox .ellipsis {
   color: #bbbbbb !important;
@@ -2231,59 +2215,11 @@ select.Select .dropdown.icon::before,
   margin-left: -45px;
 }
 
-.DocumentCard {
-  border: 1px solid #cccccc;
-  display: flex;
-  align-items: stretch;
-  justify-content: stretch;
-  flex-direction: row;
+@keyframes delay-overflow {
+  from {
+    overflow: auto;
+  }
 }
-.DocumentCard .image {
-  flex: 0 0 50%;
-  max-width: 50%;
-  min-height: 185px;
-  background-image: url("../images/login-left-graphic.png");
-  background-size: cover;
-  background-position: center;
-}
-.DocumentCard .details {
-  flex: 0 0 50%;
-  max-width: 50%;
-  padding: 20px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-}
-.DocumentCard .details .title {
-  margin: 0;
-  padding: 0;
-  font-family: "Nunito", sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  color: #444;
-}
-.DocumentCard .details .description {
-  margin: 10px 0 20px 0;
-  padding: 0;
-  font-family: "Nunito", sans-serif;
-  font-size: 14px;
-  line-height: 19px;
-  color: #444;
-}
-.DocumentCard .details .action-items {
-  width: 100%;
-  margin-top: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.DocumentCard .details .action-items > * {
-  margin-top: 10px;
-}
-
 .DocumentHover {
   flex-basis: 12%;
   flex-shrink: 0;
@@ -2295,7 +2231,13 @@ select.Select .dropdown.icon::before,
 .DocumentHover:not(.no-hover):hover .image-container .action-items {
   padding: 10px 15px;
   max-height: 53px;
-  transition: 220ms ease-out;
+  overflow: initial;
+  transition: all 220ms ease-out;
+}
+.DocumentHover:not(.no-hover):hover .image-container .action-items button {
+  opacity: 1;
+  transition-duration: 100ms;
+  transition-delay: 150ms;
 }
 .DocumentHover.white-box {
   background-color: white;
@@ -2339,9 +2281,27 @@ select.Select .dropdown.icon::before,
   flex-direction: row;
   flex-wrap: wrap;
 }
+.DocumentHover .image-container .action-items button {
+  opacity: 0;
+  transition: 100ms ease-in;
+}
 .DocumentHover .image-container .action-items .btn-view {
   padding: 6px 24px;
   margin-right: 5px;
+}
+.DocumentHover .image-container .action-items .dropdown-menu {
+  border: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.05);
+}
+.DocumentHover .image-container .action-items .dropdown-menu .dropdown-item {
+  font-size: 14px;
+  padding: 12px 15px;
+}
+.DocumentHover .image-container .action-items .dropdown-menu .dropdown-item:active {
+  background-color: #00a6ed;
 }
 .DocumentHover .title {
   margin: 10px 0 0 0;
