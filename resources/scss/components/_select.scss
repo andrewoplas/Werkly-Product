@@ -31,8 +31,12 @@
             color: $dark !important;
             padding: 8px 10px !important;
 
+            &.selected {
+                color: $primary-color !important;
+            }
+
             &:hover {
-                background-color: $dark;
+                background-color: $primary-color;
                 color: white !important;
             }
         }

@@ -2805,6 +2805,12 @@ textarea.Input {
   font-weight: bold;
   outline: 0;
 }
+.ListFilter .Select.list-select {
+  background-color: #f7f7f7 !important;
+}
+.ListFilter .Select.list-select .menu {
+  background-color: #f7f7f7 !important;
+}
 
 .Modal .modal-content {
   min-height: 40vh;
@@ -3033,9 +3039,13 @@ select.Select .menu > .item,
   color: #444 !important;
   padding: 8px 10px !important;
 }
+select.Select .menu > .item.selected,
+.fluid.Select .menu > .item.selected {
+  color: #00a6ed !important;
+}
 select.Select .menu > .item:hover,
 .fluid.Select .menu > .item:hover {
-  background-color: #444;
+  background-color: #00a6ed;
   color: white !important;
 }
 select.Select:focus,
@@ -3098,8 +3108,11 @@ select.Select .dropdown.icon::before,
   color: #444 !important;
   padding: 8px 10px !important;
 }
+.fluid.SelectMultiple .menu > .item.selected {
+  color: #00a6ed !important;
+}
 .fluid.SelectMultiple .menu > .item:hover {
-  background-color: #444;
+  background-color: #00a6ed;
   color: white !important;
 }
 .fluid.SelectMultiple:focus {

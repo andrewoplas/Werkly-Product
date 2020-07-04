@@ -147,4 +147,12 @@
         font-weight: bold;
         outline: 0;
     }
+
+    .Select.list-select {
+        background-color: $gray-7 !important;
+
+        .menu {
+            background-color: $gray-7 !important;
+        }
+    }
 }
