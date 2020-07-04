@@ -2,6 +2,8 @@
 
 .bootstrap-datetimepicker-widget table td.active,
 .bootstrap-datetimepicker-widget table td.active:hover,
-.bootstrap-datetimepicker-widget button[data-action] {
+.bootstrap-datetimepicker-widget button[data-action],
+.bootstrap-datetimepicker-widget table td span.active {
     background-color: $primary-color !important;
+    border-color: $primary-color !important;
 }

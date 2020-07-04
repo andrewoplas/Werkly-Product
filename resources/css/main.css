@@ -1,8 +1,10 @@
 @charset "UTF-8";
 .bootstrap-datetimepicker-widget table td.active,
 .bootstrap-datetimepicker-widget table td.active:hover,
-.bootstrap-datetimepicker-widget button[data-action] {
+.bootstrap-datetimepicker-widget button[data-action],
+.bootstrap-datetimepicker-widget table td span.active {
   background-color: #00a6ed !important;
+  border-color: #00a6ed !important;
 }
 
 .CustomAgGridTable {
