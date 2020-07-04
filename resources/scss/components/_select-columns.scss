@@ -1,0 +1,35 @@
+.SelectColumns {
+    .border-right {
+        border-right: 1px solid $gray-5;
+
+        @include media-breakpoint-down(xs) {
+            border-right: 0 !important;
+        }
+    }
+
+    .label {
+        margin-bottom: 10px;
+    }
+
+    .columns-list {
+        height: 200px;
+        margin-top: 10px;
+        overflow-y: auto;
+
+        .Checkbox {
+            margin-bottom: 10px;
+        }
+    }
+
+    .selected-columns {
+        @include media-breakpoint-down(xs) {
+            margin-top: 15px;
+        }
+    }
+
+    .Accordion {
+        max-height: 245px;
+        padding-right: 5px;
+        overflow-y: auto;
+    }
+}

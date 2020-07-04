@@ -73,40 +73,12 @@ $widthLarge: 35%;
                 align-self: stretch;
                 @include flex(stretch, center);
 
-                .search-input {
+                .SearchInput {
                     height: 100%;
-                    position: relative;
                     margin-right: 15px;
-                    flex: 1;
 
                     input {
-                        width: 100%;
                         height: 100%;
-                        padding: 6px 15px;
-                        padding-right: 45px;
-                        font-family: $primary-font;
-                        font-size: 14px;
-                        font-weight: 600;
-                        color: $dark;
-                        background-color: $gray-7;
-                        border-radius: 4px;
-                        border: 1px solid $gray-5 !important;
-                        outline: none !important;
-
-                        &::placeholder {
-                            font-family: $primary-font;
-                            font-size: 14px;
-                            font-weight: 500;
-                            color: $gray-6;
-                        }
-                    }
-
-                    .icon {
-                        position: absolute;
-                        color: $gray-6;
-                        top: 10px;
-                        right: 15px;
-                        font-size: 13px;
                     }
                 }
             }

@@ -1,3 +1,4 @@
+/* ================= FullWidthCellRenderer ================= */
 function FullWidthCellRenderer() {}
 
 FullWidthCellRenderer.prototype.init = function (params) {
@@ -55,6 +56,7 @@ function getData() {
     };
 }
 
+/* ================= Listeners ================= */
 function initializeGridTable(element) {
     const rowData = [];
     for (let i = 0; i < 6; i++) {
@@ -73,5 +75,10 @@ function initializeGridTable(element) {
         components: { cellRenderer: FullWidthCellRenderer },
         rowData: rowData,
         suppressRowClickSelection: true,
+        onGridReady(params) {
+            $(".btn-show-filter").click(function () {
+                $(".filter-configuration-panel").toggleClass("shown");
+            });
+        },
     });
 }

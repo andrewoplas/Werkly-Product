@@ -68,11 +68,6 @@
             button {
                 font-weight: bold;
                 align-self: stretch;
-
-                &.btn-save {
-                    border-color: $secondary-color;
-                    color: $secondary-color;
-                }
             }
         }
     }

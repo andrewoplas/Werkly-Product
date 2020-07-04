@@ -172,3 +172,55 @@
         border-top: 1px solid $gray-5;
     }
 }
+
+.ContentBox.primary {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    flex: 1;
+
+    .box-header {
+        background-color: $primary-color;
+        padding: 20px;
+
+        .box-title {
+            margin-top: 0;
+            color: white;
+        }
+
+        .action-items {
+            margin-top: 0;
+
+            .tabs {
+                li {
+                    a {
+                        color: white;
+
+                        &:not(.active):hover {
+                            font-weight: bold;
+                            color: white;
+                        }
+
+                        &.active {
+                            background-color: white;
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        Button.ellipsis {
+            background-color: transparent;
+            color: white !important;
+
+            &:hover {
+                background-color: transparentize($color: white, $amount: 0.9);
+            }
+        }
+    }
+
+    .box-content {
+        padding: 20px;
+    }
+}

@@ -227,34 +227,3 @@ const onPaginate = function (api, pageSize, rowData) {
         },
     });
 };
-
-// const onPaginate = function (api) {
-//     paginate.find("li").click(function () {
-//         const classClicked = $(this).data("goto");
-//         switch (classClicked) {
-//             case "first":
-//                 api.paginationGoToFirstPage();
-//                 break;
-//             case "last":
-//                 api.paginationGoToLastPage();
-//                 break;
-//             case "previous":
-//                 api.paginationGoToPreviousPage();
-//                 break;
-//             case "next":
-//                 api.paginationGoToNextPage();
-//                 break;
-//             default:
-//                 break;
-//         }
-
-//         const currentPage = api.paginationGetCurrentPage() + 1;
-//         if (currentPage === 1) {
-//             reachedStart();
-//         } else if (currentPage === api.paginationGetTotalPages()) {
-//             reachedLast();
-//         }
-
-//         console.log("paginationGetCurrentPage", api.paginationGetCurrentPage());
-//     });
-// };

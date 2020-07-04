@@ -94,37 +94,22 @@ $image-container-height-md: 130px;
         .details {
             @include flex(center, center);
 
-            .search-input {
+            .SearchInput {
                 width: 260px;
                 position: relative;
 
                 input {
-                    width: 100%;
-                    padding: 6px 15px;
-                    padding-right: 45px;
-                    background-color: rgba(255, 255, 255, 0.2);
-                    font-family: $primary-font;
-                    font-size: 14px;
-                    font-weight: normal;
-                    color: white;
-                    border-radius: 4px;
+                    background-color: rgba(255, 255, 255, 0.2) !important;
                     border: 0 !important;
-                    outline: none !important;
+                    color: white;
 
                     &::placeholder {
-                        font-family: $primary-font;
-                        font-size: 12px;
-                        font-weight: 500;
                         color: white;
                     }
                 }
 
                 .icon {
-                    position: absolute;
                     color: white;
-                    top: 10px;
-                    right: 15px;
-                    font-size: 13px;
                 }
             }
 
@@ -161,7 +146,7 @@ $image-container-height-md: 130px;
             }
 
             @include breakpoint-down($page-header-menu-collapse-width) {
-                .search-input,
+                .SearchInput,
                 .nav {
                     display: none;
                 }
@@ -245,7 +230,7 @@ $image-container-height-md: 130px;
         margin-top: -$header-height;
         background-color: white;
         overflow: hidden;
-        z-index: 10000;
+        z-index: 1000;
         display: flex;
         flex-direction: column;
 
@@ -597,38 +582,12 @@ $image-container-height-md: 130px;
             border: 1px solid $gray-5 !important;
             @include flex(flex-start, center);
 
-            .search-input {
-                position: relative;
+            .SearchInput {
                 margin-right: 20px;
                 flex: 1;
 
                 input {
-                    width: 100%;
-                    padding: 6px 15px;
-                    padding-right: 45px;
-                    font-family: $primary-font;
                     font-size: 12px;
-                    font-weight: 600;
-                    color: $dark;
-                    background-color: white;
-                    border-radius: 4px;
-                    border: 1px solid $gray-5 !important;
-                    outline: none !important;
-
-                    &::placeholder {
-                        font-family: $primary-font;
-                        font-size: 12px;
-                        font-weight: 500;
-                        color: $gray-6;
-                    }
-                }
-
-                .icon {
-                    position: absolute;
-                    color: $gray-6;
-                    top: 10px;
-                    right: 15px;
-                    font-size: 13px;
                 }
             }
 

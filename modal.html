@@ -13,6 +13,9 @@
         <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" href="./vendors/perfect-scrollbar/css/perfect-scrollbar.css" />
 
+        <!-- Vendor CSS -->
+        <link rel="stylesheet" href="./vendors/nestable/jquery.nestable.css" />
+
         <!-- Custom CSS -->
         <link rel="stylesheet" href="./resources/css/main.css" />
     </head>
@@ -89,6 +92,9 @@
 
                             <div class="links-container">
                                 <ul class="menu">
+                                    <li class="menu-item-has-children">
+                                        <a href="login.html"><i class="fad fa-sign-in icon"></i> <span>Login</span></a>
+                                    </li>
                                     <li class="menu-item-has-children">
                                         <a href="javascript:void(0)">
                                             <i class="fad fa-chart-line icon"></i>
@@ -394,148 +400,296 @@
 
             <!-- ===== MAIN CONTENT ===== -->
             <div class="MainContent">
-                <!-- First Row -->
-                <div class="row">
-                    <div class="col-12">
-                        <div class="ContentBox mb-4">
-                            <div class="box-header">
-                                <h4 class="box-title full-width-on-mobile">
-                                    This is a header
-                                    <button class="Button icon ellipsis d-inline-block d-sm-none ml-2" data-toggle="dropdown">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
-                                    </div>
-                                </h4>
-                                <div class="action-items">
-                                    <ul class="nav nav-tabs tabs" role="tablist">
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#tab-1" role="tab">Tab Label</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#tab-2" role="tab">Tab Label</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link active" data-toggle="tab" href="#tab-3" role="tab">Tab Label</a>
-                                        </li>
-                                    </ul>
-                                    <button class="Button icon ellipsis d-none d-sm-block" data-toggle="dropdown">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                <div class="row mb-5">
+                    <div class="col-12 col-md-3">
+                        <p class="label">Normal modal</p>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <button type="button" class="Button primary" data-toggle="modal" data-target="#modal-2">
+                            Launch modal
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="Modal medium modal fade" id="modal-2" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <div class="ContentBox primary">
+                                            <div class="box-header">
+                                                <h4 class="box-title full-width-on-mobile">
+                                                    This is a header
+                                                    <button class="Button icon ellipsis d-inline-block d-sm-none ml-2" data-toggle="dropdown">
+                                                        <i class="fas fa-ellipsis-v"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
+                                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                                    </div>
+                                                </h4>
+                                                <div class="action-items">
+                                                    <ul class="nav nav-tabs tabs" role="tablist">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" data-toggle="tab" href="#tab-1" role="tab">Tab Label</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" data-toggle="tab" href="#tab-2" role="tab">Tab Label</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active" data-toggle="tab" href="#tab-3" role="tab">Tab Label</a>
+                                                        </li>
+                                                    </ul>
+                                                    <button class="Button icon ellipsis d-none d-sm-block" data-toggle="dropdown">
+                                                        <i class="fas fa-ellipsis-v"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
+                                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="box-content tab-content">
+                                                <div class="tab-pane fade" id="tab-1" role="tabpanel">
+                                                    Tab 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                                    laboris nisi ut aliquip ex ea commodo consequat.
+                                                </div>
+                                                <div class="tab-pane fade" id="tab-2" role="tabpanel">
+                                                    Tab 2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                                    laboris nisi ut aliquip ex ea commodo consequat.
+                                                </div>
+                                                <div class="tab-pane fade show active" id="tab-3" role="tabpanel">
+                                                    Tab 3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                                    laboris nisi ut aliquip ex ea commodo consequat.
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <hr />
-                            <div class="tab-content">
-                                <div class="tab-pane fade show active" id="tab1" role="tabpanel">Tab 1</div>
-                                <div class="tab-pane fade" id="tab2" role="tabpanel">Tab 2</div>
-                                <div class="tab-pane fade" id="tab3" role="tabpanel">Tab 3</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Second Row -->
-                <div class="row">
-                    <div class="col-12 col-md-4 col-xl-6">
-                        <div class="ContentBox mb-4">
-                            <div class="box-header">
-                                <h4 class="box-title">This is a header</h4>
-                                <div class="action-items">
-                                    <button class="Button icon ellipsis" data-toggle="dropdown">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr />
-                        </div>
+                <div class="row mb-5">
+                    <div class="col-12 col-md-3">
+                        <p class="label">Select columns modal</p>
                     </div>
-                    <div class="col-12 col-md-4 col-xl-3">
-                        <div class="ContentBox mb-4">
-                            <div class="box-header">
-                                <h4 class="box-title">This is a header</h4>
-                                <div class="action-items">
-                                    <button class="Button icon ellipsis" data-toggle="dropdown">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr />
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-xl-3">
-                        <div class="ContentBox mb-4">
-                            <div class="box-header">
-                                <h4 class="box-title">This is a header</h4>
-                                <div class="action-items">
-                                    <button class="Button icon ellipsis" data-toggle="dropdown">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr />
-                        </div>
-                    </div>
-                </div>
+                    <div class="col-12 col-md-9">
+                        <button type="button" class="Button primary" data-toggle="modal" data-target="#modal-1">
+                            Launch modal
+                        </button>
 
-                <!-- Third Row -->
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-8">
-                        <div class="ContentBox mb-4">
-                            <div class="box-header">
-                                <h4 class="box-title">This is a header</h4>
-                                <div class="action-items">
-                                    <button class="Button icon ellipsis" data-toggle="dropdown">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                        <!-- Modal -->
+                        <div class="Modal modal fade" id="modal-1" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <div class="ContentBox primary">
+                                            <div class="box-header">
+                                                <h4 class="box-title">
+                                                    This is a header
+                                                </h4>
+                                                <div class="action-items">
+                                                    <button class="Button icon ellipsis d-none d-sm-block" data-toggle="dropdown">
+                                                        <i class="fas fa-ellipsis-v"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
+                                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="box-content">
+                                                <div class="SelectColumns">
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 border-right">
+                                                            <p class="label">Available Columns</p>
+                                                            <div class="SearchInput dark">
+                                                                <input type="text" placeholder="Search..." />
+                                                                <i class="icon far fa-search"></i>
+                                                            </div>
+                                                            <div class="columns-list">
+                                                                <div class="Checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" />
+                                                                        <span></span>
+                                                                        Default
+                                                                    </label>
+                                                                </div>
+                                                                <div class="Checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" checked />
+                                                                        <span></span>
+                                                                        Checked
+                                                                    </label>
+                                                                </div>
+                                                                <div class="Checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" />
+                                                                        <span></span>
+                                                                        Default
+                                                                    </label>
+                                                                </div>
+                                                                <div class="Checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" />
+                                                                        <span></span>
+                                                                        Default
+                                                                    </label>
+                                                                </div>
+                                                                <div class="Checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" />
+                                                                        <span></span>
+                                                                        Default
+                                                                    </label>
+                                                                </div>
+                                                                <div class="Checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" />
+                                                                        <span></span>
+                                                                        Default
+                                                                    </label>
+                                                                </div>
+                                                                <div class="Checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" />
+                                                                        <span></span>
+                                                                        Default
+                                                                    </label>
+                                                                </div>
+                                                                <div class="Checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" />
+                                                                        <span></span>
+                                                                        Default
+                                                                    </label>
+                                                                </div>
+                                                                <div class="Checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox" />
+                                                                        <span></span>
+                                                                        Default
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 selected-columns">
+                                                            <p class="label">Selected Columns</p>
+
+                                                            <div class="Accordion dd">
+                                                                <ol class="dd-list">
+                                                                    <li class="dd-item" data-id="1">
+                                                                        <div class="dd-handle">
+                                                                            <i class="fas fa-grip-vertical icon"></i>
+                                                                            <p class="name">Button Label</p>
+                                                                        </div>
+                                                                        <button class="btn-remove">
+                                                                            <i class="far fa-times"></i>
+                                                                        </button>
+                                                                    </li>
+                                                                    <li class="dd-item" data-id="1">
+                                                                        <div class="dd-handle">
+                                                                            <i class="fas fa-grip-vertical icon"></i>
+                                                                            <p class="name">Button Label</p>
+                                                                        </div>
+                                                                        <button class="btn-remove">
+                                                                            <i class="far fa-times"></i>
+                                                                        </button>
+                                                                    </li>
+                                                                    <li class="dd-item" data-id="1">
+                                                                        <div class="dd-handle">
+                                                                            <i class="fas fa-grip-vertical icon"></i>
+                                                                            <p class="name">Button Label</p>
+                                                                        </div>
+                                                                        <button class="btn-remove">
+                                                                            <i class="far fa-times"></i>
+                                                                        </button>
+                                                                    </li>
+                                                                    <li class="dd-item" data-id="1">
+                                                                        <div class="dd-handle">
+                                                                            <i class="fas fa-grip-vertical icon"></i>
+                                                                            <p class="name">Button Label</p>
+                                                                        </div>
+                                                                        <button class="btn-remove">
+                                                                            <i class="far fa-times"></i>
+                                                                        </button>
+                                                                    </li>
+                                                                    <li class="dd-item" data-id="1">
+                                                                        <div class="dd-handle">
+                                                                            <i class="fas fa-grip-vertical icon"></i>
+                                                                            <p class="name">Button Label</p>
+                                                                        </div>
+                                                                        <button class="btn-remove">
+                                                                            <i class="far fa-times"></i>
+                                                                        </button>
+                                                                    </li>
+                                                                    <li class="dd-item" data-id="1">
+                                                                        <div class="dd-handle">
+                                                                            <i class="fas fa-grip-vertical icon"></i>
+                                                                            <p class="name">Button Label</p>
+                                                                        </div>
+                                                                        <button class="btn-remove">
+                                                                            <i class="far fa-times"></i>
+                                                                        </button>
+                                                                    </li>
+                                                                    <li class="dd-item" data-id="1">
+                                                                        <div class="dd-handle">
+                                                                            <i class="fas fa-grip-vertical icon"></i>
+                                                                            <p class="name">Button Label</p>
+                                                                        </div>
+                                                                        <button class="btn-remove">
+                                                                            <i class="far fa-times"></i>
+                                                                        </button>
+                                                                    </li>
+                                                                    <li class="dd-item" data-id="1">
+                                                                        <div class="dd-handle">
+                                                                            <i class="fas fa-grip-vertical icon"></i>
+                                                                            <p class="name">Button Label</p>
+                                                                        </div>
+                                                                        <button class="btn-remove">
+                                                                            <i class="far fa-times"></i>
+                                                                        </button>
+                                                                    </li>
+                                                                    <li class="dd-item" data-id="1">
+                                                                        <div class="dd-handle">
+                                                                            <i class="fas fa-grip-vertical icon"></i>
+                                                                            <p class="name">Button Label</p>
+                                                                        </div>
+                                                                        <button class="btn-remove">
+                                                                            <i class="far fa-times"></i>
+                                                                        </button>
+                                                                    </li>
+                                                                    <li class="dd-item" data-id="1">
+                                                                        <div class="dd-handle">
+                                                                            <i class="fas fa-grip-vertical icon"></i>
+                                                                            <p class="name">Button Label</p>
+                                                                        </div>
+                                                                        <button class="btn-remove">
+                                                                            <i class="far fa-times"></i>
+                                                                        </button>
+                                                                    </li>
+                                                                </ol>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center mt-4">
+                                                    <button class="Button secondary outline">Cancel</button>
+                                                    <button class="Button secondary">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <hr />
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="ContentBox mb-4">
-                            <div class="box-header">
-                                <h4 class="box-title">This is a header</h4>
-                                <div class="action-items">
-                                    <button class="Button icon ellipsis" data-toggle="dropdown">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr />
                         </div>
                     </div>
                 </div>
@@ -553,12 +707,24 @@
         <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="./vendors/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
 
+        <!-- Vendor JS -->
+        <script src="./vendors/nestable/jquery.nestable.js"></script>
+
         <!-- Custom JS -->
         <script src="./resources/js/main.js"></script>
 
         <script>
             $(document).ready(function () {
                 initializePage();
+
+                $(".Accordion").nestable({
+                    maxDepth: 1,
+                    scrollSensitivity: 1000,
+                });
+
+                $(".SelectColumns .Accordion .btn-remove").click(function () {
+                    $(this).parents("li").hide(100);
+                });
             });
         </script>
     </body>

@@ -1,0 +1,67 @@
+@mixin dd-handle {
+    .dd-handle {
+        position: relative;
+        width: 100%;
+        padding: 0 10px;
+        border-radius: 4px;
+        background-color: $gray-7;
+        border: 1px solid $gray-5;
+        margin: 0 0 10px 0;
+        cursor: pointer;
+        @include flex(flex-start, center);
+
+        &:hover {
+            color: $dark;
+            opacity: 0.7;
+            transition: 100ms;
+        }
+
+        .name {
+            margin: 0;
+            font-family: $primary-font;
+            font-size: 12px;
+            font-weight: 400;
+            color: $dark;
+        }
+
+        .icon {
+            font-size: 12px;
+            margin-right: 8px;
+            color: $gray-6;
+        }
+    }
+}
+
+.Accordion {
+    max-width: 100%;
+
+    @include dd-handle;
+
+    .btn-remove {
+        width: 18px;
+        height: 18px;
+        padding-top: 1px;
+        padding-left: 1px;
+        margin: 6px 0;
+        font-size: 11px;
+        color: $dark;
+        border-radius: 50%;
+        flex-shrink: 0;
+        z-index: 9999;
+        @include flex(center, center);
+
+        float: none;
+        text-indent: 0;
+        position: absolute;
+        top: 0;
+        right: 8px;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+    }
+}
+
+.dd-dragel {
+    @include dd-handle;
+}
