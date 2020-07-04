@@ -4,7 +4,7 @@ $animationDuration: 300ms;
 
 .AdvanceList {
     .filter-configuration-panel {
-        width: 30%;
+        width: 35%;
         margin-bottom: 20px;
         transition: $animationDuration;
 
@@ -35,7 +35,7 @@ $animationDuration: 300ms;
     .list-panel {
         z-index: 999;
         padding: 0 15px;
-        width: 70%;
+        width: 65%;
         transition: 300ms;
 
         .header {
@@ -64,7 +64,7 @@ $animationDuration: 300ms;
                         padding: 6px 15px;
                         padding-right: 45px;
                         font-family: $primary-font;
-                        font-size: 12px;
+                        font-size: 14px;
                         font-weight: 600;
                         color: $dark;
                         background-color: $gray-7;
@@ -74,7 +74,7 @@ $animationDuration: 300ms;
 
                         &::placeholder {
                             font-family: $primary-font;
-                            font-size: 12px;
+                            font-size: 14px;
                             font-weight: 500;
                             color: $gray-6;
                         }

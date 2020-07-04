@@ -845,14 +845,30 @@
   font-weight: bold;
   flex: 1;
 }
+@media (max-width: 991.98px) {
+  .ContentBox .box-header .box-title.full-width-on-mobile-md {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .ContentBox .box-header .box-title.full-width-on-mobile-md + .action-items {
+    width: 100%;
+  }
+  .ContentBox .box-header .box-title.full-width-on-mobile-md + .action-items .main-button {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
 @media (max-width: 767.98px) {
   .ContentBox .box-header .box-title.full-width-on-mobile {
     width: 100%;
   }
-  .ContentBox .box-header .box-title.full-width-on-mobile.full-width-on-mobile + .action-items {
+  .ContentBox .box-header .box-title.full-width-on-mobile + .action-items {
     width: 100%;
   }
-  .ContentBox .box-header .box-title.full-width-on-mobile.full-width-on-mobile + .action-items .main-button {
+  .ContentBox .box-header .box-title.full-width-on-mobile + .action-items .main-button {
     padding-left: 8px;
     padding-right: 8px;
   }
@@ -948,10 +964,6 @@
     margin-right: 0;
   }
 }
-.ContentBox .ellipsis {
-  color: #bbbbbb !important;
-  border: 0 !important;
-}
 .ContentBox hr {
   margin-top: 15px;
   margin-bottom: 20px;
@@ -1030,19 +1042,9 @@
   font-size: 17px;
   margin-left: auto;
 }
-.Button.dropdown-toggle {
-  padding-left: 18px;
-  padding-right: 18px;
-}
-.Button.dropdown-toggle:after {
-  display: inline-block;
-  margin-left: 12px;
-  vertical-align: 0.15em;
-  content: "";
-  border-top: 0.3em solid;
-  border-right: 0.3em solid transparent;
-  border-bottom: 0;
-  border-left: 0.3em solid transparent;
+.Button.ellipsis {
+  color: #bbbbbb !important;
+  border: 0 !important;
 }
 
 .ButtonCluster .item {
@@ -1193,7 +1195,7 @@ select.Select,
   width: 100%;
   min-height: 30px !important;
   border-radius: 4px;
-  padding: 11px 10px !important;
+  padding: 11px 32px 11px 10px !important;
   border: 1px solid #e2e2e2 !important;
   font-family: "Nunito", sans-serif;
   font-weight: normal;
@@ -1260,7 +1262,7 @@ select.Select .dropdown.icon::before,
   width: 100%;
   min-height: 30px !important;
   border-radius: 4px;
-  padding: 11px 10px !important;
+  padding: 11px 32px 11px 10px !important;
   border: 1px solid #e2e2e2 !important;
   font-family: "Nunito", sans-serif;
   font-weight: normal;
@@ -2622,7 +2624,7 @@ select.Select .dropdown.icon::before,
   }
 }
 .AdvanceList .filter-configuration-panel {
-  width: 30%;
+  width: 35%;
   margin-bottom: 20px;
   transition: 300ms;
 }
@@ -2647,7 +2649,7 @@ select.Select .dropdown.icon::before,
 .AdvanceList .list-panel {
   z-index: 999;
   padding: 0 15px;
-  width: 70%;
+  width: 65%;
   transition: 300ms;
 }
 .AdvanceList .list-panel .header {
@@ -2681,7 +2683,7 @@ select.Select .dropdown.icon::before,
   padding: 6px 15px;
   padding-right: 45px;
   font-family: "Nunito", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   color: #444;
   background-color: #f7f7f7;
@@ -2691,7 +2693,7 @@ select.Select .dropdown.icon::before,
 }
 .AdvanceList .list-panel .header .search-filter .search-input input::placeholder {
   font-family: "Nunito", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   color: #bbbbbb;
 }
@@ -2869,8 +2871,9 @@ select.Select .dropdown.icon::before,
 }
 .ListFilter .main .action-buttons button {
   font-weight: bold;
+  align-self: stretch;
 }
-.ListFilter .main .action-buttons .btn-save {
+.ListFilter .main .action-buttons button.btn-save {
   border-color: #7fb800;
   color: #7fb800;
 }
@@ -2939,6 +2942,7 @@ select.Select .dropdown.icon::before,
   padding: 20px;
   background-color: white;
   border-radius: 4px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: stretch;
@@ -2947,18 +2951,40 @@ select.Select .dropdown.icon::before,
   -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
 }
+@media (max-width: 575.98px) {
+  .UserCard {
+    flex-wrap: wrap;
+  }
+}
 .UserCard .Avatar {
   width: 95px;
   height: 95px;
   flex-shrink: 0;
   margin-right: 20px;
 }
+@media (max-width: 575.98px) {
+  .UserCard .Avatar {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .UserCard .user-details {
   flex: 1;
+}
+@media (max-width: 575.98px) {
+  .UserCard .user-details {
+    flex-basis: 100%;
+    margin-top: 20px;
+  }
 }
 .UserCard .user-details .main-information {
   display: flex;
   flex-wrap: wrap;
+}
+@media (max-width: 575.98px) {
+  .UserCard .user-details .main-information {
+    justify-content: center;
+  }
 }
 .UserCard .user-details .main-information .name-position {
   margin-right: 20px;
@@ -2975,6 +3001,13 @@ select.Select .dropdown.icon::before,
   font-size: 14px;
   font-weight: bold;
   color: #bbbbbb;
+}
+@media (max-width: 575.98px) {
+  .UserCard .user-details .main-information .name-position {
+    margin-right: 0;
+    flex-basis: 100%;
+    text-align: center;
+  }
 }
 .UserCard .user-details .main-information .badges {
   margin-top: 2px;
@@ -2999,6 +3032,14 @@ select.Select .dropdown.icon::before,
   display: flex;
   flex-wrap: wrap;
 }
+@media (max-width: 575.98px) {
+  .UserCard .user-details .contact-information {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+}
 .UserCard .user-details .contact-information .item {
   display: flex;
   align-items: center;
@@ -3015,12 +3056,19 @@ select.Select .dropdown.icon::before,
   color: #bbbbbb;
   line-height: 0;
 }
-.UserCard button {
+.UserCard .ellipsis-container {
+  align-self: flex-start;
+}
+@media (max-width: 575.98px) {
+  .UserCard .ellipsis-container {
+    align-self: stretch;
+    position: absolute;
+    right: 20px;
+  }
+}
+.UserCard .ellipsis-container button {
   margin-left: auto;
   flex-shrink: 0;
-  color: #bbbbbb !important;
-  border: 0 !important;
-  align-self: flex-start;
 }
 
 .Contact .image {
@@ -3075,6 +3123,10 @@ p.normal-text {
 .grid-10 > div {
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.flex-1 {
+  flex: 1;
 }
 
 .dropdown-menu {

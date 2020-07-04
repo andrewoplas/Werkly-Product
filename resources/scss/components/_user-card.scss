@@ -2,22 +2,41 @@
     padding: 20px;
     background-color: white;
     border-radius: 4px;
+    position: relative;
     @include flex(stretch, center);
     @include shadow(0, 0, 10px, 0, rgba(0, 0, 0, 0.05));
+
+    @include media-breakpoint-down(xs) {
+        flex-wrap: wrap;
+    }
 
     .Avatar {
         width: 95px;
         height: 95px;
         flex-shrink: 0;
         margin-right: 20px;
+
+        @include media-breakpoint-down(xs) {
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     .user-details {
         flex: 1;
 
+        @include media-breakpoint-down(xs) {
+            flex-basis: 100%;
+            margin-top: 20px;
+        }
+
         .main-information {
             display: flex;
             flex-wrap: wrap;
+
+            @include media-breakpoint-down(xs) {
+                justify-content: center;
+            }
 
             .name-position {
                 margin-right: 20px;
@@ -35,6 +54,12 @@
                     font-size: 14px;
                     font-weight: bold;
                     color: $gray-6;
+                }
+
+                @include media-breakpoint-down(xs) {
+                    margin-right: 0;
+                    flex-basis: 100%;
+                    text-align: center;
                 }
             }
 
@@ -63,6 +88,10 @@
             display: flex;
             flex-wrap: wrap;
 
+            @include media-breakpoint-down(xs) {
+                @include flex(center, center);
+            }
+
             .item {
                 @include flex(center, center);
 
@@ -81,11 +110,18 @@
         }
     }
 
-    button {
-        margin-left: auto;
-        flex-shrink: 0;
-        color: $gray-6 !important;
-        border: 0 !important;
+    .ellipsis-container {
         align-self: flex-start;
+
+        @include media-breakpoint-down(xs) {
+            align-self: stretch;
+            position: absolute;
+            right: 20px;
+        }
+
+        button {
+            margin-left: auto;
+            flex-shrink: 0;
+        }
     }
 }

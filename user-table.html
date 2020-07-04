@@ -7,26 +7,404 @@
 
         <!-- Font -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
 
-        <!-- Vendor CSS -->
+        <!-- Required CSS -->
         <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="./vendors/dataTables/datatables.min.css" />
+        <link rel="stylesheet" href="./vendors/perfect-scrollbar/css/perfect-scrollbar.css" />
+
+        <!-- VendorJS -->
         <link rel="stylesheet" href="./vendors/datepicker/datepicker.min.css" />
         <link rel="stylesheet" href="./vendors/semantic-ui/transition.min.css" />
         <link rel="stylesheet" href="./vendors/semantic-dropdown/dropdown.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css"
+        />
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="./resources/css/main.css" />
     </head>
 
     <body>
-        <div class="BaseInternal">
+        <div>
+            <!-- ===== HEADER ===== -->
+            <div class="Header">
+                <div class="image-container"></div>
+
+                <div class="page-header container-fluid">
+                    <div class="title-container">
+                        <i class="fas fa-bars icon" id="btn-open-sidebar"></i>
+                        <h2 class="title">Dashboard</h2>
+                    </div>
+
+                    <div class="details">
+                        <div class="search-input">
+                            <input type="text" placeholder="Search..." />
+                            <i class="icon far fa-search"></i>
+                        </div>
+
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <i class="fas fa-check-square"></i>
+                            </li>
+                            <li class="nav-item">
+                                <i class="fas fa-question-circle"></i>
+                            </li>
+                            <li class="nav-item">
+                                <i class="fas fa-bell"></i>
+                                <span class="counter">3</span>
+                            </li>
+                        </ul>
+
+                        <div class="dropdown dropdown-avatar">
+                            <a data-toggle="dropdown">
+                                <img src="./resources/images/avatar.png" alt="avatar" class="Avatar" />
+                                <span class="avatar-name">John Smith</span>
+                                <i class="arrow fal fa-angle-down"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right mt-2">
+                                <a class="dropdown-item show-on-mobile" href="javascript:void(0)"> <i class="icon fas fa-check-square"></i>Icon 1 </a>
+                                <a class="dropdown-item show-on-mobile" href="javascript:void(0)">
+                                    <i class="icon fas fa-question-circle"></i>Icon 2
+                                </a>
+                                <a class="dropdown-item show-on-mobile" href="javascript:void(0)"> <i class="icon fas fa-bell"></i>Icon 3 </a>
+                                <div class="dropdown-divider show-on-mobile"></div>
+                                <a class="dropdown-item" href="javascript:void(0)">Profile</a>
+                                <a class="dropdown-item" href="javascript:void(0)">Account</a>
+                                <a class="dropdown-item" href="javascript:void(0)">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar collapsed">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="./resources/images/logo-small.png" alt="" class="small" />
+                            <img src="./resources/images/logo.png" alt="" class="full" />
+                        </a>
+
+                        <i class="fas fa-thumbtack icon" id="btn-pin"></i>
+                    </div>
+
+                    <div id="links-scrollbar">
+                        <!-- Section 2 -->
+                        <div class="links">
+                            <div class="header">
+                                <span class="full">Pages</span>
+                                <i class="far fa-ellipsis-h small"></i>
+                            </div>
+
+                            <div class="links-container">
+                                <ul class="menu">
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)">
+                                            <i class="fad fa-chart-line icon"></i>
+                                            <span>Content Boxes</span>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a href="boxes.html">Boxes</a>
+                                            </li>
+                                            <li>
+                                                <a href="boxes-2.html">Boxes 2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="inputs.html"><i class="fad fa-pencil-ruler icon"></i> <span>Inputs</span></a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="cards.html"><i class="fad fa-image-polaroid icon"></i> <span>Cards</span></a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)"><i class="fad fa-table icon"></i> <span>Tables</span></a>
+                                        <ul>
+                                            <li>
+                                                <a href="tables.html">Tables</a>
+                                            </li>
+                                            <li>
+                                                <a href="activity-table.html">Activity Tables</a>
+                                            </li>
+                                            <li>
+                                                <a href="table-modal.html">Table with Modal</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)"><i class="fad fa-pager icon"></i> <span>Others</span></a>
+                                        <ul>
+                                            <li>
+                                                <a href="user-table.html">User & Table</a>
+                                            </li>
+                                            <li>
+                                                <a href="key-contact.html">Key Contact</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Section 2 -->
+                        <div class="links">
+                            <div class="header">
+                                <span class="full">Menu Section</span>
+                                <i class="far fa-ellipsis-h small"></i>
+                            </div>
+
+                            <div class="links-container">
+                                <ul class="menu">
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)">
+                                            <i class="fad fa-chart-line icon"></i>
+                                            <span>Dashboard</span>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a><i class="fad fa-chart-line icon"></i> <span>Dashboard</span></a>
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li class="active">
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                                <ul>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">Sub menu item</a>
+                                                        <ul>
+                                                            <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                                <ul>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)"><i class="fad fa-chart-line icon"></i> <span>Dashboard</span></a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)"><i class="fad fa-chart-line icon"></i> <span>Dashboard</span></a>
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-mobile">
+                    <img src="./resources/images/logo.png" class="logo" />
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <i class="fas fa-check-square"></i>
+                        </li>
+                        <li class="nav-item">
+                            <i class="fas fa-question-circle"></i>
+                        </li>
+                        <li class="nav-item">
+                            <i class="fas fa-bell"></i>
+                            <span class="counter">3</span>
+                        </li>
+                        <li class="nav-item dropdown-show collapsed" data-toggle="collapse" data-target="#mobile-navbar">
+                            <i class="fas fa-bars icon"></i>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="collapse navbar-collapse" id="mobile-navbar">
+                    <div class="first-row">
+                        <div class="search-input">
+                            <input type="text" placeholder="Search..." />
+                            <i class="icon far fa-search"></i>
+                        </div>
+                        <img src="./resources/images/avatar.png" alt="avatar" class="Avatar" />
+                    </div>
+
+                    <div class="links-row">
+                        <!-- Section 1 -->
+                        <div class="links">
+                            <div class="header">
+                                <span class="full">Menu Section</span>
+                            </div>
+
+                            <div class="links-container">
+                                <ul class="menu">
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)">
+                                            <i class="fad fa-chart-line icon"></i>
+                                            <span>Dashboard</span>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a><i class="fad fa-chart-line icon"></i> <span>Dashboard</span></a>
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li class="active">
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                                <ul>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">Sub menu item</a>
+                                                        <ul>
+                                                            <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                                <ul>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)"><i class="fad fa-chart-line icon"></i> <span>Dashboard</span></a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)"><i class="fad fa-chart-line icon"></i> <span>Dashboard</span></a>
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Section 2 -->
+                        <div class="links">
+                            <div class="header">
+                                <span class="full">Menu Section</span>
+                            </div>
+
+                            <div class="links-container">
+                                <ul class="menu">
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)">
+                                            <i class="fad fa-chart-line icon"></i>
+                                            <span>Dashboard</span>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a><i class="fad fa-chart-line icon"></i> <span>Dashboard</span></a>
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li class="active">
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                                <ul>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">Sub menu item</a>
+                                                        <ul>
+                                                            <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                                <ul>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                    <li><a href="javascript:void(0)">Sub menu item</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)"><i class="fad fa-chart-line icon"></i> <span>Dashboard</span></a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)"><i class="fad fa-chart-line icon"></i> <span>Dashboard</span></a>
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)">Sub menu item</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- ===== MAIN CONTENT ===== -->
-            <div class="MainContent container-fluid">
-                <div class="row" style="margin-bottom: 100px;">
-                    <div class="col-12 col-md-6">
+            <div class="MainContent">
+                <div class="row mb-30">
+                    <div class="col-12 col-xl-6 d-flex flex-column">
                         <!-- First Row -->
                         <div class="row mb-30">
                             <div class="col-12">
@@ -56,9 +434,16 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <button class="Button icon ellipsis">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </button>
+                                    <div class="ellipsis-container">
+                                        <button class="Button icon ellipsis" data-toggle="dropdown">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                            <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
+                                            <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -70,9 +455,14 @@
                                     <div class="box-header">
                                         <h4 class="box-title">This is a header</h4>
                                         <div class="action-items">
-                                            <button class="Button icon ellipsis">
+                                            <button class="Button icon ellipsis" data-toggle="dropdown">
                                                 <i class="fas fa-ellipsis-v"></i>
                                             </button>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                                <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
+                                                <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                            </div>
                                         </div>
                                     </div>
                                     <hr />
@@ -81,28 +471,38 @@
                         </div>
 
                         <!-- Third Row -->
-                        <div class="row">
-                            <div class="col-12 col-md-6 col-lg-8">
-                                <div class="ContentBox mb-4">
+                        <div class="row flex-1 mb-30 mb-xl-0">
+                            <div class="col-12 col-md-6 mb-30 mb-md-0">
+                                <div class="ContentBox h-100">
                                     <div class="box-header">
                                         <h4 class="box-title">This is a header</h4>
                                         <div class="action-items">
-                                            <button class="Button icon ellipsis">
+                                            <button class="Button icon ellipsis" data-toggle="dropdown">
                                                 <i class="fas fa-ellipsis-v"></i>
                                             </button>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                                <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
+                                                <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                            </div>
                                         </div>
                                     </div>
                                     <hr />
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6 col-lg-4">
-                                <div class="ContentBox mb-4">
+                            <div class="col-12 col-md-6">
+                                <div class="ContentBox h-100">
                                     <div class="box-header">
                                         <h4 class="box-title">This is a header</h4>
                                         <div class="action-items">
-                                            <button class="Button icon ellipsis">
+                                            <button class="Button icon ellipsis" data-toggle="dropdown">
                                                 <i class="fas fa-ellipsis-v"></i>
                                             </button>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                                <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
+                                                <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                            </div>
                                         </div>
                                     </div>
                                     <hr />
@@ -110,20 +510,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-xl-6">
                         <div class="ContentBox">
                             <div class="box-header">
-                                <h4 class="box-title">Activity Log</h4>
+                                <h4 class="box-title">This is a header</h4>
                                 <div class="action-items">
-                                    <button class="Button icon ellipsis">
+                                    <button class="Button icon ellipsis" data-toggle="dropdown">
                                         <i class="fas fa-ellipsis-v"></i>
                                     </button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                    </div>
                                 </div>
                             </div>
                             <hr />
 
                             <div class="AdvanceList row">
-                                <div class="filter-configuration-panel panel">
+                                <div class="filter-configuration-panel panel shown">
                                     <div class="ListFilter">
                                         <select class="ui fluid dropdown Select list-select Awesome dudes (893)">
                                             <option value="">Selectable option here</option>
@@ -136,9 +541,15 @@
                                             <div class="border">
                                                 <div class="header-container">
                                                     <span>All users (893)</span>
-                                                    <button class="Button icon ellipsis">
+                                                    <button class="Button icon ellipsis" data-toggle="dropdown">
                                                         <i class="fas fa-ellipsis-v"></i>
                                                     </button>
+
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
+                                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                                    </div>
                                                 </div>
 
                                                 <div class="filters-list">
@@ -329,118 +740,18 @@
                                                 <input type="text" placeholder="Search..." />
                                                 <i class="icon far fa-search"></i>
                                             </div>
-                                            <button class="Button icon ellipsis">
+                                            <button class="Button icon ellipsis" data-toggle="dropdown">
                                                 <i class="fas fa-ellipsis-v"></i>
                                             </button>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                                <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
+                                                <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <div class="list">
-                                        <div class="item">
-                                            <div class="icon red">
-                                                <i class="fad fa-chart-line"></i>
-                                            </div>
-
-                                            <div class="details">
-                                                <p class="title">Activity Label Goes Here</p>
-                                                <p class="description">
-                                                    Activity description or overview goes here in this space, it can be quite long.
-                                                </p>
-                                            </div>
-
-                                            <span class="time">5 hours ago</span>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="icon violet">
-                                                <i class="fad fa-chart-line"></i>
-                                            </div>
-
-                                            <div class="details">
-                                                <p class="title">Activity Label Goes Here</p>
-                                                <p class="description">
-                                                    Activity description or overview goes here in this space, it can be quite long.
-                                                </p>
-                                            </div>
-
-                                            <span class="time">5 hours ago</span>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="icon green">
-                                                <i class="fad fa-chart-line"></i>
-                                            </div>
-
-                                            <div class="details">
-                                                <p class="title">Activity Label Goes Here</p>
-                                                <p class="description">
-                                                    Activity description or overview goes here in this space, it can be quite long.
-                                                </p>
-                                            </div>
-
-                                            <span class="time">5 hours ago</span>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="icon purple">
-                                                <i class="fad fa-chart-line"></i>
-                                            </div>
-
-                                            <div class="details">
-                                                <p class="title">Activity Label Goes Here</p>
-                                                <p class="description">
-                                                    Activity description or overview goes here in this space, it can be quite long.
-                                                </p>
-                                            </div>
-
-                                            <span class="time">5 hours ago</span>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="icon red">
-                                                <i class="fad fa-chart-line"></i>
-                                            </div>
-
-                                            <div class="details">
-                                                <p class="title">Activity Label Goes Here</p>
-                                                <p class="description">
-                                                    Activity description or overview goes here in this space, it can be quite long.
-                                                </p>
-                                            </div>
-
-                                            <span class="time">5 hours ago</span>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="icon violet">
-                                                <i class="fad fa-chart-line"></i>
-                                            </div>
-
-                                            <div class="details">
-                                                <p class="title">Activity Label Goes Here</p>
-                                                <p class="description">
-                                                    Activity description or overview goes here in this space, it can be quite long.
-                                                </p>
-                                            </div>
-
-                                            <span class="time">5 hours ago</span>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="icon green">
-                                                <i class="fad fa-chart-line"></i>
-                                            </div>
-
-                                            <div class="details">
-                                                <p class="title">Activity Label Goes Here</p>
-                                                <p class="description">
-                                                    Activity description or overview goes here in this space, it can be quite long.
-                                                </p>
-                                            </div>
-
-                                            <span class="time">5 hours ago</span>
-                                        </div>
-                                    </div>
+                                    <div class="list" id="table"></div>
 
                                     <button class="btn-show-more mx-auto"><i class="fas fa-sync-alt icon"></i> <span>Show More</span></button>
                                 </div>
@@ -448,24 +759,88 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row" style="margin-bottom: 100px;">
+                    <div class="col-12">
+                        <div class="ContentBox no-min-height">
+                            <div class="box-header">
+                                <h4 class="box-title full-width-on-mobile-md">
+                                    This is a header
+                                    <button class="Button icon ellipsis d-inline-block d-md-none ml-2" data-toggle="dropdown">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                    </div>
+                                </h4>
+                                <div class="action-items with-input">
+                                    <div class="InputIcon">
+                                        <input
+                                            type="text"
+                                            class="Input datetimepicker-input"
+                                            id="datepicker"
+                                            data-toggle="datetimepicker"
+                                            data-target="#datepicker"
+                                        />
+                                        <i class="far fa-calendar icon"></i>
+                                    </div>
+                                    <select class="ui fluid dropdown Select">
+                                        <option value="">Select an option from this list</option>
+                                        <option value="1">Selectable option here</option>
+                                        <option value="2">Selectable option here</option>
+                                        <option value="3">Selectable option here</option>
+                                    </select>
+                                    <button class="Button icon ellipsis d-none d-md-block" data-toggle="dropdown">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 2</a>
+                                        <a class="dropdown-item" href="javascript:void(0)">Option 1</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== FOOTER ===== -->
+            <div class="Footer d-none">
+                <p class="text">© Werkly. All rights reserved 2020.</p>
             </div>
         </div>
 
-        <!-- Vendor JS -->
-        <script src="https://kit.fontawesome.com/8c9c5e8e6e.js" crossorigin="anonymous"></script>
+        <!-- Required JS -->
+        <script src="https://kit.fontawesome.com/8c9c5e8e6e.js"></script>
         <script src="./vendors/jquery/jquery.min.js"></script>
         <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="./vendors/datatables/datatables.min.js"></script>
+        <script src="./vendors/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+
+        <!-- Vendor JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
         <script src="./vendors/datepicker/datepicker.min.js"></script>
         <script src="./vendors/semantic-ui/transition.min.js"></script>
         <script src="./vendors/semantic-dropdown/dropdown.min.js"></script>
+        <script src="./vendors/ag-grid/dist/ag-grid-community.min.js"></script>
 
         <!-- Custom JS -->
-        <script src="./resources/js/ListFilter.js"></script>
+        <script src="./resources/js/ActivityAgGrid.js"></script>
+        <script src="./resources/js/Filter.js"></script>
         <script src="./resources/js/main.js"></script>
 
         <script>
-            initialize217();
+            $(document).ready(function () {
+                initializePage();
+                initializeListFilter("#table");
+
+                $("#datepicker").datetimepicker({
+                    format: "DD MMMM, YYYY",
+                });
+            });
         </script>
     </body>
 </html>

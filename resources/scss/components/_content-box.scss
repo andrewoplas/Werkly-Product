@@ -1,3 +1,14 @@
+@mixin full-width-on-mobile-items {
+    & + .action-items {
+        width: 100%;
+
+        .main-button {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+    }
+}
+
 .ContentBox {
     min-height: 170px; // NOTE:: Remove min-height if it already has content
     padding: 10px 20px 20px 20px;
@@ -34,18 +45,18 @@
             font-weight: bold;
             flex: 1;
 
+            @include media-breakpoint-down(md) {
+                &.full-width-on-mobile-md {
+                    width: 100%;
+                    @include flex(space-between, center);
+                    @include full-width-on-mobile-items;
+                }
+            }
+
             @include media-breakpoint-down(sm) {
                 &.full-width-on-mobile {
                     width: 100%;
-
-                    &.full-width-on-mobile + .action-items {
-                        width: 100%;
-
-                        .main-button {
-                            padding-left: 8px;
-                            padding-right: 8px;
-                        }
-                    }
+                    @include full-width-on-mobile-items;
                 }
             }
 
@@ -143,11 +154,6 @@
                 }
             }
         }
-    }
-
-    .ellipsis {
-        color: $gray-6 !important;
-        border: 0 !important;
     }
 
     hr {
