@@ -21,9 +21,9 @@ FullWidthCellRenderer.prototype.getTemplate = function (params) {
         '"></i>' +
         "    </div>" +
         '    <div class="details">' +
-        '        <a href="#" class="' +
+        '        <a href="' +
         data.labelLink +
-        '">' +
+        '" class="Link">' +
         data.label +
         "</a>" +
         '        <p class="description">' +

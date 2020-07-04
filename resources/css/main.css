@@ -947,10 +947,12 @@
 }
 .ContentBox .box-header .action-items.with-input .InputIcon {
   margin-right: 10px;
+  flex-grow: 1;
 }
 .ContentBox .box-header .action-items.with-input .Select {
   width: 265px;
   margin-right: 10px;
+  flex-grow: 1;
 }
 @media (max-width: 767.98px) {
   .ContentBox .box-header .action-items.with-input .InputIcon {

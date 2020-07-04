@@ -134,10 +134,12 @@
 
                 .InputIcon {
                     margin-right: 10px;
+                    flex-grow: 1;
                 }
                 .Select {
                     width: 265px;
                     margin-right: 10px;
+                    flex-grow: 1;
                 }
 
                 @include media-breakpoint-down(sm) {
