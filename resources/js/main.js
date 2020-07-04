@@ -347,7 +347,7 @@ function initializeLayout14() {
     }
 }
 
-function initialize217() {
+function initializeListFilter(elementSelector) {
     // initialize dropdown
     $(".ui.dropdown").dropdown();
 
@@ -362,7 +362,8 @@ function initialize217() {
     // List Filters
     if (initializeListFilterListeners) {
         initializeListFilterListeners();
+        initializeGridTable(elementSelector);
     } else {
-        console.error("Could not find initializeTableFilterListeners method");
+        console.error("Could not find initializeListFilterListeners method");
     }
 }

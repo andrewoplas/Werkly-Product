@@ -24,11 +24,13 @@
 
 .CustomColorPicker {
     .pcr-save {
+        font-family: $primary-font;
         border-radius: 4px !important;
         background-color: $primary-color !important;
     }
 
     .pcr-cancel {
+        font-family: $primary-font;
         border-radius: 4px !important;
         background-color: $dark !important;
     }

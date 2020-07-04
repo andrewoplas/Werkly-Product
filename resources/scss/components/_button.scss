@@ -93,28 +93,6 @@
     }
 }
 
-.ButtonGroup {
-    .dropdown-menu {
-        width: 225px;
-        border-radius: 4px;
-        background-color: $secondary-color;
-        padding: 2px 0;
-        border: 0;
-
-        .dropdown-item {
-            padding-left: 18px;
-            font-family: $primary-font;
-            font-size: 14px;
-            font-weight: normal;
-            color: white;
-
-            &:hover {
-                background-color: rgba(255, 255, 255, 0.2);
-            }
-        }
-    }
-}
-
 .ButtonCluster {
     .item {
         width: 100%;

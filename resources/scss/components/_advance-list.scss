@@ -45,18 +45,22 @@ $animationDuration: 300ms;
 
             .btn-show-filter {
                 min-height: 35px;
+                margin-right: 15px;
             }
 
             .search-filter {
-                @include flex(flex-start, center);
+                align-self: stretch;
+                @include flex(stretch, center);
 
                 .search-input {
+                    height: 100%;
                     position: relative;
-                    margin-right: 20px;
+                    margin-right: 15px;
                     flex: 1;
 
                     input {
                         width: 100%;
+                        height: 100%;
                         padding: 6px 15px;
                         padding-right: 45px;
                         font-family: $primary-font;
@@ -88,10 +92,19 @@ $animationDuration: 300ms;
         }
 
         .list {
+            width: 100%;
+            height: 400px;
+
+            .ag-cell-value {
+                white-space: normal !important;
+                width: 100% !important;
+                min-width: 550px;
+            }
+
             .item {
-                @include flex(flex-start, center);
                 padding-top: 13px;
                 padding-bottom: 13px;
+                @include flex(flex-start, center);
 
                 .icon {
                     width: 33px;
@@ -149,7 +162,7 @@ $animationDuration: 300ms;
         }
 
         .btn-show-more {
-            margin-top: 20px;
+            margin-top: 30px;
             background-color: white;
             border: 0;
             outline: 0;
