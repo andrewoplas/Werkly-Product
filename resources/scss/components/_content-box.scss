@@ -131,26 +131,33 @@
 
             &.with-input {
                 @include flex(flex-end, stretch);
+                flex-wrap: nowrap;
 
                 .InputIcon {
                     margin-right: 10px;
+                    margin-top: 2px;
+                    margin-bottom: 2px;
                     flex-grow: 1;
                 }
                 .Select {
                     width: 265px;
                     margin-right: 10px;
+                    margin-top: 2px;
+                    margin-bottom: 2px;
                     flex-grow: 1;
                 }
 
                 @include media-breakpoint-down(sm) {
+                    flex-wrap: wrap;
+
                     .InputIcon {
                         width: 100%;
-                        margin-top: 0;
-                        margin-right: 0;
+                        margin: 0;
                     }
                     .Select {
                         width: 100%;
                         margin-top: 10px;
+                        margin-bottom: 0;
                         margin-right: 0;
                     }
                 }

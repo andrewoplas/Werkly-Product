@@ -19,9 +19,7 @@
 @import "./components/radio-button";
 @import "./components/checkbox";
 @import "./components/avatar";
-@import "./components/mini-table";
 @import "./components/datatable";
-@import "./components/accordion";
 @import "./components/document-hover";
 @import "./components/modal";
 @import "./components/link";
@@ -32,9 +30,11 @@
 @import "./components/form-error";
 @import "./components/colorpicker";
 @import "./components/advance-list";
+@import "./components/advance-list2";
 @import "./components/list-filter";
 @import "./components/user-card";
 @import "./components/contact";
+@import "./components/pagination";
 
 * {
     font-family: $primary-font;

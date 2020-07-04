@@ -42,16 +42,24 @@ FullWidthCellRenderer.prototype.getGui = function () {
     return this.eGui;
 };
 
-function initializeGridTable(element) {
-    const data = {
+function getData() {
+    const colors = ["red", "green", "purple", "violet"];
+
+    return {
         label: "Activity Label Goes Here",
         labelLink: "#",
         description: "Activity description or overview goes here in this space, it can be quite long.",
         time: "5 hours ago",
         icon: "fad fa-chart-line", // font awesome icon classes only
-        color: "red", // enum: red, green, purple, violet
+        color: colors[Math.floor(Math.random() * colors.length)], // enum: red, green, purple, violet
     };
-    const rowData = new Array(6).fill(data);
+}
+
+function initializeGridTable(element) {
+    const rowData = [];
+    for (let i = 0; i < 6; i++) {
+        rowData.push(getData());
+    }
 
     new agGrid.Grid($(element)[0], {
         columnDefs: [{ field: "empty", cellRenderer: "cellRenderer" }],
@@ -64,5 +72,6 @@ function initializeGridTable(element) {
         domLayout: "autoHeight",
         components: { cellRenderer: FullWidthCellRenderer },
         rowData: rowData,
+        suppressRowClickSelection: true,
     });
 }

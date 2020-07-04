@@ -1,5 +1,5 @@
 @mixin checkbox-before($content, $margin-top) {
-    content: "\f00c";
+    content: $content;
     margin-top: $margin-top;
     height: 100%;
     font-family: "Font Awesome 5 Pro";
@@ -54,11 +54,11 @@
         }
 
         [type="checkbox"]:checked + span:before {
-            @include checkbox-before("../images/check.svg", 1px);
+            @include checkbox-before("\f00c", 1px);
         }
 
         [type="checkbox"].minus:checked + span:before {
-            @include checkbox-before("../images/minus.svg", 0);
+            @include checkbox-before("\f068", 1px);
         }
     }
 }

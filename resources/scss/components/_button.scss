@@ -80,6 +80,16 @@
         color: $gray-6 !important;
         border: 0 !important;
     }
+
+    &.mini {
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 11px;
+        background-color: $gray-7;
+        border-color: $gray-5;
+
+        @include buttonHover($gray-1);
+    }
 }
 
 .ButtonCluster {

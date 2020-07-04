@@ -1,0 +1,63 @@
+.Pagination {
+    @include flex(center, center);
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        @include flex(center, center);
+
+        li {
+            border-radius: 4px;
+            @extend .Link;
+
+            a {
+                color: $primary-color !important;
+            }
+
+            &.paginationjs-page {
+                height: 20px;
+                width: 20px;
+                @include flex(center, center);
+            }
+
+            &.active {
+                border: 1px solid $primary-color !important;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+
+            &.paginationjs-ellipsis {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+
+            &.paginationjs-prev,
+            &.paginationjs-next {
+                padding: 0 5px;
+            }
+
+            &.paginationjs-prev {
+                margin-right: 5px;
+            }
+
+            &.paginationjs-next {
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .first,
+    .last {
+        border-radius: 4px;
+        @extend .Link;
+        font-size: 10px;
+        padding: 0 5px;
+
+        a {
+            color: $primary-color !important;
+        }
+    }
+}

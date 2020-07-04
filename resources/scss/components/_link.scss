@@ -2,11 +2,20 @@
     color: $primary-color;
     font-size: 14px;
     font-weight: bold;
+    background-color: transparent;
+    border: 0;
+    outline: 0 !important;
+    text-decoration: none !important;
+    cursor: pointer;
 
     &[disabled],
     &.disabled {
         pointer-events: none;
         opacity: 0.5;
+    }
+
+    &:hover {
+        color: #0282b9;
     }
 }
 

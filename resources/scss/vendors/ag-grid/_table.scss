@@ -1,0 +1,67 @@
+@import "../../abstracts/mixins";
+@import "../../abstracts/variables";
+
+.CustomAgGridTable {
+    border: 1px solid $gray-5;
+    border-radius: 4px;
+
+    * {
+        outline: none !important;
+    }
+
+    .sorting-icons {
+        @include flex(stretch, stretch, column);
+        color: $gray-2;
+
+        .desc {
+            margin-top: -8px;
+        }
+
+        .active {
+            color: $dark;
+        }
+    }
+
+    .ag-header-viewport {
+        background-color: $gray-7;
+        border-bottom: 1px solid $gray-5;
+    }
+
+    .ag-header-cell-label {
+        padding: 0 15px;
+        font-family: $primary-font !important;
+        font-size: 14px;
+        font-weight: bold;
+        color: $dark;
+        border-left: 1px solid $gray-5;
+    }
+
+    .ag-header-cell-sorted-none {
+        .ag-header-cell-label {
+            background-color: $gray-7;
+            font-weight: 400 !important;
+        }
+    }
+
+    .ag-cell {
+        padding: 0 15px;
+        font-size: 14px;
+        color: $dark;
+        @include flex(flex-start, center);
+    }
+
+    .custom-header-checkbox {
+        .ag-header-cell-label {
+            padding: 0;
+            @include flex(center, center);
+        }
+    }
+
+    .ag-row:not(:last-child) {
+        border-bottom: 1px solid $gray-5;
+    }
+
+    .ag-paging-panel {
+        display: none !important;
+    }
+}

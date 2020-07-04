@@ -351,10 +351,6 @@ function initializeListFilter(elementSelector) {
     // initialize dropdown
     $(".ui.dropdown").dropdown();
 
-    $(".btn-show-filter").click(function () {
-        $(".filter-configuration-panel").toggleClass("shown");
-    });
-
     $(".btn-show-more").click(function () {
         alert("show more clicked");
     });
