@@ -49,6 +49,7 @@ $widthLarge: 35%;
             padding: 0 15px;
 
             .ListFilter {
+                -webkit-animation: fadeIn ease-in 500ms;
                 animation: fadeIn ease-in 500ms;
             }
         }

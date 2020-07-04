@@ -76,6 +76,7 @@ $widthLarge: 35%;
 
             .ListFilter {
                 @include media-breakpoint-up(lg) {
+                    -webkit-animation: fadeIn ease-in 500ms;
                     animation: fadeIn ease-in 500ms;
                 }
             }

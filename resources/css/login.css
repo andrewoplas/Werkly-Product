@@ -144,7 +144,7 @@
   padding-left: 20px;
   padding-right: 20px;
   background-color: #00a6ed;
-  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -208,6 +208,18 @@
 .Header .page-header .details .SearchInput input {
   background-color: rgba(255, 255, 255, 0.2) !important;
   border: 0 !important;
+  color: white;
+}
+.Header .page-header .details .SearchInput input::-webkit-input-placeholder {
+  color: white;
+}
+.Header .page-header .details .SearchInput input::-moz-placeholder {
+  color: white;
+}
+.Header .page-header .details .SearchInput input:-ms-input-placeholder {
+  color: white;
+}
+.Header .page-header .details .SearchInput input::-ms-input-placeholder {
   color: white;
 }
 .Header .page-header .details .SearchInput input::placeholder {
@@ -291,9 +303,7 @@
   border: 0;
   border-radius: 0;
   margin-top: -5px !important;
-  -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.05);
 }
 .Header .page-header .details .dropdown-avatar .dropdown-menu .dropdown-item {
   font-size: 14px;
@@ -334,9 +344,7 @@
   display: flex;
   flex-direction: column;
   transition: width 200ms ease-out;
-  -webkit-box-shadow: 3px 0px 6px 0px rgba(0, 0, 0, 0.16);
-  -moz-box-shadow: 3px 0px 6px 0px rgba(0, 0, 0, 0.16);
-  box-shadow: 3px 0px 6px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 3px 0 6px 0 rgba(0, 0, 0, 0.16);
 }
 @media (max-width: 1199.98px) {
   .Header .sidebar {
@@ -581,8 +589,6 @@
   height: 60px;
   width: 100vw;
   background-color: white;
-  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-  -moz-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   display: none;
 }
@@ -641,8 +647,6 @@
 }
 .Header #mobile-navbar {
   background-color: #f7f7f7;
-  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-  -moz-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 }
 .Header #mobile-navbar .first-row {
@@ -994,6 +998,7 @@
   padding: 0 15px;
 }
 .AdvanceList .filter-configuration-panel.shown .ListFilter {
+  -webkit-animation: fadeIn ease-in 500ms;
   animation: fadeIn ease-in 500ms;
 }
 .AdvanceList .list-panel {
@@ -1222,6 +1227,7 @@
 }
 @media (min-width: 992px) {
   .AdvanceList2 .filter-configuration-panel.shown .ListFilter {
+    -webkit-animation: fadeIn ease-in 500ms;
     animation: fadeIn ease-in 500ms;
   }
 }
@@ -1520,6 +1526,7 @@
   transition: 200ms;
 }
 .AdvanceTable .filter-configuration-panel.shown .TableFilter {
+  -webkit-animation: fadeIn ease-in 500ms;
   animation: fadeIn ease-in 500ms;
 }
 .AdvanceTable .table-panel {
@@ -1718,6 +1725,10 @@
   margin-bottom: 0;
   cursor: pointer;
 }
+.Checkbox label::-moz-selection {
+  color: none;
+  background: none;
+}
 .Checkbox label::selection {
   color: none;
   background: none;
@@ -1823,9 +1834,7 @@
   background-color: white;
   border-radius: 4px;
   align-self: flex-start;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
 }
 .ContentBox.same-padding {
   padding: 20px !important;
@@ -2028,379 +2037,11 @@
   padding: 20px;
 }
 
-.Datatable {
-  border: 0 !important;
-}
-.Datatable table {
-  padding-top: 15px !important;
-  min-width: 800px;
-}
-.Datatable table thead th {
-  padding: 13px 20px !important;
-  font-family: "Nunito", sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-  border: 0;
-  border-bottom: 1px solid #cccccc !important;
-  vertical-align: bottom;
-}
-.Datatable table thead th.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  margin-bottom: -1px;
-}
-.Datatable table tbody td {
-  padding: 13px 20px !important;
-  font-family: "Nunito", sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  border: 0;
-  border-bottom: 1px solid #cccccc !important;
-  vertical-align: middle;
-}
-.Datatable .dataTables_length {
-  font-family: "Nunito", sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  color: #444;
-}
-.Datatable .dataTables_length select {
-  font-family: "Nunito", sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  border: 1px solid #cccccc;
-  padding: 7px 5px;
-  border-radius: 8px;
-}
-.Datatable .dataTables_info {
-  padding: 0 !important;
-  margin-top: 22px;
-  font-family: "Nunito", sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-}
-.Datatable .dataTable.no-footer {
-  border: 0 !important;
-}
-.Datatable .dataTables_paginate {
-  padding: 0 !important;
-  margin-top: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-.Datatable .dataTables_paginate > span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-.Datatable .dataTables_paginate > .paginate_button:first-child {
-  border-left: 1px solid #cccccc !important;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-}
-.Datatable .dataTables_paginate > .paginate_button:last-child {
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-.Datatable .dataTables_paginate .paginate_button {
-  height: 22px;
-  margin: 0;
-  padding: 4px 7px !important;
-  font-family: "Nunito", sans-serif;
-  font-size: 11px;
-  font-weight: normal;
-  color: #444;
-  border: 0 !important;
-  border-top: 1px solid #cccccc !important;
-  border-right: 1px solid #cccccc !important;
-  border-bottom: 1px solid #cccccc !important;
-  border-radius: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-.Datatable .dataTables_paginate .paginate_button:not(.disabled):not(.active):hover {
-  background: rgba(0, 0, 0, 0.1);
-  color: #444 !important;
-}
-.Datatable .dataTables_paginate .paginate_button.disabled {
-  font-family: "Nunito", sans-serif !important;
-  font-weight: 300 !important;
-  color: #cccccc !important;
-}
-.Datatable .dataTables_paginate .paginate_button.disabled:hover {
-  color: #cccccc !important;
-}
-.Datatable .dataTables_paginate .paginate_button.current {
-  background: #7fb800 !important;
-  color: white !important;
-}
-.Datatable .dataTables_paginate .paginate_button.current:hover {
-  color: white !important;
-}
-.Datatable .dataTables_paginate .ellipsis {
-  height: 22px;
-  padding: 2px 7px !important;
-  line-height: 1;
-  border-top: 1px solid #cccccc !important;
-  border-right: 1px solid #cccccc !important;
-  border-bottom: 1px solid #cccccc !important;
-  font-family: "Nunito", sans-serif;
-  font-size: 11px;
-  font-weight: normal;
-  border-radius: 0;
-}
-.Datatable .dataTables_filter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-.Datatable .dataTables_filter input {
-  border-radius: 4px;
-  font-size: 11px;
-  font-weight: 300;
-  padding: 6px 11px;
-  width: 180px;
-  height: 100%;
-}
-.Datatable .dataTables_filter label {
-  margin: 0;
-  align-self: stretch;
-}
-
-.Datatable-2 {
-  border: 0 !important;
-}
-.Datatable-2 table {
-  padding-top: 15px !important;
-  min-width: 800px;
-}
-.Datatable-2 table thead th {
-  padding: 13px 20px !important;
-  font-family: "Nunito", sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-  border: 1px solid #dddddd;
-  border-right: 0 !important;
-  vertical-align: middle;
-  background-color: #fafafa;
-  background-image: none !important;
-}
-.Datatable-2 table thead th:last-child {
-  border-right: 1px solid #dddddd !important;
-}
-.Datatable-2 table thead th.square {
-  padding: 13px 15px !important;
-}
-.Datatable-2 table thead th.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  margin-bottom: -1px;
-}
-.Datatable-2 table thead th.sorting_desc, .Datatable-2 table thead th.sorting_asc {
-  background-color: #eeeeee;
-}
-.Datatable-2 table thead th.normal-column .sorting-icons {
-  display: flex;
-  align-items: stretch;
-  justify-content: stretch;
-  flex-direction: column;
-  color: #dddddd;
-}
-.Datatable-2 table thead th.normal-column .sorting-icons .desc {
-  margin-top: -8px;
-}
-.Datatable-2 table thead th.normal-column.sorting_asc .asc {
-  color: #444;
-}
-.Datatable-2 table thead th.normal-column.sorting_desc .desc {
-  color: #444;
-}
-.Datatable-2 table thead .checkbox-options button {
-  border: 0;
-  padding: 0 5px;
-  background-color: transparent;
-  margin-right: 20px;
-  outline: 0 !important;
-  font-weight: bold;
-  font-size: 14px;
-}
-.Datatable-2 table thead .checkbox-options button i {
-  margin-right: 2px;
-}
-.Datatable-2 table thead .checkbox-options button:hover {
-  opacity: 0.7;
-}
-.Datatable-2 table tbody td {
-  padding: 13px 20px !important;
-  font-family: "Nunito", sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  border: 0;
-  border-bottom: 1px solid #cccccc !important;
-  vertical-align: middle;
-  box-sizing: border-box;
-}
-.Datatable-2 table tbody td.square {
-  padding: 13px 15px !important;
-}
-.Datatable-2 table tbody td:first-child {
-  border-left: 1px solid #dddddd;
-}
-.Datatable-2 table tbody td:last-child {
-  border-right: 1px solid #dddddd;
-}
-.Datatable-2 table tbody td .link {
-  font-weight: bold;
-  color: #444;
-}
-.Datatable-2 .dataTables_length {
-  font-family: "Nunito", sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  color: #444;
-}
-.Datatable-2 .dataTables_length select {
-  font-family: "Nunito", sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  border: 1px solid #cccccc;
-  padding: 7px 5px;
-  border-radius: 8px;
-}
-.Datatable-2 .dataTables_info {
-  padding: 0 !important;
-  margin-top: 22px;
-  font-family: "Nunito", sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-}
-.Datatable-2 .dataTable.no-footer {
-  border: 0 !important;
-}
-.Datatable-2 .dataTables_paginate {
-  width: 100%;
-  padding: 0 !important;
-  margin-top: 22px;
-  margin-bottom: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-.Datatable-2 .dataTables_paginate > span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-.Datatable-2 .dataTables_paginate .paginate_button {
-  height: 25px;
-  margin: 0;
-  margin-right: 5px;
-  padding: 4px 7px !important;
-  font-family: "Nunito", sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  color: #444 !important;
-  border: 0 !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-@media (max-width: 575.98px) {
-  .Datatable-2 .dataTables_paginate .paginate_button {
-    font-size: 12px;
+@-webkit-keyframes delay-overflow {
+  from {
+    overflow: auto;
   }
 }
-.Datatable-2 .dataTables_paginate .paginate_button:not(.disabled):not(.active):hover, .Datatable-2 .dataTables_paginate .paginate_button:not(.disabled):not(.active):active, .Datatable-2 .dataTables_paginate .paginate_button:not(.disabled):not(.active):focus {
-  background: rgba(0, 0, 0, 0.1);
-  color: #444 !important;
-}
-.Datatable-2 .dataTables_paginate .paginate_button.disabled {
-  font-family: "Nunito", sans-serif !important;
-  font-weight: 300 !important;
-  color: #cccccc !important;
-}
-.Datatable-2 .dataTables_paginate .paginate_button.disabled:hover {
-  color: #cccccc !important;
-}
-.Datatable-2 .dataTables_paginate .paginate_button.current {
-  background: #eeeeee !important;
-  font-weight: bold;
-}
-.Datatable-2 .dataTables_paginate .ellipsis {
-  height: 22px;
-  padding: 2px 7px !important;
-  line-height: 1;
-  font-family: "Nunito", sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  border-radius: 0;
-}
-.Datatable-2 .dataTables_paginate .dropdown-container {
-  margin-left: 20px;
-}
-.Datatable-2 .dataTables_paginate .dropdown-container .dropdown-toggle {
-  font-size: 14px;
-  font-weight: bold;
-}
-@media (max-width: 575.98px) {
-  .Datatable-2 .dataTables_paginate .dropdown-container .dropdown-toggle {
-    font-size: 12px;
-  }
-}
-.Datatable-2 .dataTables_paginate .dropdown-container .dropdown-toggle::after {
-  margin-left: 10px;
-  vertical-align: 1px;
-}
-.Datatable-2 .dataTables_paginate .dropdown-container .dropdown-menu.show {
-  padding: 0;
-  min-width: auto;
-  float: none;
-  right: 0;
-}
-.Datatable-2 .dataTables_filter {
-  margin-top: 0 !important;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-direction: row;
-}
-.Datatable-2 .dataTables_filter input {
-  padding: 8px 16px;
-  width: 220px;
-  height: 100%;
-  background-color: #fafafa;
-  border: 1px solid #dddddd;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 300;
-}
-@media (max-width: 575.98px) {
-  .Datatable-2 .dataTables_filter input {
-    width: 150px;
-  }
-}
-.Datatable-2 .dataTables_filter label {
-  margin: 0;
-  align-self: stretch;
-}
-.Datatable-2 .dataTables_filter button {
-  align-self: stretch;
-  min-width: 36px;
-}
-
 @keyframes delay-overflow {
   from {
     overflow: auto;
@@ -2429,8 +2070,6 @@
   background-color: white;
   border-radius: 4px;
   padding: 20px;
-  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
 }
 .DocumentHover .image-container {
@@ -2548,6 +2187,34 @@ textarea.Input {
 input.Input:focus,
 textarea.Input:focus {
   border-color: #444;
+}
+input.Input::-webkit-input-placeholder,
+textarea.Input::-webkit-input-placeholder {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #bbbbbb;
+}
+input.Input::-moz-placeholder,
+textarea.Input::-moz-placeholder {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #bbbbbb;
+}
+input.Input:-ms-input-placeholder,
+textarea.Input:-ms-input-placeholder {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #bbbbbb;
+}
+input.Input::-ms-input-placeholder,
+textarea.Input::-ms-input-placeholder {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #bbbbbb;
 }
 input.Input::placeholder,
 textarea.Input::placeholder {
@@ -2991,6 +2658,30 @@ textarea.Input {
   border: 1px solid #e2e2e2 !important;
   outline: none !important;
 }
+.SearchInput input::-webkit-input-placeholder {
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #bbbbbb;
+}
+.SearchInput input::-moz-placeholder {
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #bbbbbb;
+}
+.SearchInput input:-ms-input-placeholder {
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #bbbbbb;
+}
+.SearchInput input::-ms-input-placeholder {
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #bbbbbb;
+}
 .SearchInput input::placeholder {
   font-family: "Nunito", sans-serif;
   font-size: 12px;
@@ -3053,6 +2744,34 @@ select.Select .menu > .item:hover,
 select.Select:focus,
 .fluid.Select:focus {
   border-color: #444;
+}
+select.Select::-webkit-input-placeholder,
+.fluid.Select::-webkit-input-placeholder {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #b7b7b7;
+}
+select.Select::-moz-placeholder,
+.fluid.Select::-moz-placeholder {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #b7b7b7;
+}
+select.Select:-ms-input-placeholder,
+.fluid.Select:-ms-input-placeholder {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #b7b7b7;
+}
+select.Select::-ms-input-placeholder,
+.fluid.Select::-ms-input-placeholder {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #b7b7b7;
 }
 select.Select::placeholder,
 .fluid.Select::placeholder {
@@ -3119,6 +2838,30 @@ select.Select .dropdown.icon::before,
 }
 .fluid.SelectMultiple:focus {
   border-color: #444;
+}
+.fluid.SelectMultiple::-webkit-input-placeholder {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #b7b7b7;
+}
+.fluid.SelectMultiple::-moz-placeholder {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #b7b7b7;
+}
+.fluid.SelectMultiple:-ms-input-placeholder {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #b7b7b7;
+}
+.fluid.SelectMultiple::-ms-input-placeholder {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #b7b7b7;
 }
 .fluid.SelectMultiple::placeholder {
   font-family: "Nunito", sans-serif;
@@ -3220,7 +2963,6 @@ select.Select .dropdown.icon::before,
   right: 0;
   bottom: 0;
   background-color: #f1f1f1;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 .Switch .slider:before {
@@ -3231,18 +2973,15 @@ select.Select .dropdown.icon::before,
   left: 2px;
   bottom: 2px;
   background-color: white;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 .Switch input:checked + .slider {
   background-color: #00a6ed;
 }
 .Switch input:focus + .slider {
-  box-shadow: 0 0 1px #00a6ed;
+  box-shadow: 0 0 1px 0 #00a6ed;
 }
 .Switch input:checked + .slider:before {
-  -webkit-transform: translateX(27px);
-  -ms-transform: translateX(27px);
   transform: translateX(27px);
 }
 .Switch .slider.round {
@@ -3409,8 +3148,6 @@ select.Select .dropdown.icon::before,
   align-items: center;
   justify-content: stretch;
   flex-direction: row;
-  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
 }
 @media (max-width: 575.98px) {
@@ -3588,9 +3325,7 @@ p.normal-text {
 .dropdown-menu {
   border: 0;
   border-radius: 0;
-  -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.05);
 }
 .dropdown-menu .dropdown-item {
   font-size: 14px;

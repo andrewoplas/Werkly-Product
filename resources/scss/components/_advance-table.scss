@@ -36,6 +36,7 @@ $animationDuration: 300ms;
 
         &.shown {
             .TableFilter {
+                -webkit-animation: fadeIn ease-in 500ms;
                 animation: fadeIn ease-in 500ms;
             }
         }

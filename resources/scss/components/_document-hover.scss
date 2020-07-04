@@ -1,5 +1,11 @@
 $border-width: 60px;
 
+@-webkit-keyframes delay-overflow {
+    from {
+        overflow: auto;
+    }
+}
+
 @keyframes delay-overflow {
     from {
         overflow: auto;

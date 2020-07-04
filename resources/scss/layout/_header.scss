@@ -43,7 +43,7 @@ $image-container-height-md: 130px;
         padding-left: 20px;
         padding-right: 20px;
         background-color: $primary-color;
-        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+        @include shadow(0, 3px, 5px, 0, rgba(0, 0, 0, 0.1));
         @include flex(space-between, center);
 
         margin-left: $sidebar-width;
@@ -102,6 +102,22 @@ $image-container-height-md: 130px;
                     background-color: rgba(255, 255, 255, 0.2) !important;
                     border: 0 !important;
                     color: white;
+
+                    &::-webkit-input-placeholder {
+                        color: white;
+                    }
+
+                    &::-moz-placeholder {
+                        color: white;
+                    }
+
+                    &:-ms-input-placeholder {
+                        color: white;
+                    }
+
+                    &::-ms-input-placeholder {
+                        color: white;
+                    }
 
                     &::placeholder {
                         color: white;
@@ -190,7 +206,7 @@ $image-container-height-md: 130px;
                     border: 0;
                     border-radius: 0;
                     margin-top: -5px !important;
-                    @include shadow(0px, 2px, 5px, 1px, rgba(0, 0, 0, 0.05));
+                    @include shadow(0, 2px, 5px, 1px, rgba(0, 0, 0, 0.05));
 
                     .dropdown-item {
                         font-size: 14px;
@@ -233,11 +249,8 @@ $image-container-height-md: 130px;
         z-index: 1000;
         display: flex;
         flex-direction: column;
-
         transition: width 200ms ease-out;
-        -webkit-box-shadow: 3px 0px 6px 0px rgba(0, 0, 0, 0.16);
-        -moz-box-shadow: 3px 0px 6px 0px rgba(0, 0, 0, 0.16);
-        box-shadow: 3px 0px 6px 0px rgba(0, 0, 0, 0.16);
+        @include shadow(3px, 0, 6px, 0, rgba(0, 0, 0, 0.16));
 
         @include media-breakpoint-down(lg) {
             height: calc(100% - #{$image-container-height-lg});

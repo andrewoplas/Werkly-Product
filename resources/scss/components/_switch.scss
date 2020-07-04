@@ -23,7 +23,6 @@
         right: 0;
         bottom: 0;
         background-color: #f1f1f1;
-        -webkit-transition: 0.4s;
         transition: 0.4s;
 
         &:before {
@@ -34,7 +33,6 @@
             left: 2px;
             bottom: 2px;
             background-color: white;
-            -webkit-transition: 0.4s;
             transition: 0.4s;
         }
     }
@@ -44,12 +42,10 @@
     }
 
     input:focus + .slider {
-        box-shadow: 0 0 1px $primary-color;
+        @include shadow(0, 0, 1px, 0, $primary-color);
     }
 
     input:checked + .slider:before {
-        -webkit-transform: translateX(27px);
-        -ms-transform: translateX(27px);
         transform: translateX(27px);
     }
 

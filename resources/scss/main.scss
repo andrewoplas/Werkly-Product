@@ -21,8 +21,6 @@
 @import "./components/colorpicker";
 @import "./components/contact";
 @import "./components/content-box";
-@import "./components/datatable";
-@import "./components/datatable2";
 @import "./components/document-hover";
 @import "./components/filters-container";
 @import "./components/form-error";
@@ -99,7 +97,7 @@ p.normal-text {
 .dropdown-menu {
     border: 0;
     border-radius: 0;
-    @include shadow(0px, 2px, 5px, 1px, rgba(0, 0, 0, 0.05));
+    @include shadow(0, 2px, 5px, 1px, rgba(0, 0, 0, 0.05));
 
     .dropdown-item {
         font-size: 14px;

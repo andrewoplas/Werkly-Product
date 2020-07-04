@@ -46,6 +46,34 @@
         border-color: $dark;
     }
 
+    &::-webkit-input-placeholder {
+        font-family: $primary-font;
+        font-weight: 300;
+        font-size: 14px;
+        color: $gray-4;
+    }
+
+    &::-moz-placeholder {
+        font-family: $primary-font;
+        font-weight: 300;
+        font-size: 14px;
+        color: $gray-4;
+    }
+
+    &:-ms-input-placeholder {
+        font-family: $primary-font;
+        font-weight: 300;
+        font-size: 14px;
+        color: $gray-4;
+    }
+
+    &::-ms-input-placeholder {
+        font-family: $primary-font;
+        font-weight: 300;
+        font-size: 14px;
+        color: $gray-4;
+    }
+
     &::placeholder {
         font-family: $primary-font;
         font-weight: 300;

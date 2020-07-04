@@ -29,8 +29,6 @@
 }
 
 @mixin shadow($x, $y, $b, $s, $color) {
-    -webkit-box-shadow: $x $y $b $s $color;
-    -moz-box-shadow: $x $y $b $s $color;
     box-shadow: $x $y $b $s $color;
 }
 

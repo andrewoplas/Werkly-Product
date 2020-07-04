@@ -21,6 +21,34 @@
         border: 1px solid $gray-5 !important;
         outline: none !important;
 
+        &::-webkit-input-placeholder {
+            font-family: $primary-font;
+            font-size: 12px;
+            font-weight: 500;
+            color: $gray-6;
+        }
+
+        &::-moz-placeholder {
+            font-family: $primary-font;
+            font-size: 12px;
+            font-weight: 500;
+            color: $gray-6;
+        }
+
+        &:-ms-input-placeholder {
+            font-family: $primary-font;
+            font-size: 12px;
+            font-weight: 500;
+            color: $gray-6;
+        }
+
+        &::-ms-input-placeholder {
+            font-family: $primary-font;
+            font-size: 12px;
+            font-weight: 500;
+            color: $gray-6;
+        }
+
         &::placeholder {
             font-family: $primary-font;
             font-size: 12px;

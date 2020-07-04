@@ -24,6 +24,11 @@
         margin-bottom: 0;
         cursor: pointer;
 
+        &::-moz-selection {
+            color: none;
+            background: none;
+        }
+
         &::selection {
             color: none;
             background: none;
