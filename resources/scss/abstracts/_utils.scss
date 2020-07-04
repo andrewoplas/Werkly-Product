@@ -1,0 +1,34 @@
+p.label {
+    margin: 0;
+    font-family: $primary-font;
+    font-size: 14px;
+    font-weight: bold;
+    color: $dark;
+}
+
+p.normal-text {
+    margin: 0;
+    font-family: $primary-font;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.grid-10 {
+    &.row {
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+    }
+
+    & > div {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.flex-1 {
+    flex: 1;
+}

@@ -204,7 +204,7 @@ $image-container-height-md: 130px;
 
                 .dropdown-menu {
                     border: 0;
-                    border-radius: 0;
+                    border-radius: 4px;
                     margin-top: -5px !important;
                     @include shadow(0, 2px, 5px, 1px, rgba(0, 0, 0, 0.05));
 

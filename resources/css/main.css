@@ -66,6 +66,38 @@
   display: none !important;
 }
 
+p.label {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+}
+
+p.normal-text {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.grid-10.row {
+  margin-left: -10px !important;
+  margin-right: -10px !important;
+}
+.grid-10 > div {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -301,7 +333,7 @@
 }
 .Header .page-header .details .dropdown-avatar .dropdown-menu {
   border: 0;
-  border-radius: 0;
+  border-radius: 4px;
   margin-top: -5px !important;
   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.05);
 }
@@ -2738,8 +2770,13 @@ select.Select .menu > .item.selected,
 }
 select.Select .menu > .item:hover,
 .fluid.Select .menu > .item:hover {
-  background-color: #00a6ed;
-  color: white !important;
+  background-color: #f7f7f7;
+  color: #00a6ed !important;
+}
+select.Select .menu > .item:active,
+.fluid.Select .menu > .item:active {
+  background-color: #f7f7f7;
+  color: #00a6ed;
 }
 select.Select:focus,
 .fluid.Select:focus {
@@ -2833,8 +2870,12 @@ select.Select .dropdown.icon::before,
   color: #00a6ed !important;
 }
 .fluid.SelectMultiple .menu > .item:hover {
-  background-color: #00a6ed;
-  color: white !important;
+  background-color: #f7f7f7;
+  color: #00a6ed !important;
+}
+.fluid.SelectMultiple .menu > .item:active {
+  background-color: #f7f7f7;
+  color: #00a6ed;
 }
 .fluid.SelectMultiple:focus {
   border-color: #444;
@@ -3290,47 +3331,20 @@ body > div:first-child {
   min-height: 100vh;
 }
 
-p.label {
-  margin: 0;
-  font-family: "Nunito", sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-  color: #444;
-}
-
-p.normal-text {
-  margin: 0;
-  font-family: "Nunito", sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-}
-
-.mb-30 {
-  margin-bottom: 30px;
-}
-
-.grid-10.row {
-  margin-left: -10px !important;
-  margin-right: -10px !important;
-}
-.grid-10 > div {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.flex-1 {
-  flex: 1;
-}
-
 .dropdown-menu {
   border: 0;
-  border-radius: 0;
+  border-radius: 4px;
   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.05);
 }
 .dropdown-menu .dropdown-item {
   font-size: 14px;
   padding: 12px 15px;
 }
+.dropdown-menu .dropdown-item:hover {
+  background-color: #f7f7f7;
+  color: #00a6ed;
+}
 .dropdown-menu .dropdown-item:active {
-  background-color: #00a6ed;
+  background-color: #f7f7f7;
+  color: #00a6ed;
 }

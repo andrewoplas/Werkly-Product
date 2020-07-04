@@ -4,6 +4,7 @@
 // abstracts
 @import "./abstracts/variables";
 @import "./abstracts/mixins";
+@import "./abstracts/utils";
 
 // layout
 @import "./layout/header";
@@ -59,52 +60,23 @@ body {
     }
 }
 
-p.label {
-    margin: 0;
-    font-family: $primary-font;
-    font-size: 14px;
-    font-weight: bold;
-    color: $dark;
-}
-
-p.normal-text {
-    margin: 0;
-    font-family: $primary-font;
-    font-size: 14px;
-    font-weight: normal;
-}
-
-.mb-30 {
-    margin-bottom: 30px;
-}
-
-.grid-10 {
-    &.row {
-        margin-left: -10px !important;
-        margin-right: -10px !important;
-    }
-
-    & > div {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-}
-
-.flex-1 {
-    flex: 1;
-}
-
 .dropdown-menu {
     border: 0;
-    border-radius: 0;
+    border-radius: 4px;
     @include shadow(0, 2px, 5px, 1px, rgba(0, 0, 0, 0.05));
 
     .dropdown-item {
         font-size: 14px;
         padding: 12px 15px;
 
+        &:hover {
+            background-color: $gray-7;
+            color: $primary-color;
+        }
+
         &:active {
-            background-color: $primary-color;
+            background-color: $gray-7;
+            color: $primary-color;
         }
     }
 }
