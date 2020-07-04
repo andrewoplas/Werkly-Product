@@ -2,9 +2,31 @@
 
 $animationDuration: 300ms;
 
+$width: 30%;
+$widthLarge: 35%;
+
 .AdvanceList {
+    // Regular widths
     .filter-configuration-panel {
-        width: 35%;
+        width: $width;
+    }
+
+    .list-panel {
+        width: calc(100% - #{$width});
+    }
+
+    // Large Widths
+    &.large {
+        .filter-configuration-panel {
+            width: $widthLarge;
+        }
+
+        .list-panel {
+            width: calc(100% - #{$widthLarge});
+        }
+    }
+
+    .filter-configuration-panel {
         margin-bottom: 20px;
         transition: $animationDuration;
 
@@ -35,7 +57,6 @@ $animationDuration: 300ms;
     .list-panel {
         z-index: 999;
         padding: 0 15px;
-        width: 65%;
         transition: 300ms;
 
         .header {

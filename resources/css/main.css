@@ -2624,7 +2624,18 @@ select.Select .dropdown.icon::before,
   }
 }
 .AdvanceList .filter-configuration-panel {
+  width: 30%;
+}
+.AdvanceList .list-panel {
+  width: calc(100% - 30%);
+}
+.AdvanceList.large .filter-configuration-panel {
   width: 35%;
+}
+.AdvanceList.large .list-panel {
+  width: calc(100% - 35%);
+}
+.AdvanceList .filter-configuration-panel {
   margin-bottom: 20px;
   transition: 300ms;
 }
@@ -2649,7 +2660,6 @@ select.Select .dropdown.icon::before,
 .AdvanceList .list-panel {
   z-index: 999;
   padding: 0 15px;
-  width: 65%;
   transition: 300ms;
 }
 .AdvanceList .list-panel .header {
