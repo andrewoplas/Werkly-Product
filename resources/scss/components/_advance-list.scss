@@ -202,23 +202,13 @@ $widthLarge: 35%;
         }
     }
 
-    @include media-breakpoint-down(lg) {
-        .filter-configuration-panel {
-            width: 30%;
-        }
-
-        .list-panel {
-            width: 70%;
-        }
-    }
-
     @include media-breakpoint-down(md) {
         .filter-configuration-panel {
-            width: 100%;
+            width: 100% !important;
         }
 
         .list-panel {
-            width: 100%;
+            width: 100% !important;
         }
     }
 }

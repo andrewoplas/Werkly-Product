@@ -2797,20 +2797,12 @@ select.Select .dropdown.icon::before,
   font-size: 14px;
   font-weight: bold;
 }
-@media (max-width: 1199.98px) {
-  .AdvanceList .filter-configuration-panel {
-    width: 30%;
-  }
-  .AdvanceList .list-panel {
-    width: 70%;
-  }
-}
 @media (max-width: 991.98px) {
   .AdvanceList .filter-configuration-panel {
-    width: 100%;
+    width: 100% !important;
   }
   .AdvanceList .list-panel {
-    width: 100%;
+    width: 100% !important;
   }
 }
 
@@ -3087,6 +3079,17 @@ select.Select .dropdown.icon::before,
   background-image: url("../images/contact-image.png");
   background-position: center;
   background-size: cover;
+}
+@media (max-width: 991.98px) {
+  .Contact .image {
+    height: 300px;
+    margin-bottom: 20px;
+  }
+}
+.Contact span,
+.Contact a {
+  font-size: 14px;
+  color: #444;
 }
 
 * {

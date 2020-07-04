@@ -5,5 +5,16 @@
         background-image: url("../images/contact-image.png");
         background-position: center;
         background-size: cover;
+
+        @include media-breakpoint-down(md) {
+            height: 300px;
+            margin-bottom: 20px;
+        }
+    }
+
+    span,
+    a {
+        font-size: 14px;
+        color: $dark;
     }
 }
