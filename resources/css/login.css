@@ -1507,14 +1507,11 @@ p.normal-text {
 }
 @media (max-width: 991.98px) {
   .AdvanceList2 .header .filter-container {
+    flex-wrap: wrap;
     position: relative;
     width: auto;
-  }
-}
-@media (max-width: 767.98px) {
-  .AdvanceList2 .header .filter-container {
     flex-basis: 100%;
-    flex-wrap: wrap;
+    flex-grow: 1;
   }
 }
 .AdvanceList2 .header .filter-container .Select.list-select {
@@ -1537,19 +1534,8 @@ p.normal-text {
 }
 @media (max-width: 991.98px) {
   .AdvanceList2 .header .filter-container .Select.list-select {
-    width: 275px !important;
-    margin-right: 15px;
-  }
-}
-@media (max-width: 767.98px) {
-  .AdvanceList2 .header .filter-container .Select.list-select {
-    flex: 1;
-    width: auto;
-  }
-}
-@media (max-width: 575.98px) {
-  .AdvanceList2 .header .filter-container .Select.list-select {
     width: auto !important;
+    flex: 1;
   }
 }
 .AdvanceList2 .header .filter-container .btn-show-filter {
@@ -1558,7 +1544,7 @@ p.normal-text {
   margin-right: 20px;
   align-self: stretch;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .AdvanceList2 .header .filter-container .btn-show-filter {
     margin-right: 0;
   }
@@ -1566,7 +1552,7 @@ p.normal-text {
 .AdvanceList2 .header .filter-container .selected-options {
   display: none;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .AdvanceList2 .header .filter-container .selected-options {
     flex-basis: 100%;
   }
@@ -1592,10 +1578,11 @@ p.normal-text {
   justify-content: stretch;
   flex-direction: row;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .AdvanceList2 .header .search-filter {
     margin-top: 20px;
     flex-basis: 100%;
+    flex-grow: 1;
   }
 }
 .AdvanceList2 .header .search-filter .SearchInput {
@@ -1606,6 +1593,11 @@ p.normal-text {
   align-self: stretch;
   height: 38px;
   width: 33px;
+}
+@media (max-width: 991.98px) {
+  .AdvanceList2 .header .search-filter .ellipsis {
+    margin-left: 5px;
+  }
 }
 
 .Avatar {

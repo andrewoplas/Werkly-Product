@@ -222,13 +222,11 @@ $widthLarge: 35%;
             @include flex(stretch, center);
 
             @include media-breakpoint-down(md) {
+                flex-wrap: wrap;
                 position: relative;
                 width: auto;
-            }
-
-            @include media-breakpoint-down(sm) {
                 flex-basis: 100%;
-                flex-wrap: wrap;
+                flex-grow: 1;
             }
 
             .Select.list-select {
@@ -249,17 +247,8 @@ $widthLarge: 35%;
                 }
 
                 @include media-breakpoint-down(md) {
-                    width: 275px !important;
-                    margin-right: 15px;
-                }
-
-                @include media-breakpoint-down(sm) {
-                    flex: 1;
-                    width: auto;
-                }
-
-                @include media-breakpoint-down(xs) {
                     width: auto !important;
+                    flex: 1;
                 }
             }
 
@@ -269,14 +258,14 @@ $widthLarge: 35%;
                 margin-right: 20px;
                 align-self: stretch;
 
-                @include media-breakpoint-down(sm) {
+                @include media-breakpoint-down(md) {
                     margin-right: 0;
                 }
             }
 
             .selected-options {
                 display: none;
-                @include media-breakpoint-down(sm) {
+                @include media-breakpoint-down(md) {
                     flex-basis: 100%;
                 }
 
@@ -304,9 +293,10 @@ $widthLarge: 35%;
             z-index: 2;
             @include flex(stretch, center);
 
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(md) {
                 margin-top: 20px;
                 flex-basis: 100%;
+                flex-grow: 1;
             }
 
             .SearchInput {
@@ -318,6 +308,10 @@ $widthLarge: 35%;
                 align-self: stretch;
                 height: 38px;
                 width: 33px;
+
+                @include media-breakpoint-down(md) {
+                    margin-left: 5px;
+                }
             }
         }
     }
