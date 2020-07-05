@@ -1007,28 +1007,54 @@ p.normal-text {
 .AdvanceList.large .list-panel {
   width: calc(100% - 35%);
 }
+@media (max-width: 991.98px) {
+  .AdvanceList .filter-configuration-panel {
+    width: 100%;
+  }
+  .AdvanceList .list-panel {
+    width: 100%;
+  }
+}
 .AdvanceList .filter-configuration-panel {
   margin-bottom: 20px;
-  transition: 300ms;
+}
+@media (min-width: 992px) {
+  .AdvanceList .filter-configuration-panel {
+    transition: 300ms;
+  }
 }
 .AdvanceList .filter-configuration-panel:not(.shown) {
-  width: 0;
-  transition: ease-in 300ms;
+  width: 0 !important;
+}
+@media (min-width: 992px) {
+  .AdvanceList .filter-configuration-panel:not(.shown) {
+    transition: ease-in 300ms;
+  }
 }
 .AdvanceList .filter-configuration-panel:not(.shown) + .panel {
   width: 100% !important;
-  transition: ease-in 300ms;
+}
+@media (min-width: 992px) {
+  .AdvanceList .filter-configuration-panel:not(.shown) + .panel {
+    transition: ease-in 300ms;
+  }
 }
 .AdvanceList .filter-configuration-panel:not(.shown) .ListFilter {
   opacity: 0;
-  transition: 200ms;
+}
+@media (min-width: 992px) {
+  .AdvanceList .filter-configuration-panel:not(.shown) .ListFilter {
+    transition: 200ms;
+  }
 }
 .AdvanceList .filter-configuration-panel.shown {
   padding: 0 15px;
 }
-.AdvanceList .filter-configuration-panel.shown .ListFilter {
-  -webkit-animation: fadeIn ease-in 500ms;
-  animation: fadeIn ease-in 500ms;
+@media (min-width: 992px) {
+  .AdvanceList .filter-configuration-panel.shown .ListFilter {
+    -webkit-animation: fadeIn ease-in 500ms;
+    animation: fadeIn ease-in 500ms;
+  }
 }
 .AdvanceList .list-panel {
   z-index: 999;
@@ -1143,14 +1169,6 @@ p.normal-text {
   color: #00a6ed;
   font-size: 14px;
   font-weight: bold;
-}
-@media (max-width: 991.98px) {
-  .AdvanceList .filter-configuration-panel {
-    width: 100% !important;
-  }
-  .AdvanceList .list-panel {
-    width: 100% !important;
-  }
 }
 
 @keyframes fadeIn {

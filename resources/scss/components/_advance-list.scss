@@ -26,22 +26,40 @@ $widthLarge: 35%;
         }
     }
 
+    @include media-breakpoint-down(md) {
+        .filter-configuration-panel {
+            width: 100%;
+        }
+
+        .list-panel {
+            width: 100%;
+        }
+    }
+
     .filter-configuration-panel {
         margin-bottom: 20px;
-        transition: $animationDuration;
+        @include media-breakpoint-up(lg) {
+            transition: $animationDuration;
+        }
 
         &:not(.shown) {
-            width: 0;
-            transition: ease-in $animationDuration;
+            width: 0 !important;
+            @include media-breakpoint-up(lg) {
+                transition: ease-in $animationDuration;
+            }
 
             & + .panel {
                 width: 100% !important;
-                transition: ease-in $animationDuration;
+                @include media-breakpoint-up(lg) {
+                    transition: ease-in $animationDuration;
+                }
             }
 
             .ListFilter {
                 opacity: 0;
-                transition: 200ms;
+                @include media-breakpoint-up(lg) {
+                    transition: 200ms;
+                }
             }
         }
 
@@ -49,8 +67,10 @@ $widthLarge: 35%;
             padding: 0 15px;
 
             .ListFilter {
-                -webkit-animation: fadeIn ease-in 500ms;
-                animation: fadeIn ease-in 500ms;
+                @include media-breakpoint-up(lg) {
+                    -webkit-animation: fadeIn ease-in 500ms;
+                    animation: fadeIn ease-in 500ms;
+                }
             }
         }
     }
@@ -172,16 +192,6 @@ $widthLarge: 35%;
                 font-size: 14px;
                 font-weight: bold;
             }
-        }
-    }
-
-    @include media-breakpoint-down(md) {
-        .filter-configuration-panel {
-            width: 100% !important;
-        }
-
-        .list-panel {
-            width: 100% !important;
         }
     }
 }

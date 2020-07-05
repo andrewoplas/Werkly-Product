@@ -43,7 +43,6 @@ $widthLarge: 35%;
     .filter-configuration-panel {
         height: 100%;
         margin-bottom: 20px;
-
         @include media-breakpoint-up(lg) {
             transition: $animationDuration;
         }
