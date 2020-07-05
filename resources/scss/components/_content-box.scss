@@ -41,7 +41,6 @@
             font-family: $primary-font;
             font-size: 16px;
             font-weight: bold;
-            flex: 1;
 
             @include media-breakpoint-down(md) {
                 &.full-width-on-mobile-md {
@@ -71,6 +70,7 @@
         .action-items {
             margin-top: 10px;
             flex-wrap: wrap;
+            margin-left: auto;
             @include flex(flex-end, center);
 
             @include media-breakpoint-down(xs) {

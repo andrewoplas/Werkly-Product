@@ -1910,7 +1910,6 @@ p.normal-text {
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   font-weight: bold;
-  flex: 1;
 }
 @media (max-width: 991.98px) {
   .ContentBox .box-header .box-title.full-width-on-mobile-md {
@@ -1955,6 +1954,7 @@ p.normal-text {
 .ContentBox .box-header .action-items {
   margin-top: 10px;
   flex-wrap: wrap;
+  margin-left: auto;
   display: flex;
   align-items: center;
   justify-content: flex-end;
