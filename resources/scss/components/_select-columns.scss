@@ -23,13 +23,13 @@
 
     .selected-columns {
         @include media-breakpoint-down(xs) {
-            margin-top: 15px;
+            margin-top: 20px;
         }
     }
 
     .Accordion {
         max-height: 245px;
-        padding-right: 5px;
+        padding-right: 10px;
         overflow-y: auto;
     }
 }

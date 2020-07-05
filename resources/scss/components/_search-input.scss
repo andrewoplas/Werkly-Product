@@ -1,6 +1,7 @@
 .SearchInput {
     position: relative;
     flex: 1;
+    @include flex(stretch, center);
 
     &.dark {
         input {
@@ -19,39 +20,39 @@
         background-color: white;
         border-radius: 4px;
         border: 1px solid $gray-5 !important;
-        outline: none !important;
+        align-self: stretch;
 
         &::-webkit-input-placeholder {
             font-family: $primary-font;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 500;
             color: $gray-6;
         }
 
         &::-moz-placeholder {
             font-family: $primary-font;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 500;
             color: $gray-6;
         }
 
         &:-ms-input-placeholder {
             font-family: $primary-font;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 500;
             color: $gray-6;
         }
 
         &::-ms-input-placeholder {
             font-family: $primary-font;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 500;
             color: $gray-6;
         }
 
         &::placeholder {
             font-family: $primary-font;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 500;
             color: $gray-6;
         }
@@ -60,7 +61,6 @@
     .icon {
         position: absolute;
         color: $gray-6;
-        top: 10px;
         right: 15px;
         font-size: 13px;
     }

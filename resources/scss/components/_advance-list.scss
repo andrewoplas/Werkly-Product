@@ -6,6 +6,9 @@ $width: 30%;
 $widthLarge: 35%;
 
 .AdvanceList {
+    display: flex;
+    flex-wrap: wrap;
+
     // Regular widths
     .filter-configuration-panel {
         width: $width;
@@ -69,7 +72,11 @@ $widthLarge: 35%;
         }
 
         &.shown {
-            padding: 0 15px;
+            padding: 0 20px 0 0;
+
+            @include media-breakpoint-down(md) {
+                padding: 0;
+            }
 
             .ListFilter {
                 @include media-breakpoint-up(lg) {
@@ -82,15 +89,17 @@ $widthLarge: 35%;
 
     .list-panel {
         z-index: 999;
-        padding: 0 15px;
+        padding: 0;
         transition: 300ms;
 
         .header {
-            padding-bottom: 10px;
+            padding-bottom: 20px;
             border-bottom: 1px solid $gray-5;
             @include flex(space-between, center);
 
             .btn-show-filter {
+                height: 38px;
+                width: 38px;
                 min-height: 35px;
                 margin-right: 15px;
             }
@@ -100,19 +109,20 @@ $widthLarge: 35%;
                 @include flex(stretch, center);
 
                 .SearchInput {
-                    height: 100%;
                     margin-right: 15px;
+                    height: 38px;
+                }
 
-                    input {
-                        height: 100%;
-                    }
+                .ellipsis {
+                    align-self: stretch;
+                    height: 38px;
+                    width: 33px;
                 }
             }
         }
 
         .list {
             width: 100%;
-            height: 400px;
 
             .ag-cell-value {
                 white-space: normal !important;
@@ -121,8 +131,7 @@ $widthLarge: 35%;
             }
 
             .item {
-                padding-top: 13px;
-                padding-bottom: 13px;
+                padding-top: 20px;
                 @include flex(flex-start, center);
 
                 .icon {
@@ -156,7 +165,7 @@ $widthLarge: 35%;
 
                 .details {
                     flex: 1;
-                    margin-right: 15px;
+                    margin-right: 20px;
 
                     .title {
                         margin: 0;
@@ -181,7 +190,7 @@ $widthLarge: 35%;
         }
 
         .btn-show-more {
-            margin-top: 30px;
+            margin-top: 20px;
             background-color: white;
             border: 0;
             outline: 0;

@@ -1,6 +1,7 @@
 @mixin full-width-on-mobile-items {
     & + .action-items {
         width: 100%;
+        margin-top: 10px;
 
         .main-button {
             padding-left: 8px;
@@ -83,7 +84,7 @@
             }
 
             .tabs {
-                margin-right: 13px;
+                margin-right: 20px;
                 border: 0;
 
                 li {
@@ -133,16 +134,13 @@
 
                 .InputIcon {
                     margin-right: 10px;
-                    margin-top: 2px;
-                    margin-bottom: 2px;
                     flex-grow: 1;
                 }
                 .Select {
                     width: 265px;
                     margin-right: 10px;
-                    margin-top: 2px;
-                    margin-bottom: 2px;
                     flex-grow: 1;
+                    lign-self: stretch;
                 }
 
                 @include media-breakpoint-down(sm) {

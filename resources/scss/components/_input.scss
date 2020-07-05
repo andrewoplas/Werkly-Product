@@ -114,9 +114,11 @@ textarea.Input {
 
 .InputIcon {
     position: relative;
+    display: flex;
 
     input {
         padding-right: 40px;
+        align-self: stretch;
     }
 
     .icon {

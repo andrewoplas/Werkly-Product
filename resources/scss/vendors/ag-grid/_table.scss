@@ -27,13 +27,16 @@
         border-bottom: 1px solid $gray-5;
     }
 
+    .ag-header-cell:not(:first-child) .ag-header-cell-label {
+        border-left: 1px solid $gray-5;
+    }
+
     .ag-header-cell-label {
         padding: 0 15px;
         font-family: $primary-font !important;
         font-size: 14px;
         font-weight: bold;
         color: $dark;
-        border-left: 1px solid $gray-5;
     }
 
     .ag-header-cell-sorted-none {

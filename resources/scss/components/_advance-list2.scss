@@ -6,6 +6,9 @@ $width: 30%;
 $widthLarge: 35%;
 
 .AdvanceList2 {
+    display: flex;
+    flex-wrap: wrap;
+
     // Regular widths
     .filter-configuration-panel {
         width: $width;
@@ -74,7 +77,11 @@ $widthLarge: 35%;
         }
 
         &.shown {
-            padding: 0 15px;
+            padding: 0 20px 0 0;
+
+            @include media-breakpoint-down(md) {
+                padding: 0;
+            }
 
             .ListFilter {
                 @include media-breakpoint-up(lg) {
@@ -90,7 +97,7 @@ $widthLarge: 35%;
     }
 
     .list-panel {
-        padding: 0 15px;
+        padding: 0;
         transition: 300ms;
 
         .list {
@@ -103,8 +110,8 @@ $widthLarge: 35%;
             }
 
             .item {
-                padding-top: 13px;
-                padding-bottom: 13px;
+                padding-top: 10px;
+                padding-bottom: 10px;
                 @include flex(flex-start, center);
 
                 .icon {
@@ -138,7 +145,7 @@ $widthLarge: 35%;
 
                 .details {
                     flex: 1;
-                    margin-right: 15px;
+                    margin-right: 20px;
 
                     .title {
                         margin: 0;
@@ -163,7 +170,7 @@ $widthLarge: 35%;
         }
 
         .btn-show-more {
-            margin-top: 30px;
+            margin-top: 20px;
             background-color: white;
             border: 0;
             outline: 0;
@@ -183,10 +190,10 @@ $widthLarge: 35%;
     }
 
     .header {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         position: relative;
         flex-basis: 100%;
-        padding: 0 15px;
+        padding: 0;
         @include flex(space-between, center);
 
         @include media-breakpoint-down(md) {
@@ -211,7 +218,7 @@ $widthLarge: 35%;
 
         .filter-container {
             position: absolute;
-            width: calc(100% - 30px);
+            width: calc(100% - 20px);
             @include flex(stretch, center);
 
             @include media-breakpoint-down(md) {
@@ -225,8 +232,8 @@ $widthLarge: 35%;
             }
 
             .Select.list-select {
-                width: calc(#{$width} - 21px) !important;
-                margin-right: 30px;
+                width: calc(#{$width} - 16px) !important;
+                margin-right: 20px;
                 background-color: $gray-7 !important;
                 align-self: stretch;
                 @include flex(stretch, center);
@@ -257,9 +264,9 @@ $widthLarge: 35%;
             }
 
             .btn-show-filter {
-                min-height: 35px;
+                height: 38px;
                 width: 38px;
-                margin-right: 15px;
+                margin-right: 20px;
                 align-self: stretch;
 
                 @include media-breakpoint-down(sm) {
@@ -298,22 +305,19 @@ $widthLarge: 35%;
             @include flex(stretch, center);
 
             @include media-breakpoint-down(sm) {
-                margin-top: 15px;
+                margin-top: 20px;
                 flex-basis: 100%;
             }
 
             .SearchInput {
-                min-height: 38px;
-                margin-right: 15px;
-
-                input {
-                    height: 100%;
-                }
+                height: 38px;
+                margin-right: 20px;
             }
 
             .ellipsis {
                 align-self: stretch;
-                width: 38px;
+                height: 38px;
+                width: 33px;
             }
         }
     }

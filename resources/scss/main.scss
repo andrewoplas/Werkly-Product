@@ -15,7 +15,6 @@
 @import "./components/accordion";
 @import "./components/advance-list";
 @import "./components/advance-list2";
-@import "./components/advance-table";
 @import "./components/avatar";
 @import "./components/button";
 @import "./components/checkbox";
@@ -35,7 +34,6 @@
 @import "./components/select";
 @import "./components/select-columns";
 @import "./components/switch";
-@import "./components/table-filter";
 @import "./components/user-card";
 
 * {
@@ -61,13 +59,15 @@ body {
 }
 
 .dropdown-menu {
+    overflow: hidden;
+    padding: 0;
     border: 0;
     border-radius: 4px;
     @include shadow(0, 2px, 5px, 1px, rgba(0, 0, 0, 0.05));
 
     .dropdown-item {
         font-size: 14px;
-        padding: 12px 15px;
+        padding: 10px 20px;
 
         &:hover {
             background-color: $gray-7;

@@ -70,7 +70,7 @@ function initializeGridTable(element) {
             resizable: true,
         },
         headerHeight: 0,
-        rowHeight: 66,
+        rowHeight: 60,
         domLayout: "autoHeight",
         components: { cellRenderer: FullWidthCellRenderer },
         rowData: rowData,
