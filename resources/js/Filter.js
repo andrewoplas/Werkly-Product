@@ -2,21 +2,6 @@ function initializeListFilterListeners() {
     mainListeners();
     selectFiltersOptionsListeners();
     selectFiltersValueListeners();
-
-    // Initialize datepicker
-    const datepicker = $('[data-toggle="datepicker"]')
-        .datepicker({ autoHide: true })
-        .on("pick.datepicker", function (e) {
-            // Get date
-            const day = e.date.getDate() + getOrdinalDate(e.date.getDate());
-            const month = $(this).datepicker("getMonthName");
-            const year = e.date.getFullYear();
-
-            // Set date
-            $(this).val(`${day} ${month}, ${year}`);
-            e.preventDefault();
-        });
-    $('[data-toggle="datepicker"]').datepicker("pick");
 }
 
 function mainListeners() {

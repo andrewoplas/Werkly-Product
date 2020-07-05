@@ -14,7 +14,6 @@
         <link rel="stylesheet" href="./vendors/perfect-scrollbar/css/perfect-scrollbar.css" />
 
         <!-- Vendor JS -->
-        <link rel="stylesheet" href="./vendors/datepicker/datepicker.min.css" />
         <link rel="stylesheet" href="./vendors/semantic-ui/transition.min.css" />
         <link rel="stylesheet" href="./vendors/semantic-dropdown/dropdown.css" />
         <link
@@ -609,7 +608,13 @@
 
                                                     <div class="selector d-none">
                                                         <input type="text" class="Input query-value text" placeholder="Placeholder text goes here" />
-                                                        <input type="text" class="Input query-value date d-none" data-toggle="datepicker" readonly />
+                                                        <input
+                                                            type="text"
+                                                            class="Input query-value date d-none datetimepicker-input"
+                                                            id="datepicker-is"
+                                                            data-toggle="datetimepicker"
+                                                            data-target="#datepicker-is"
+                                                        />
                                                     </div>
                                                 </div>
 
@@ -652,7 +657,13 @@
                                                     </div>
 
                                                     <div class="selector d-none">
-                                                        <input type="text" class="Input query-value" data-toggle="datepicker" readonly />
+                                                        <input
+                                                            type="text"
+                                                            class="Input query-value datetimepicker-input"
+                                                            id="datepicker-is-before"
+                                                            data-toggle="datetimepicker"
+                                                            data-target="#datepicker-is-before"
+                                                        />
                                                     </div>
                                                 </div>
 
@@ -671,7 +682,13 @@
                                                     </div>
 
                                                     <div class="selector d-none">
-                                                        <input type="text" class="Input query-value" data-toggle="datepicker" readonly />
+                                                        <input
+                                                            type="text"
+                                                            class="Input query-value datetimepicker-input"
+                                                            id="datepicker-is-after"
+                                                            data-toggle="datetimepicker"
+                                                            data-target="#datepicker-is-after"
+                                                        />
                                                     </div>
                                                 </div>
 
@@ -812,7 +829,6 @@
         <!-- Vendor JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
-        <script src="./vendors/datepicker/datepicker.min.js"></script>
         <script src="./vendors/semantic-ui/transition.min.js"></script>
         <script src="./vendors/semantic-dropdown/dropdown.min.js"></script>
         <script src="./vendors/ag-grid/dist/ag-grid-community.min.js"></script>

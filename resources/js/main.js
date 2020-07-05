@@ -52,24 +52,23 @@ function initializePage() {
         $(this).addClass("selected");
     });
 
+    const datetimepickers = [
+        { id: "#datetimepicker", format: "DD MMMM, YYYY hh:mm A" },
+        { id: "#datepicker", format: "DD MMMM, YYYY" },
+        { id: "#timepicker", format: "hh:mm A" },
+        { id: "#datepicker-is-before", format: "DD MMMM, YYYY" },
+        { id: "#datepicker-is-after", format: "DD MMMM, YYYY" },
+        { id: "#datepicker-is", format: "DD MMMM, YYYY" },
+    ];
+
     // Date time pickers
-    if ($("#datetimepicker").length) {
-        $("#datetimepicker").datetimepicker({
-            format: "DD MMMM, YYYY hh:mm A",
-        });
-    }
-
-    if ($("#datepicker").length) {
-        $("#datepicker").datetimepicker({
-            format: "DD MMMM, YYYY",
-        });
-    }
-
-    if ($("#timepicker").length) {
-        $("#timepicker").datetimepicker({
-            format: "hh:mm A",
-        });
-    }
+    datetimepickers.forEach((pickers) => {
+        if ($(pickers.id).length) {
+            $(pickers.id).datetimepicker({
+                format: pickers.format,
+            });
+        }
+    });
 }
 
 function initializeSidebar() {
