@@ -229,6 +229,10 @@ $widthLarge: 35%;
                 align-self: stretch;
                 @include flex(stretch, center);
 
+                .menu {
+                    background-color: $gray-7 !important;
+                }
+
                 .dropdown.icon {
                     display: flex;
                     align-items: center;

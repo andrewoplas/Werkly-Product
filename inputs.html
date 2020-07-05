@@ -928,26 +928,6 @@
             $(document).ready(function () {
                 initializePage();
 
-                $(".ui.dropdown").dropdown();
-
-                $(".ButtonCluster .item").click(function () {
-                    $(this).parents(".ButtonCluster").find(".item").removeClass("selected");
-                    $(this).addClass("selected");
-                });
-
-                // Date time pickers
-                $("#datetimepicker").datetimepicker({
-                    format: "DD MMMM, YYYY hh:mm A",
-                    debug: true,
-                    collapse: false,
-                });
-                $("#datepicker").datetimepicker({
-                    format: "DD MMMM, YYYY",
-                });
-                $("#timepicker").datetimepicker({
-                    format: "hh:mm A",
-                });
-
                 // Simple example, see optional options for more configuration.
                 const defaultColor = "#7fb800";
                 const pickr = Pickr.create({

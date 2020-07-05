@@ -10,6 +10,8 @@ $image-container-height: 180px;
 $image-container-height-lg: 150px;
 $image-container-height-md: 130px;
 
+$header-hover-color: #3ab7ed;
+
 .Header {
     /* =========== Desktop Header =========== */
 
@@ -80,12 +82,12 @@ $image-container-height-md: 130px;
                 height: 40px;
                 color: white;
                 font-size: 18px;
-                border-radius: 50%;
+                border-radius: 4px;
                 cursor: pointer;
                 @include flex(center, center);
 
                 &:hover {
-                    background-color: rgba(255, 255, 255, 0.1);
+                    background-color: $header-hover-color;
                     transition: 150ms;
                 }
             }
@@ -141,7 +143,7 @@ $image-container-height-md: 130px;
                     @include flex(center, center);
 
                     &:hover {
-                        background-color: #3ab7ed;
+                        background-color: $header-hover-color;
                     }
 
                     .counter {
@@ -222,10 +224,6 @@ $image-container-height-md: 130px;
 
                         @include media-breakpoint-down(sm) {
                             font-size: 12px;
-                        }
-
-                        &:active {
-                            background-color: $primary-color;
                         }
 
                         .icon {
@@ -528,7 +526,7 @@ $image-container-height-md: 130px;
 
     .header-mobile {
         height: 60px;
-        width: 100vw;
+        width: 100%;
         background-color: white;
         @include shadow(0, 3px, 6px, 0, rgba(0, 0, 0, 0.16));
         display: none;

@@ -216,7 +216,7 @@ p.normal-text {
   height: 40px;
   color: white;
   font-size: 18px;
-  border-radius: 50%;
+  border-radius: 4px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -224,7 +224,7 @@ p.normal-text {
   flex-direction: row;
 }
 .Header .page-header .title-container .icon:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #3ab7ed;
   transition: 150ms;
 }
 .Header .page-header .details {
@@ -356,9 +356,6 @@ p.normal-text {
   .Header .page-header .details .dropdown-avatar .dropdown-menu .dropdown-item {
     font-size: 12px;
   }
-}
-.Header .page-header .details .dropdown-avatar .dropdown-menu .dropdown-item:active {
-  background-color: #00a6ed;
 }
 .Header .page-header .details .dropdown-avatar .dropdown-menu .dropdown-item .icon {
   margin-right: 10px;
@@ -619,7 +616,7 @@ p.normal-text {
 }
 .Header .header-mobile {
   height: 60px;
-  width: 100vw;
+  width: 100%;
   background-color: white;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   display: none;
@@ -1411,6 +1408,9 @@ p.normal-text {
   justify-content: stretch;
   flex-direction: row;
 }
+.AdvanceList2 .header .filter-container .Select.list-select .menu {
+  background-color: #f7f7f7 !important;
+}
 .AdvanceList2 .header .filter-container .Select.list-select .dropdown.icon {
   display: flex;
   align-items: center;
@@ -2146,7 +2146,8 @@ p.normal-text {
   transition: 100ms ease-in;
 }
 .DocumentHover .image-container .action-items .btn-view {
-  padding: 6px 24px;
+  padding-left: 24px;
+  padding-right: 24px;
   margin-right: 5px;
 }
 .DocumentHover .title {
@@ -2378,7 +2379,7 @@ textarea.Input {
   margin-left: 0.355em;
 }
 
-.ListFilter .main {
+.ListFilter .screen {
   margin-top: 18px;
 }
 .ListFilter .main .border {

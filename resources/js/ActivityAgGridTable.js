@@ -23,7 +23,7 @@ CheckboxCellRenderer.prototype.init = function (params) {
     this.eGui = document.createElement("span");
 
     const html =
-        '<div class="Checkbox CellCheckbox">' + "<label>" + '<input type="checkbox" name="demo" />' + "<span></span>" + "</label>" + "</div>";
+        '<div class="Checkbox CellOptionCheckbox">' + "<label>" + '<input type="checkbox" name="demo" />' + "<span></span>" + "</label>" + "</div>";
 
     this.eGui.innerHTML = html;
 };
@@ -133,7 +133,7 @@ function initializeGridTable(element) {
 const checkboxOnchange = function (tableName) {
     const table = $(tableName);
 
-    table.find('.HeaderCheckbox [type="checkbox"]').on("change", function () {
+    $(document).on("change", '.HeaderCheckbox [type="checkbox"]', function () {
         let isChecked = $(this).is(":checked");
         const name = $(this).attr("name");
 
@@ -143,14 +143,15 @@ const checkboxOnchange = function (tableName) {
         }
 
         $(this).removeClass("minus");
-        table.find('.CellCheckbox [name="' + name + '"]').prop("checked", isChecked);
+        table.find('.CellOptionCheckbox [name="' + name + '"]').prop("checked", isChecked);
         showHideCheckboxOptions(isChecked);
     });
 
-    table.find('.CellCheckbox [type="checkbox"]').on("change", function () {
-        const totalCheckboxes = table.find('.CellCheckbox [type="checkbox"]').length;
-        const checkedCount = table.find('.CellCheckbox [type="checkbox"]:checked').length;
+    $(document).on("change", '.CellOptionCheckbox [type="checkbox"]', function () {
+        const totalCheckboxes = table.find('.CellOptionCheckbox [type="checkbox"]').length;
+        const checkedCount = table.find('.CellOptionCheckbox [type="checkbox"]:checked').length;
         showHideCheckboxOptions(checkedCount > 0);
+
         table.find('.HeaderCheckbox [type="checkbox"]').prop("checked", checkedCount > 0);
         if (totalCheckboxes === checkedCount) {
             table.find('.HeaderCheckbox [type="checkbox"]').removeClass("minus");
