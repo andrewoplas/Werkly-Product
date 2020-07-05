@@ -27,12 +27,17 @@ $widthLarge: 35%;
     }
 
     @include media-breakpoint-down(md) {
-        .filter-configuration-panel {
-            width: 100%;
-        }
+        @include media-breakpoint-down(md) {
+            .filter-configuration-panel,
+            .list-panel,
+            &.large .filter-configuration-panel,
+            &.large .list-panel {
+                width: 100% !important;
+            }
 
-        .list-panel {
-            width: 100%;
+            .list-panel {
+                width: 100% !important;
+            }
         }
     }
 

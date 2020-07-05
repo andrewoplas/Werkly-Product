@@ -1007,12 +1007,13 @@ p.normal-text {
 .AdvanceList.large .list-panel {
   width: calc(100% - 35%);
 }
-@media (max-width: 991.98px) {
-  .AdvanceList .filter-configuration-panel {
-    width: 100%;
+@media (max-width: 991.98px) and (max-width: 991.98px) {
+  .AdvanceList .filter-configuration-panel,
+.AdvanceList .list-panel, .AdvanceList.large .filter-configuration-panel, .AdvanceList.large .list-panel {
+    width: 100% !important;
   }
   .AdvanceList .list-panel {
-    width: 100%;
+    width: 100% !important;
   }
 }
 .AdvanceList .filter-configuration-panel {
@@ -1227,7 +1228,8 @@ p.normal-text {
   width: 35%;
 }
 @media (max-width: 991.98px) {
-  .AdvanceList2 .filter-configuration-panel {
+  .AdvanceList2 .filter-configuration-panel,
+.AdvanceList2 .list-panel, .AdvanceList2.large .filter-configuration-panel, .AdvanceList2.large .list-panel {
     width: 100% !important;
   }
   .AdvanceList2 .list-panel {

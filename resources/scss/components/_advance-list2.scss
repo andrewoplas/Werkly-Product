@@ -31,7 +31,10 @@ $widthLarge: 35%;
     }
 
     @include media-breakpoint-down(md) {
-        .filter-configuration-panel {
+        .filter-configuration-panel,
+        .list-panel,
+        &.large .filter-configuration-panel,
+        &.large .list-panel {
             width: 100% !important;
         }
 
