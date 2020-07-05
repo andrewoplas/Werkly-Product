@@ -2846,6 +2846,13 @@ select.Select .dropdown.icon::before,
   vertical-align: middle;
   border: 0;
 }
+select.Select .default.text,
+.fluid.Select .default.text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+}
 
 .fluid.SelectMultiple {
   width: 100%;
@@ -2935,6 +2942,12 @@ select.Select .dropdown.icon::before,
   display: inline-block;
   vertical-align: middle;
   border: 0;
+}
+.fluid.SelectMultiple .default.text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
 }
 .fluid.SelectMultiple .menu .item:hover {
   background-color: #7fb800;

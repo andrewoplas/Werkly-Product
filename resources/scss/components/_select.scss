@@ -99,6 +99,13 @@
         vertical-align: middle;
         border: 0;
     }
+
+    .default.text {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 100%;
+        white-space: nowrap;
+    }
 }
 
 select.Select,
